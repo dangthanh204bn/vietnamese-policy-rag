@@ -1,0 +1,31 @@
+from load_documents import load_documents
+from chunking import chunk_text_by_tokens
+
+def prepare_knowledge(file_path, model, tokenizer, chunk_size = 16, overlap = 2):
+    documents = load_documents(file_path)
+
+    all_chunks = []
+    chunk_records = []
+    for parent_id, document in enumerate(documents, start=1):
+        document_chunk = chunk_text_by_tokens(document, tokenizer, chunke_size = chunk_size, overlap=overlap)
+        for chunk in document_chunk:
+            chunk_records.append({
+                "parent_id": parent_id,
+                "parent_text": document,
+                "chunk_id": len(chunk_records)+1,
+                "text": chunk,
+                "source": file_path.name
+            })
+
+            all_chunks.append(chunk)
+
+    for chunk in all_chunks:
+        encoded = tokenizer.encode(chunk, add_special_tokens = True)
+        if len(encoded.ids) > 128:
+            raise ValueError("Chunk vượt quá giới hạn 128 token")
+    chunks_vectors = list(model.embed(all_chunks))
+    
+    return {
+        "chunk_records": chunk_records,
+        "chunks_vectors": chunks_vectors
+    }

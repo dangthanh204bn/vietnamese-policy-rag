@@ -1,0 +1,47 @@
+[
+  {
+    "query": "Điều kiện để đổi sản phẩm trong 14 ngày là gì?",
+    "answer": "Điều kiện để đổi sản phẩm trong 14 ngày là: Yêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản phẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm phải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông tin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người sử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn chuyển sang mẫu khác. [chunk_14]",
+    "expected_answerable": true,
+    "fact_found": true,
+    "allowed_ids": [
+      11,
+      14,
+      24
+    ],
+    "cited_ids": [
+      14
+    ],
+    "invalid_ids": []
+  },
+  {
+    "query": "Sản phẩm không bị lỗi nhưng tôi muốn đổi sang mẫu khác thì có được không?",
+    "answer": "Sản phẩm không bị lỗi nhưng tôi muốn đổi sang mẫu khác thì không được. Theo chính sách, cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn chuyển sang mẫu khác [chunk_16]. Đổi sản phẩm chỉ được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản phẩm so với đơn đã xác nhận. Do đó, yêu cầu đổi sang mẫu khác do thay đổi sở thích không nằm trong phạm vi được chấp thuận.",
+    "expected_answerable": true,
+    "fact_found": true,
+    "allowed_ids": [
+      5,
+      16,
+      20
+    ],
+    "cited_ids": [
+      16
+    ],
+    "invalid_ids": []
+  },
+  {
+    "query": "Phí vận chuyển khi gửi sản phẩm đi bảo hành là bao nhiêu?",
+    "answer": "Tài liệu không cung cấp thông tin về phí vận chuyển khi gửi sản phẩm đi bảo hành. Các đoạn văn trong tài liệu chỉ đề cập đến thời hạn bảo hành (18 tháng), điều kiện đổi sản phẩm và quy trình yêu cầu bảo hành, nhưng không nêu rõ phí vận chuyển liên quan đến việc gửi sản phẩm bảo hành. \n\n[chunk_23]",
+    "expected_answerable": false,
+    "fact_found": null,
+    "allowed_ids": [
+      1,
+      15,
+      23
+    ],
+    "cited_ids": [
+      23
+    ],
+    "invalid_ids": []
+  }
+]

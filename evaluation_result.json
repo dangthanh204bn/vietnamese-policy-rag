@@ -1,0 +1,77 @@
+[
+  {
+    "query": "Sản phẩm được bảo hành bao lâu?",
+    "answer": "Sản phẩm được bảo hành trong 18 tháng [chunk_2].",
+    "expected_answerable": true,
+    "fact_found": true,
+    "allowed_ids": [
+      2,
+      3
+    ],
+    "cited_ids": [
+      2
+    ],
+    "invalid_ids": []
+  },
+  {
+    "query": "Đổi sản phẩm trong bao lâu?",
+    "answer": "Đổi sản phẩm trong 14 ngày [chunk_3].",
+    "expected_answerable": true,
+    "fact_found": true,
+    "allowed_ids": [
+      2,
+      3
+    ],
+    "cited_ids": [
+      3
+    ],
+    "invalid_ids": []
+  },
+  {
+    "query": "Giao hàng trong bao lâu?",
+    "answer": "2 ngày [chunk_1]",
+    "expected_answerable": true,
+    "fact_found": true,
+    "allowed_ids": [
+      1,
+      3
+    ],
+    "cited_ids": [
+      1
+    ],
+    "invalid_ids": []
+  },
+  {
+    "query": "Dung lượng pin là bao nhiêu?",
+    "answer": "Không có đoạn nào đạt ngưỡng tìm kiếm.",
+    "expected_answerable": false,
+    "fact_found": null,
+    "allowed_ids": [],
+    "cited_ids": [],
+    "invalid_ids": []
+  },
+  {
+    "query": "Địa chỉ bảo hành ở đâu?",
+    "answer": "Không có đoạn nào đạt ngưỡng tìm kiếm.",
+    "expected_answerable": false,
+    "fact_found": null,
+    "allowed_ids": [],
+    "cited_ids": [],
+    "invalid_ids": []
+  },
+  {
+    "query": "Sản phẩm được bảo hành tại địa chỉ nào?",
+    "answer": "Tài liệu không cung cấp thông tin về địa chỉ bảo hành sản phẩm. Chỉ có thông tin về thời gian bảo hành (18 tháng) và thời gian đổi sản phẩm (14 ngày) trong các đoạn [chunk_2] và [chunk_3]. Câu hỏi yêu cầu địa chỉ bảo hành nhưng tài liệu không có dữ liệu liên quan đến địa điểm này. \n\nTrả lời: Tài liệu không có thông tin về địa chỉ bảo hành sản phẩm.",
+    "expected_answerable": false,
+    "fact_found": null,
+    "allowed_ids": [
+      2,
+      3
+    ],
+    "cited_ids": [
+      2,
+      3
+    ],
+    "invalid_ids": []
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "query": "Điều kiện để đổi sản phẩm trong 14 ngày là gì?",
+    "answer": "Khách hàng phải gửi yêu cầu đổi sản phẩm qua email hỗ trợ trong vòng 14 ngày kể từ ngày nhận hàng (tính theo ngày lịch, bao gồm thứ Bảy, Chủ nhật và ngày lễ). [chunk_11]",
+    "expected_answerable": true,
+    "fact_found": false,
+    "allowed_ids": [
+      11,
+      21,
+      24
+    ],
+    "cited_ids": [
+      11
+    ],
+    "invalid_ids": []
+  },
+  {
+    "query": "Sản phẩm không bị lỗi nhưng tôi muốn đổi sang mẫu khác thì có được không?",
+    "answer": "Không, vì cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn chuyển sang mẫu khác [chunk_16].",
+    "expected_answerable": true,
+    "fact_found": true,
+    "allowed_ids": [
+      5,
+      16,
+      20
+    ],
+    "cited_ids": [
+      16
+    ],
+    "invalid_ids": []
+  },
+  {
+    "query": "Phí vận chuyển khi gửi sản phẩm đi bảo hành là bao nhiêu?",
+    "answer": "Tài liệu không cung cấp thông tin về phí vận chuyển khi gửi sản phẩm đi bảo hành.",
+    "expected_answerable": false,
+    "fact_found": null,
+    "allowed_ids": [
+      4,
+      15,
+      23
+    ],
+    "cited_ids": [],
+    "invalid_ids": []
+  }
+]

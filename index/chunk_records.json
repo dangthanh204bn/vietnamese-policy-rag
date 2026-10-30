@@ -1,0 +1,261 @@
+[
+  {
+    "parent_id": 1,
+    "parent_text": "TÀI LIỆU GIẢ LẬP: CHÍNH SÁCH CỬA HÀNG MẪU",
+    "chunk_id": 1,
+    "text": "TÀI LIỆU GIẢ LẬP: CHÍNH SÁCH CỬA HÀNG MẪU",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 2,
+    "parent_text": "Đây là dữ liệu do trợ lý biên soạn để thực hành và đánh giá một ứng dụng RAG. Cửa hàng, địa chỉ và quy trình trong tài liệu đều thuộc tình huống giả lập. Các thông tin này không đại diện cho chính sách của doanh nghiệp thực tế. Tài liệu mô tả riêng các quy trình giao hàng, đổi sản phẩm, hoàn tiền và bảo hành của Cửa hàng Mẫu.",
+    "chunk_id": 2,
+    "text": "Đây là dữ liệu do trợ lý biên soạn để thực hành và đánh giá một ứng dụng RAG. Cửa hàng, địa chỉ và quy trình trong tài liệu đều thuộc tình huống giả lập. Các thông tin này không đại diện cho chính sách của doanh nghiệp thực tế. Tài liệu mô tả riêng các quy trình giao",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 2,
+    "parent_text": "Đây là dữ liệu do trợ lý biên soạn để thực hành và đánh giá một ứng dụng RAG. Cửa hàng, địa chỉ và quy trình trong tài liệu đều thuộc tình huống giả lập. Các thông tin này không đại diện cho chính sách của doanh nghiệp thực tế. Tài liệu mô tả riêng các quy trình giao hàng, đổi sản phẩm, hoàn tiền và bảo hành của Cửa hàng Mẫu.",
+    "chunk_id": 3,
+    "text": "sách của doanh nghiệp thực tế. Tài liệu mô tả riêng các quy trình giao hàng, đổi sản phẩm, hoàn tiền và bảo hành của Cửa hàng Mẫu.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 3,
+    "parent_text": "1. PHẠM VI ÁP DỤNG\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có mã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông tin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy trình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công suất của từng mẫu sản phẩm.",
+    "chunk_id": 4,
+    "text": "1. PHẠM VI ÁP DỤNG\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có mã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông tin này khi yêu cầu hỗ trợ.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 3,
+    "parent_text": "1. PHẠM VI ÁP DỤNG\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có mã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông tin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy trình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công suất của từng mẫu sản phẩm.",
+    "chunk_id": 5,
+    "text": "tử. Khách hàng sử dụng các thông tin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy trình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công suất của từng mẫu sản phẩm.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "2. GIAO HÀNG NỘI THÀNH HÀ NỘI\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác nhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc đó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình giao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua email sau khi đơn hàng được bàn giao cho đơn vị giao nhận.",
+    "chunk_id": 6,
+    "text": "2. GIAO HÀNG NỘI THÀNH HÀ NỘI\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác nhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc đó. Đơn xác nhận từ 15 giờ trở đi được",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "2. GIAO HÀNG NỘI THÀNH HÀ NỘI\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác nhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc đó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình giao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua email sau khi đơn hàng được bàn giao cho đơn vị giao nhận.",
+    "chunk_id": 7,
+    "text": "đầu từ ngày làm việc đó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình giao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua email sau khi đơn hàng được bàn giao cho đơn",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "2. GIAO HÀNG NỘI THÀNH HÀ NỘI\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác nhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc đó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình giao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua email sau khi đơn hàng được bàn giao cho đơn vị giao nhận.",
+    "chunk_id": 8,
+    "text": "hàng nhận mã vận chuyển qua email sau khi đơn hàng được bàn giao cho đơn vị giao nhận.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 5,
+    "parent_text": "3. GIAO HÀNG NGOẠI THÀNH VÀ CÁC TỈNH\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính từ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao, bộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời gian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và không mô tả dịch vụ giao hàng quốc tế.",
+    "chunk_id": 9,
+    "text": "3. GIAO HÀNG NGOẠI THÀNH VÀ CÁC TỈNH\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính từ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao, bộ phận hỗ trợ gửi",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 5,
+    "parent_text": "3. GIAO HÀNG NGOẠI THÀNH VÀ CÁC TỈNH\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính từ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao, bộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời gian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và không mô tả dịch vụ giao hàng quốc tế.",
+    "chunk_id": 10,
+    "text": "địa chỉ nhận hàng. Nếu phát sinh chậm giao, bộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời gian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và không mô tả dịch vụ giao hàng quốc tế.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "4. THỜI HẠN ĐỔI SẢN PHẨM\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này được tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua email hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời gian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận tiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.",
+    "chunk_id": 11,
+    "text": "4. THỜI HẠN ĐỔI SẢN PHẨM\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này được tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua email hỗ trợ",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "4. THỜI HẠN ĐỔI SẢN PHẨM\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này được tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua email hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời gian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận tiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.",
+    "chunk_id": 12,
+    "text": ", Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua email hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời gian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận tiếp nhận còn phải kiểm tra tình",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "4. THỜI HẠN ĐỔI SẢN PHẨM\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này được tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua email hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời gian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận tiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.",
+    "chunk_id": 13,
+    "text": "yêu cầu đã được chấp thuận. Bộ phận tiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "5. ĐIỀU KIỆN CHẤP THUẬN ĐỔI SẢN PHẨM\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản phẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm phải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông tin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người sử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn chuyển sang mẫu khác.",
+    "chunk_id": 14,
+    "text": "5. ĐIỀU KIỆN CHẤP THUẬN ĐỔI SẢN PHẨM\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản phẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "5. ĐIỀU KIỆN CHẤP THUẬN ĐỔI SẢN PHẨM\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản phẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm phải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông tin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người sử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn chuyển sang mẫu khác.",
+    "chunk_id": 15,
+    "text": "đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm phải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông tin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "5. ĐIỀU KIỆN CHẤP THUẬN ĐỔI SẢN PHẨM\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản phẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm phải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông tin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người sử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn chuyển sang mẫu khác.",
+    "chunk_id": 16,
+    "text": "tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người sử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn chuyển sang mẫu khác.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "6. QUY TRÌNH GỬI YÊU CẦU ĐỔI\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu có thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp nhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn sau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ phận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.",
+    "chunk_id": 17,
+    "text": "6. QUY TRÌNH GỬI YÊU CẦU ĐỔI\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu có thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "6. QUY TRÌNH GỬI YÊU CẦU ĐỔI\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu có thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp nhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn sau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ phận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.",
+    "chunk_id": 18,
+    "text": "đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp nhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn sau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ phận",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "6. QUY TRÌNH GỬI YÊU CẦU ĐỔI\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu có thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp nhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn sau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ phận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.",
+    "chunk_id": 19,
+    "text": ". Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ phận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "7. KẾT QUẢ XÉT DUYỆT ĐỔI VÀ HOÀN TIỀN\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang sản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung hàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email. Khoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp thuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi thường hoặc lãi phát sinh khi chờ hoàn tiền.",
+    "chunk_id": 20,
+    "text": "7. KẾT QUẢ XÉT DUYỆT ĐỔI VÀ HOÀN TIỀN\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang sản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "7. KẾT QUẢ XÉT DUYỆT ĐỔI VÀ HOÀN TIỀN\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang sản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung hàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email. Khoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp thuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi thường hoặc lãi phát sinh khi chờ hoàn tiền.",
+    "chunk_id": 21,
+    "text": "sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung hàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email. Khoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp thuận. Tiền được hoàn về phương thức",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "7. KẾT QUẢ XÉT DUYỆT ĐỔI VÀ HOÀN TIỀN\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang sản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung hàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email. Khoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp thuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi thường hoặc lãi phát sinh khi chờ hoàn tiền.",
+    "chunk_id": 22,
+    "text": "từ ngày phương án hoàn tiền được chấp thuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi thường hoặc lãi phát sinh khi chờ hoàn tiền.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "8. THỜI HẠN VÀ PHẠM VI BẢO HÀNH\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên đơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi gửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin sản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi đã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành nếu đáp ứng các điều kiện liên quan.",
+    "chunk_id": 23,
+    "text": "8. THỜI HẠN VÀ PHẠM VI BẢO HÀNH\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên đơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi gửi yêu cầu, khách hàng",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "8. THỜI HẠN VÀ PHẠM VI BẢO HÀNH\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên đơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi gửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin sản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi đã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành nếu đáp ứng các điều kiện liên quan.",
+    "chunk_id": 24,
+    "text": "xuất trong điều kiện sử dụng thông thường. Khi gửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin sản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi đã hết thời hạn đổi, một sản",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "8. THỜI HẠN VÀ PHẠM VI BẢO HÀNH\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên đơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi gửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin sản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi đã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành nếu đáp ứng các điều kiện liên quan.",
+    "chunk_id": 25,
+    "text": "cầu đổi sản phẩm 14 ngày. Khi đã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành nếu đáp ứng các điều kiện liên quan.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "9. CÁC TRƯỜNG HỢP NGOÀI PHẠM VI BẢO HÀNH\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc tự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không được cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông thường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất. Bộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa cho các trường hợp ngoài phạm vi bảo hành.",
+    "chunk_id": 26,
+    "text": "9. CÁC TRƯỜNG HỢP NGOÀI PHẠM VI BẢO HÀNH\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc tự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "9. CÁC TRƯỜNG HỢP NGOÀI PHẠM VI BẢO HÀNH\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc tự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không được cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông thường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất. Bộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa cho các trường hợp ngoài phạm vi bảo hành.",
+    "chunk_id": 27,
+    "text": "sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không được cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông thường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất. Bộ",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "9. CÁC TRƯỜNG HỢP NGOÀI PHẠM VI BẢO HÀNH\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc tự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không được cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông thường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất. Bộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa cho các trường hợp ngoài phạm vi bảo hành.",
+    "chunk_id": 28,
+    "text": "sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất. Bộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa cho các trường hợp ngoài phạm vi bảo hành.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "10. TIẾP NHẬN VÀ XỬ LÝ BẢO HÀNH\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày làm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong tối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình trạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau. Tài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.",
+    "chunk_id": 29,
+    "text": "10. TIẾP NHẬN VÀ XỬ LÝ BẢO HÀNH\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày làm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "10. TIẾP NHẬN VÀ XỬ LÝ BẢO HÀNH\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày làm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong tối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình trạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau. Tài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.",
+    "chunk_id": 30,
+    "text": "bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong tối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình trạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "10. TIẾP NHẬN VÀ XỬ LÝ BẢO HÀNH\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày làm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong tối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình trạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau. Tài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.",
+    "chunk_id": 31,
+    "text": "Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau. Tài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "11. ĐỊA CHỈ VÀ THỜI GIAN TIẾP NHẬN\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô Phỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu, trừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách hàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên phường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ sở có thật.",
+    "chunk_id": 32,
+    "text": "11. ĐỊA CHỈ VÀ THỜI GIAN TIẾP NHẬN\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô Phỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "11. ĐỊA CHỈ VÀ THỜI GIAN TIẾP NHẬN\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô Phỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu, trừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách hàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên phường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ sở có thật.",
+    "chunk_id": 33,
+    "text": "Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu, trừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách hàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "11. ĐỊA CHỈ VÀ THỜI GIAN TIẾP NHẬN\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô Phỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu, trừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách hàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên phường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ sở có thật.",
+    "chunk_id": 34,
+    "text": "hàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên phường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ sở có thật.",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 14,
+    "parent_text": "12. KÊNH HỖ TRỢ\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu đổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ để được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng xã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu không liệt kê chi nhánh hoặc đại lý tiếp nhận khác.",
+    "chunk_id": 35,
+    "text": "12. KÊNH HỖ TRỢ\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu đổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ để được",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 14,
+    "parent_text": "12. KÊNH HỖ TRỢ\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu đổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ để được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng xã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu không liệt kê chi nhánh hoặc đại lý tiếp nhận khác.",
+    "chunk_id": 36,
+    "text": ". Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ để được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng xã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu không liệt kê",
+    "source": "store_policy_demo.txt"
+  },
+  {
+    "parent_id": 14,
+    "parent_text": "12. KÊNH HỖ TRỢ\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu đổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ để được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng xã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu không liệt kê chi nhánh hoặc đại lý tiếp nhận khác.",
+    "chunk_id": 37,
+    "text": "trụ sở tiếp nhận được mô tả ở mục 11, tài liệu không liệt kê chi nhánh hoặc đại lý tiếp nhận khác.",
+    "source": "store_policy_demo.txt"
+  }
+]
