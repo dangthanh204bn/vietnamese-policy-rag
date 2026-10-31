@@ -117,7 +117,23 @@ Các thư viện ứng dụng được cố định phiên bản trong requireme
 | uvicorn | 0.54.0 |
 | streamlit | 1.66.1 |
 
-Đây là thông tin môi trường đã sử dụng, chưa phải lockfile đã kiểm thử trên một môi trường cài mới.
+Bảng trên ghi lại môi trường phát triển ban đầu.
+
+### Kiểm tra cài đặt từ GitHub
+
+Đã kiểm tra bằng một môi trường `.venv` mới
+từ bản clone GitHub trên cùng máy.
+
+- Hệ điều hành: Windows.
+- Python: 3.12.10.
+- PyTorch: 2.15.0+cpu.
+- `pip check`: không phát hiện dependency bị lỗi.
+- Tạo lại index: 37 chunk, 37 vector, mỗi vector 384 chiều.
+- FastAPI `/health`: hoạt động, trả về 37 chunk.
+- Thử thủ công Streamlit → API → Ollama với một câu có thông tin
+  và một câu thiếu thông tin.
+
+Ollama và model sinh câu trả lời đã được cài sẵn trên máy.
 
 ### 3. Chuẩn bị Ollama
 
