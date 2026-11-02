@@ -8,6 +8,7 @@ from rag_pipeline import answer_question
 from config import RETRIEVAL_K, RERANK_TOP_N, RETRIEVAL_MIN_SCORE
 from fastapi import FastAPI, HTTPException
 import requests
+from config import INDEX_DIR
 
 class AskRequest(BaseModel):
     query: str
@@ -16,7 +17,7 @@ class AskRequest(BaseModel):
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     print("Khởi động ứng dụng")
-    index_dir = Path(__file__).parent / "index"
+    index_dir = Path(__file__).parent / INDEX_DIR
     app.state.knowledge = load_index(index_dir)
     app.state.embedding_model = TextEmbedding( model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
     app.state.reranker = CrossEncoder("cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",device="cpu")
@@ -46,7 +47,8 @@ def ask(payload: AskRequest):
         retrieved_sources.append({
             "chunk_id": record["chunk_id"],
             "source": record["source"],
-            "text": record["parent_text"]
+            "text": record["parent_text"],
+            "page_number": record.get("page_number")
         })
     return {"received_query": query,
             "answer": rag_result["answer"],

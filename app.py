@@ -7,11 +7,12 @@ from config import RETRIEVAL_K
 from config import RERANK_TOP_N
 from config import RETRIEVAL_MIN_SCORE
 from index_store import load_index
+from config import INDEX_DIR
 
 def main():
     model = TextEmbedding(model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 
-    index_dir = Path(__file__).parent / "index"
+    index_dir = Path(__file__).parent / INDEX_DIR
     knowledge = load_index(index_dir)
     chunk_records = knowledge["chunk_records"]
     chunks_vectors = knowledge["chunks_vectors"]

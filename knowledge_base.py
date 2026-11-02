@@ -1,20 +1,23 @@
-from load_documents import load_documents
+from document_loader import load_source
 from chunking import chunk_text_by_tokens
 
+
 def prepare_knowledge(file_path, model, tokenizer, chunk_size = 16, overlap = 2):
-    documents = load_documents(file_path)
+    documents = load_source(file_path)
 
     all_chunks = []
     chunk_records = []
     for parent_id, document in enumerate(documents, start=1):
-        document_chunk = chunk_text_by_tokens(document, tokenizer, chunke_size = chunk_size, overlap=overlap)
+        text = document["text"]
+        document_chunk = chunk_text_by_tokens(text, tokenizer, chunke_size = chunk_size, overlap=overlap)
         for chunk in document_chunk:
             chunk_records.append({
                 "parent_id": parent_id,
-                "parent_text": document,
+                "parent_text": text,
                 "chunk_id": len(chunk_records)+1,
                 "text": chunk,
-                "source": file_path.name
+                "source": document["source"],
+                "page_number": document["page_number"]
             })
 
             all_chunks.append(chunk)

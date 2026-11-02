@@ -29,6 +29,12 @@ if st.session_state["last_response"] is not None:
     st.write(data["received_query"])
     st.write(data["answer"])
     for source in data["retrieved_sources"]:
-        label = f"[chunk_{source['chunk_id']}] {source['source']}"
+        page_number = source.get("page_number")
+        if page_number != None:
+            label = f"[chunk_{source['chunk_id']}] {source['source']} | Trang: {page_number}"
+        else:
+            label = f"[chunk_{source['chunk_id']}] {source['source']}"
+
+
         with st.expander(label):
             st.write(source["text"])

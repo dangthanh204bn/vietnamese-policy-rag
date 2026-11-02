@@ -1,0 +1,674 @@
+[
+  {
+    "parent_id": 1,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 01 / 13\nTẬP DỮ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng Mẫu\nGiao hàng - Đổi sản phẩm - Hoàn tiền - Bảo hành\nTài liệu có lớp văn bản, được biên soạn theo từng chủ đề để đọc và tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống minh họa; số trang vật lý được ghi ở chân mỗi trang.\nToàn bộ cửa hàng, địa chỉ, email và tình huống trong tài liệu đều là giả lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của một doanh nghiệp thực tế.\nMục lục\n01. Phạm vi áp dụng\n2\n02. Giao hàng nội thành Hà Nội\n3\n03. Giao hàng ngoại thành và các tỉnh\n4\n04. Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06. Quy trình gửi yêu cầu đổi\n7\n07. Kết quả xét duyệt đổi và hoàn tiền\n8\n08. Thời hạn và phạm vi bảo hành\n9\n09. Các trường hợp ngoài phạm vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ và thời gian tiếp nhận\n12\n12. Kênh hỗ trợ\n13\nNguồn nội dung chính: tài liệu store_policy_demo.txt của dự án Vietnamese Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các mốc và điều kiện với quy định gốc.",
+    "chunk_id": 1,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 01 / 13\nTẬP DỮ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng",
+    "source": "sample.pdf",
+    "page_number": 1
+  },
+  {
+    "parent_id": 1,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 01 / 13\nTẬP DỮ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng Mẫu\nGiao hàng - Đổi sản phẩm - Hoàn tiền - Bảo hành\nTài liệu có lớp văn bản, được biên soạn theo từng chủ đề để đọc và tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống minh họa; số trang vật lý được ghi ở chân mỗi trang.\nToàn bộ cửa hàng, địa chỉ, email và tình huống trong tài liệu đều là giả lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của một doanh nghiệp thực tế.\nMục lục\n01. Phạm vi áp dụng\n2\n02. Giao hàng nội thành Hà Nội\n3\n03. Giao hàng ngoại thành và các tỉnh\n4\n04. Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06. Quy trình gửi yêu cầu đổi\n7\n07. Kết quả xét duyệt đổi và hoàn tiền\n8\n08. Thời hạn và phạm vi bảo hành\n9\n09. Các trường hợp ngoài phạm vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ và thời gian tiếp nhận\n12\n12. Kênh hỗ trợ\n13\nNguồn nội dung chính: tài liệu store_policy_demo.txt của dự án Vietnamese Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các mốc và điều kiện với quy định gốc.",
+    "chunk_id": 2,
+    "text": "Ữ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng Mẫu\nGiao hàng - Đổi sản phẩm - Hoàn tiền - Bảo hành\nTài liệu có lớp văn bản, được biên soạn theo từng chủ đề để đọc và tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống",
+    "source": "sample.pdf",
+    "page_number": 1
+  },
+  {
+    "parent_id": 1,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 01 / 13\nTẬP DỮ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng Mẫu\nGiao hàng - Đổi sản phẩm - Hoàn tiền - Bảo hành\nTài liệu có lớp văn bản, được biên soạn theo từng chủ đề để đọc và tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống minh họa; số trang vật lý được ghi ở chân mỗi trang.\nToàn bộ cửa hàng, địa chỉ, email và tình huống trong tài liệu đều là giả lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của một doanh nghiệp thực tế.\nMục lục\n01. Phạm vi áp dụng\n2\n02. Giao hàng nội thành Hà Nội\n3\n03. Giao hàng ngoại thành và các tỉnh\n4\n04. Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06. Quy trình gửi yêu cầu đổi\n7\n07. Kết quả xét duyệt đổi và hoàn tiền\n8\n08. Thời hạn và phạm vi bảo hành\n9\n09. Các trường hợp ngoài phạm vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ và thời gian tiếp nhận\n12\n12. Kênh hỗ trợ\n13\nNguồn nội dung chính: tài liệu store_policy_demo.txt của dự án Vietnamese Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các mốc và điều kiện với quy định gốc.",
+    "chunk_id": 3,
+    "text": "tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống minh họa; số trang vật lý được ghi ở chân mỗi trang.\nToàn bộ cửa hàng, địa chỉ, email và tình huống trong tài liệu đều là giả lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của",
+    "source": "sample.pdf",
+    "page_number": 1
+  },
+  {
+    "parent_id": 1,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 01 / 13\nTẬP DỮ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng Mẫu\nGiao hàng - Đổi sản phẩm - Hoàn tiền - Bảo hành\nTài liệu có lớp văn bản, được biên soạn theo từng chủ đề để đọc và tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống minh họa; số trang vật lý được ghi ở chân mỗi trang.\nToàn bộ cửa hàng, địa chỉ, email và tình huống trong tài liệu đều là giả lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của một doanh nghiệp thực tế.\nMục lục\n01. Phạm vi áp dụng\n2\n02. Giao hàng nội thành Hà Nội\n3\n03. Giao hàng ngoại thành và các tỉnh\n4\n04. Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06. Quy trình gửi yêu cầu đổi\n7\n07. Kết quả xét duyệt đổi và hoàn tiền\n8\n08. Thời hạn và phạm vi bảo hành\n9\n09. Các trường hợp ngoài phạm vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ và thời gian tiếp nhận\n12\n12. Kênh hỗ trợ\n13\nNguồn nội dung chính: tài liệu store_policy_demo.txt của dự án Vietnamese Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các mốc và điều kiện với quy định gốc.",
+    "chunk_id": 4,
+    "text": "lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của một doanh nghiệp thực tế.\nMục lục\n01. Phạm vi áp dụng\n2\n02. Giao hàng nội thành Hà Nội\n3\n03. Giao hàng ngoại thành và các tỉnh\n4\n04. Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06.",
+    "source": "sample.pdf",
+    "page_number": 1
+  },
+  {
+    "parent_id": 1,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 01 / 13\nTẬP DỮ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng Mẫu\nGiao hàng - Đổi sản phẩm - Hoàn tiền - Bảo hành\nTài liệu có lớp văn bản, được biên soạn theo từng chủ đề để đọc và tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống minh họa; số trang vật lý được ghi ở chân mỗi trang.\nToàn bộ cửa hàng, địa chỉ, email và tình huống trong tài liệu đều là giả lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của một doanh nghiệp thực tế.\nMục lục\n01. Phạm vi áp dụng\n2\n02. Giao hàng nội thành Hà Nội\n3\n03. Giao hàng ngoại thành và các tỉnh\n4\n04. Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06. Quy trình gửi yêu cầu đổi\n7\n07. Kết quả xét duyệt đổi và hoàn tiền\n8\n08. Thời hạn và phạm vi bảo hành\n9\n09. Các trường hợp ngoài phạm vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ và thời gian tiếp nhận\n12\n12. Kênh hỗ trợ\n13\nNguồn nội dung chính: tài liệu store_policy_demo.txt của dự án Vietnamese Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các mốc và điều kiện với quy định gốc.",
+    "chunk_id": 5,
+    "text": "Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06. Quy trình gửi yêu cầu đổi\n7\n07. Kết quả xét duyệt đổi và hoàn tiền\n8\n08. Thời hạn và phạm vi bảo hành\n9\n09. Các trường hợp ngoài phạm vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ",
+    "source": "sample.pdf",
+    "page_number": 1
+  },
+  {
+    "parent_id": 1,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 01 / 13\nTẬP DỮ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng Mẫu\nGiao hàng - Đổi sản phẩm - Hoàn tiền - Bảo hành\nTài liệu có lớp văn bản, được biên soạn theo từng chủ đề để đọc và tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống minh họa; số trang vật lý được ghi ở chân mỗi trang.\nToàn bộ cửa hàng, địa chỉ, email và tình huống trong tài liệu đều là giả lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của một doanh nghiệp thực tế.\nMục lục\n01. Phạm vi áp dụng\n2\n02. Giao hàng nội thành Hà Nội\n3\n03. Giao hàng ngoại thành và các tỉnh\n4\n04. Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06. Quy trình gửi yêu cầu đổi\n7\n07. Kết quả xét duyệt đổi và hoàn tiền\n8\n08. Thời hạn và phạm vi bảo hành\n9\n09. Các trường hợp ngoài phạm vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ và thời gian tiếp nhận\n12\n12. Kênh hỗ trợ\n13\nNguồn nội dung chính: tài liệu store_policy_demo.txt của dự án Vietnamese Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các mốc và điều kiện với quy định gốc.",
+    "chunk_id": 6,
+    "text": "vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ và thời gian tiếp nhận\n12\n12. Kênh hỗ trợ\n13\nNguồn nội dung chính: tài liệu store_policy_demo.txt của dự án Vietnamese Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các m",
+    "source": "sample.pdf",
+    "page_number": 1
+  },
+  {
+    "parent_id": 1,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 01 / 13\nTẬP DỮ LIỆU THỰC HÀNH RAG\nChính sách Cửa hàng Mẫu\nGiao hàng - Đổi sản phẩm - Hoàn tiền - Bảo hành\nTài liệu có lớp văn bản, được biên soạn theo từng chủ đề để đọc và tra cứu. Nội dung gồm quy định\nchính, phần diễn giải và tình huống minh họa; số trang vật lý được ghi ở chân mỗi trang.\nToàn bộ cửa hàng, địa chỉ, email và tình huống trong tài liệu đều là giả lập. Tài liệu phục vụ học tập, không\nđại diện cho chính sách của một doanh nghiệp thực tế.\nMục lục\n01. Phạm vi áp dụng\n2\n02. Giao hàng nội thành Hà Nội\n3\n03. Giao hàng ngoại thành và các tỉnh\n4\n04. Thời hạn đổi sản phẩm\n5\n05. Điều kiện chấp thuận đổi sản phẩm\n6\n06. Quy trình gửi yêu cầu đổi\n7\n07. Kết quả xét duyệt đổi và hoàn tiền\n8\n08. Thời hạn và phạm vi bảo hành\n9\n09. Các trường hợp ngoài phạm vi bảo hành\n10\n10. Tiếp nhận và xử lý bảo hành\n11\n11. Địa chỉ và thời gian tiếp nhận\n12\n12. Kênh hỗ trợ\n13\nNguồn nội dung chính: tài liệu store_policy_demo.txt của dự án Vietnamese Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các mốc và điều kiện với quy định gốc.",
+    "chunk_id": 7,
+    "text": "Policy RAG. Phần diễn giải và tình huống\nminh họa giữ cùng các mốc và điều kiện với quy định gốc.",
+    "source": "sample.pdf",
+    "page_number": 1
+  },
+  {
+    "parent_id": 2,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 02 / 13\nMỤC 01\nPhạm vi áp dụng\nQuy định chính\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có\nmã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông\ntin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy\ntrình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công\nsuất của từng mẫu sản phẩm.\nDiễn giải áp dụng\nMã đơn, ngày xác nhận và ngày giao thành công là các thông tin khác nhau trong hồ sơ mua hàng.\nKhi đối chiếu chính sách, cần sử dụng đúng mốc được nêu trong từng quy trình. Phạm vi tiếp nhận\nđược xác định theo nơi mua và loại sản phẩm được mô tả trong tài liệu.\nTình huống minh họa\nMột khách hàng mua sản phẩm cùng mẫu từ nhà bán hàng khác rồi liên hệ Cửa hàng Mẫu. Việc\nsản phẩm có cùng tên hoặc cùng mẫu không làm thay đổi phạm vi áp dụng của quy trình này.\nPhạm vi tiếp nhận được xác định theo nơi mua và hồ sơ đơn hàng.",
+    "chunk_id": 8,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 02 / 13\nMỤC 01\nPhạm vi áp dụng\nQuy định chính\nChính sách áp dụng cho sản phẩm điện tử",
+    "source": "sample.pdf",
+    "page_number": 2
+  },
+  {
+    "parent_id": 2,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 02 / 13\nMỤC 01\nPhạm vi áp dụng\nQuy định chính\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có\nmã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông\ntin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy\ntrình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công\nsuất của từng mẫu sản phẩm.\nDiễn giải áp dụng\nMã đơn, ngày xác nhận và ngày giao thành công là các thông tin khác nhau trong hồ sơ mua hàng.\nKhi đối chiếu chính sách, cần sử dụng đúng mốc được nêu trong từng quy trình. Phạm vi tiếp nhận\nđược xác định theo nơi mua và loại sản phẩm được mô tả trong tài liệu.\nTình huống minh họa\nMột khách hàng mua sản phẩm cùng mẫu từ nhà bán hàng khác rồi liên hệ Cửa hàng Mẫu. Việc\nsản phẩm có cùng tên hoặc cùng mẫu không làm thay đổi phạm vi áp dụng của quy trình này.\nPhạm vi tiếp nhận được xác định theo nơi mua và hồ sơ đơn hàng.",
+    "chunk_id": 9,
+    "text": "Phạm vi áp dụng\nQuy định chính\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có\nmã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông\ntin này khi yêu cầu hỗ trợ. Sản",
+    "source": "sample.pdf",
+    "page_number": 2
+  },
+  {
+    "parent_id": 2,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 02 / 13\nMỤC 01\nPhạm vi áp dụng\nQuy định chính\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có\nmã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông\ntin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy\ntrình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công\nsuất của từng mẫu sản phẩm.\nDiễn giải áp dụng\nMã đơn, ngày xác nhận và ngày giao thành công là các thông tin khác nhau trong hồ sơ mua hàng.\nKhi đối chiếu chính sách, cần sử dụng đúng mốc được nêu trong từng quy trình. Phạm vi tiếp nhận\nđược xác định theo nơi mua và loại sản phẩm được mô tả trong tài liệu.\nTình huống minh họa\nMột khách hàng mua sản phẩm cùng mẫu từ nhà bán hàng khác rồi liên hệ Cửa hàng Mẫu. Việc\nsản phẩm có cùng tên hoặc cùng mẫu không làm thay đổi phạm vi áp dụng của quy trình này.\nPhạm vi tiếp nhận được xác định theo nơi mua và hồ sơ đơn hàng.",
+    "chunk_id": 10,
+    "text": ". Khách hàng sử dụng các thông\ntin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy\ntrình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công\nsuất của từng mẫu sản phẩm.\nDiễn giải áp dụng",
+    "source": "sample.pdf",
+    "page_number": 2
+  },
+  {
+    "parent_id": 2,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 02 / 13\nMỤC 01\nPhạm vi áp dụng\nQuy định chính\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có\nmã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông\ntin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy\ntrình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công\nsuất của từng mẫu sản phẩm.\nDiễn giải áp dụng\nMã đơn, ngày xác nhận và ngày giao thành công là các thông tin khác nhau trong hồ sơ mua hàng.\nKhi đối chiếu chính sách, cần sử dụng đúng mốc được nêu trong từng quy trình. Phạm vi tiếp nhận\nđược xác định theo nơi mua và loại sản phẩm được mô tả trong tài liệu.\nTình huống minh họa\nMột khách hàng mua sản phẩm cùng mẫu từ nhà bán hàng khác rồi liên hệ Cửa hàng Mẫu. Việc\nsản phẩm có cùng tên hoặc cùng mẫu không làm thay đổi phạm vi áp dụng của quy trình này.\nPhạm vi tiếp nhận được xác định theo nơi mua và hồ sơ đơn hàng.",
+    "chunk_id": 11,
+    "text": "dung lượng pin hoặc công\nsuất của từng mẫu sản phẩm.\nDiễn giải áp dụng\nMã đơn, ngày xác nhận và ngày giao thành công là các thông tin khác nhau trong hồ sơ mua hàng.\nKhi đối chiếu chính sách, cần sử dụng đúng mốc được nêu trong từng quy trình. Phạm vi tiếp nhận\nđược xác",
+    "source": "sample.pdf",
+    "page_number": 2
+  },
+  {
+    "parent_id": 2,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 02 / 13\nMỤC 01\nPhạm vi áp dụng\nQuy định chính\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có\nmã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông\ntin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy\ntrình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công\nsuất của từng mẫu sản phẩm.\nDiễn giải áp dụng\nMã đơn, ngày xác nhận và ngày giao thành công là các thông tin khác nhau trong hồ sơ mua hàng.\nKhi đối chiếu chính sách, cần sử dụng đúng mốc được nêu trong từng quy trình. Phạm vi tiếp nhận\nđược xác định theo nơi mua và loại sản phẩm được mô tả trong tài liệu.\nTình huống minh họa\nMột khách hàng mua sản phẩm cùng mẫu từ nhà bán hàng khác rồi liên hệ Cửa hàng Mẫu. Việc\nsản phẩm có cùng tên hoặc cùng mẫu không làm thay đổi phạm vi áp dụng của quy trình này.\nPhạm vi tiếp nhận được xác định theo nơi mua và hồ sơ đơn hàng.",
+    "chunk_id": 12,
+    "text": "đúng mốc được nêu trong từng quy trình. Phạm vi tiếp nhận\nđược xác định theo nơi mua và loại sản phẩm được mô tả trong tài liệu.\nTình huống minh họa\nMột khách hàng mua sản phẩm cùng mẫu từ nhà bán hàng khác rồi liên hệ Cửa hàng Mẫu. Việc\nsản phẩm có cùng tên hoặc",
+    "source": "sample.pdf",
+    "page_number": 2
+  },
+  {
+    "parent_id": 2,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 02 / 13\nMỤC 01\nPhạm vi áp dụng\nQuy định chính\nChính sách áp dụng cho sản phẩm điện tử mới mua trực tiếp từ Cửa hàng Mẫu. Mỗi đơn hàng có\nmã đơn, ngày xác nhận, ngày giao thành công và hóa đơn điện tử. Khách hàng sử dụng các thông\ntin này khi yêu cầu hỗ trợ. Sản phẩm mua từ nhà bán hàng khác không được tiếp nhận theo quy\ntrình của Cửa hàng Mẫu. Tài liệu này không cung cấp thông số kỹ thuật, dung lượng pin hoặc công\nsuất của từng mẫu sản phẩm.\nDiễn giải áp dụng\nMã đơn, ngày xác nhận và ngày giao thành công là các thông tin khác nhau trong hồ sơ mua hàng.\nKhi đối chiếu chính sách, cần sử dụng đúng mốc được nêu trong từng quy trình. Phạm vi tiếp nhận\nđược xác định theo nơi mua và loại sản phẩm được mô tả trong tài liệu.\nTình huống minh họa\nMột khách hàng mua sản phẩm cùng mẫu từ nhà bán hàng khác rồi liên hệ Cửa hàng Mẫu. Việc\nsản phẩm có cùng tên hoặc cùng mẫu không làm thay đổi phạm vi áp dụng của quy trình này.\nPhạm vi tiếp nhận được xác định theo nơi mua và hồ sơ đơn hàng.",
+    "chunk_id": 13,
+    "text": "rồi liên hệ Cửa hàng Mẫu. Việc\nsản phẩm có cùng tên hoặc cùng mẫu không làm thay đổi phạm vi áp dụng của quy trình này.\nPhạm vi tiếp nhận được xác định theo nơi mua và hồ sơ đơn hàng.",
+    "source": "sample.pdf",
+    "page_number": 2
+  },
+  {
+    "parent_id": 3,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 03 / 13\nMỤC 02\nGiao hàng nội thành Hà Nội\nQuy định chính\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác\nnhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc\nđó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình\ngiao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua\nemail sau khi đơn hàng được bàn giao cho đơn vị giao nhận.\nDiễn giải áp dụng\nMốc 15 giờ quyết định ngày bắt đầu tính thời gian giao hàng nội thành. Quy định này sử dụng ngày\nlàm việc, vì vậy không thể coi hai ngày làm việc luôn tương đương với hai ngày lịch liên tiếp. Email\ncó mã vận chuyển được gửi sau bước bàn giao cho đơn vị giao nhận.\nTình huống minh họa\nMột đơn được xác nhận lúc 14 giờ trong ngày làm việc và một đơn khác lúc 16 giờ. Đơn đầu được\ntính từ ngày làm việc đó; đơn sau bắt đầu từ ngày làm việc kế tiếp.\nTrước 15 giờ: tính từ ngày làm việc đó. Từ 15 giờ trở đi: tính từ ngày làm việc kế tiếp.",
+    "chunk_id": 14,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 03 / 13\nMỤC 02\nGiao hàng nội thành Hà Nội\nQuy định chính\nĐơn hàng có địa chỉ nhận tại",
+    "source": "sample.pdf",
+    "page_number": 3
+  },
+  {
+    "parent_id": 3,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 03 / 13\nMỤC 02\nGiao hàng nội thành Hà Nội\nQuy định chính\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác\nnhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc\nđó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình\ngiao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua\nemail sau khi đơn hàng được bàn giao cho đơn vị giao nhận.\nDiễn giải áp dụng\nMốc 15 giờ quyết định ngày bắt đầu tính thời gian giao hàng nội thành. Quy định này sử dụng ngày\nlàm việc, vì vậy không thể coi hai ngày làm việc luôn tương đương với hai ngày lịch liên tiếp. Email\ncó mã vận chuyển được gửi sau bước bàn giao cho đơn vị giao nhận.\nTình huống minh họa\nMột đơn được xác nhận lúc 14 giờ trong ngày làm việc và một đơn khác lúc 16 giờ. Đơn đầu được\ntính từ ngày làm việc đó; đơn sau bắt đầu từ ngày làm việc kế tiếp.\nTrước 15 giờ: tính từ ngày làm việc đó. Từ 15 giờ trở đi: tính từ ngày làm việc kế tiếp.",
+    "chunk_id": 15,
+    "text": "Giao hàng nội thành Hà Nội\nQuy định chính\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác\nnhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc\nđó. Đơn xác nhận từ 15 giờ trở đi được",
+    "source": "sample.pdf",
+    "page_number": 3
+  },
+  {
+    "parent_id": 3,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 03 / 13\nMỤC 02\nGiao hàng nội thành Hà Nội\nQuy định chính\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác\nnhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc\nđó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình\ngiao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua\nemail sau khi đơn hàng được bàn giao cho đơn vị giao nhận.\nDiễn giải áp dụng\nMốc 15 giờ quyết định ngày bắt đầu tính thời gian giao hàng nội thành. Quy định này sử dụng ngày\nlàm việc, vì vậy không thể coi hai ngày làm việc luôn tương đương với hai ngày lịch liên tiếp. Email\ncó mã vận chuyển được gửi sau bước bàn giao cho đơn vị giao nhận.\nTình huống minh họa\nMột đơn được xác nhận lúc 14 giờ trong ngày làm việc và một đơn khác lúc 16 giờ. Đơn đầu được\ntính từ ngày làm việc đó; đơn sau bắt đầu từ ngày làm việc kế tiếp.\nTrước 15 giờ: tính từ ngày làm việc đó. Từ 15 giờ trở đi: tính từ ngày làm việc kế tiếp.",
+    "chunk_id": 16,
+    "text": "đầu từ ngày làm việc\nđó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình\ngiao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua\nemail sau khi đơn hàng được bàn giao cho đơn",
+    "source": "sample.pdf",
+    "page_number": 3
+  },
+  {
+    "parent_id": 3,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 03 / 13\nMỤC 02\nGiao hàng nội thành Hà Nội\nQuy định chính\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác\nnhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc\nđó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình\ngiao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua\nemail sau khi đơn hàng được bàn giao cho đơn vị giao nhận.\nDiễn giải áp dụng\nMốc 15 giờ quyết định ngày bắt đầu tính thời gian giao hàng nội thành. Quy định này sử dụng ngày\nlàm việc, vì vậy không thể coi hai ngày làm việc luôn tương đương với hai ngày lịch liên tiếp. Email\ncó mã vận chuyển được gửi sau bước bàn giao cho đơn vị giao nhận.\nTình huống minh họa\nMột đơn được xác nhận lúc 14 giờ trong ngày làm việc và một đơn khác lúc 16 giờ. Đơn đầu được\ntính từ ngày làm việc đó; đơn sau bắt đầu từ ngày làm việc kế tiếp.\nTrước 15 giờ: tính từ ngày làm việc đó. Từ 15 giờ trở đi: tính từ ngày làm việc kế tiếp.",
+    "chunk_id": 17,
+    "text": "hàng nhận mã vận chuyển qua\nemail sau khi đơn hàng được bàn giao cho đơn vị giao nhận.\nDiễn giải áp dụng\nMốc 15 giờ quyết định ngày bắt đầu tính thời gian giao hàng nội thành. Quy định này sử dụng ngày\nlàm việc, vì vậy không thể coi hai ngày làm việc luôn tương đương với hai",
+    "source": "sample.pdf",
+    "page_number": 3
+  },
+  {
+    "parent_id": 3,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 03 / 13\nMỤC 02\nGiao hàng nội thành Hà Nội\nQuy định chính\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác\nnhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc\nđó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình\ngiao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua\nemail sau khi đơn hàng được bàn giao cho đơn vị giao nhận.\nDiễn giải áp dụng\nMốc 15 giờ quyết định ngày bắt đầu tính thời gian giao hàng nội thành. Quy định này sử dụng ngày\nlàm việc, vì vậy không thể coi hai ngày làm việc luôn tương đương với hai ngày lịch liên tiếp. Email\ncó mã vận chuyển được gửi sau bước bàn giao cho đơn vị giao nhận.\nTình huống minh họa\nMột đơn được xác nhận lúc 14 giờ trong ngày làm việc và một đơn khác lúc 16 giờ. Đơn đầu được\ntính từ ngày làm việc đó; đơn sau bắt đầu từ ngày làm việc kế tiếp.\nTrước 15 giờ: tính từ ngày làm việc đó. Từ 15 giờ trở đi: tính từ ngày làm việc kế tiếp.",
+    "chunk_id": 18,
+    "text": "việc, vì vậy không thể coi hai ngày làm việc luôn tương đương với hai ngày lịch liên tiếp. Email\ncó mã vận chuyển được gửi sau bước bàn giao cho đơn vị giao nhận.\nTình huống minh họa\nMột đơn được xác nhận lúc 14 giờ trong ngày làm việc và một đơn khác lúc 16 giờ. Đơn đầu",
+    "source": "sample.pdf",
+    "page_number": 3
+  },
+  {
+    "parent_id": 3,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 03 / 13\nMỤC 02\nGiao hàng nội thành Hà Nội\nQuy định chính\nĐơn hàng có địa chỉ nhận tại nội thành Hà Nội được giao trong 2 ngày làm việc kể từ ngày xác\nnhận đơn. Đơn được xác nhận trước 15 giờ được tính thời gian giao hàng bắt đầu từ ngày làm việc\nđó. Đơn xác nhận từ 15 giờ trở đi được tính từ ngày làm việc kế tiếp. Ngày làm việc trong quy trình\ngiao hàng là từ thứ Hai đến thứ Sáu, không bao gồm ngày lễ. Khách hàng nhận mã vận chuyển qua\nemail sau khi đơn hàng được bàn giao cho đơn vị giao nhận.\nDiễn giải áp dụng\nMốc 15 giờ quyết định ngày bắt đầu tính thời gian giao hàng nội thành. Quy định này sử dụng ngày\nlàm việc, vì vậy không thể coi hai ngày làm việc luôn tương đương với hai ngày lịch liên tiếp. Email\ncó mã vận chuyển được gửi sau bước bàn giao cho đơn vị giao nhận.\nTình huống minh họa\nMột đơn được xác nhận lúc 14 giờ trong ngày làm việc và một đơn khác lúc 16 giờ. Đơn đầu được\ntính từ ngày làm việc đó; đơn sau bắt đầu từ ngày làm việc kế tiếp.\nTrước 15 giờ: tính từ ngày làm việc đó. Từ 15 giờ trở đi: tính từ ngày làm việc kế tiếp.",
+    "chunk_id": 19,
+    "text": "14 giờ trong ngày làm việc và một đơn khác lúc 16 giờ. Đơn đầu được\ntính từ ngày làm việc đó; đơn sau bắt đầu từ ngày làm việc kế tiếp.\nTrước 15 giờ: tính từ ngày làm việc đó. Từ 15 giờ trở đi: tính từ ngày làm việc kế tiếp.",
+    "source": "sample.pdf",
+    "page_number": 3
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 04 / 13\nMỤC 03\nGiao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính\ntừ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời\ngian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp dụng\nKhoảng giao hàng từ 3 đến 5 ngày làm việc dành cho địa chỉ ngoại thành Hà Nội hoặc các tỉnh. Đây\nlà thời gian vận chuyển, không phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền. Các quy trình cần được đối chiếu riêng theo nội dung tương ứng.\nTình huống minh họa\nKhách hàng có địa chỉ nhận hàng tại một tỉnh và nhận được thông báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng không sử dụng thời gian hoàn tiền để suy ra lịch giao hàng.\nĐối chiếu thời gian giao hàng riêng với thời gian xét duyệt đổi hoặc hoàn tiền.",
+    "chunk_id": 20,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 04 / 13\nMỤC 03\nGiao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà",
+    "source": "sample.pdf",
+    "page_number": 4
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 04 / 13\nMỤC 03\nGiao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính\ntừ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời\ngian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp dụng\nKhoảng giao hàng từ 3 đến 5 ngày làm việc dành cho địa chỉ ngoại thành Hà Nội hoặc các tỉnh. Đây\nlà thời gian vận chuyển, không phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền. Các quy trình cần được đối chiếu riêng theo nội dung tương ứng.\nTình huống minh họa\nKhách hàng có địa chỉ nhận hàng tại một tỉnh và nhận được thông báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng không sử dụng thời gian hoàn tiền để suy ra lịch giao hàng.\nĐối chiếu thời gian giao hàng riêng với thời gian xét duyệt đổi hoặc hoàn tiền.",
+    "chunk_id": 21,
+    "text": "Giao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính\ntừ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo",
+    "source": "sample.pdf",
+    "page_number": 4
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 04 / 13\nMỤC 03\nGiao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính\ntừ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời\ngian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp dụng\nKhoảng giao hàng từ 3 đến 5 ngày làm việc dành cho địa chỉ ngoại thành Hà Nội hoặc các tỉnh. Đây\nlà thời gian vận chuyển, không phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền. Các quy trình cần được đối chiếu riêng theo nội dung tương ứng.\nTình huống minh họa\nKhách hàng có địa chỉ nhận hàng tại một tỉnh và nhận được thông báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng không sử dụng thời gian hoàn tiền để suy ra lịch giao hàng.\nĐối chiếu thời gian giao hàng riêng với thời gian xét duyệt đổi hoặc hoàn tiền.",
+    "chunk_id": 22,
+    "text": "hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời\ngian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp",
+    "source": "sample.pdf",
+    "page_number": 4
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 04 / 13\nMỤC 03\nGiao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính\ntừ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời\ngian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp dụng\nKhoảng giao hàng từ 3 đến 5 ngày làm việc dành cho địa chỉ ngoại thành Hà Nội hoặc các tỉnh. Đây\nlà thời gian vận chuyển, không phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền. Các quy trình cần được đối chiếu riêng theo nội dung tương ứng.\nTình huống minh họa\nKhách hàng có địa chỉ nhận hàng tại một tỉnh và nhận được thông báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng không sử dụng thời gian hoàn tiền để suy ra lịch giao hàng.\nĐối chiếu thời gian giao hàng riêng với thời gian xét duyệt đổi hoặc hoàn tiền.",
+    "chunk_id": 23,
+    "text": "giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp dụng\nKhoảng giao hàng từ 3 đến 5 ngày làm việc dành cho địa chỉ ngoại thành Hà Nội hoặc các tỉnh. Đây\nlà thời gian vận chuyển, không phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền.",
+    "source": "sample.pdf",
+    "page_number": 4
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 04 / 13\nMỤC 03\nGiao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính\ntừ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời\ngian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp dụng\nKhoảng giao hàng từ 3 đến 5 ngày làm việc dành cho địa chỉ ngoại thành Hà Nội hoặc các tỉnh. Đây\nlà thời gian vận chuyển, không phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền. Các quy trình cần được đối chiếu riêng theo nội dung tương ứng.\nTình huống minh họa\nKhách hàng có địa chỉ nhận hàng tại một tỉnh và nhận được thông báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng không sử dụng thời gian hoàn tiền để suy ra lịch giao hàng.\nĐối chiếu thời gian giao hàng riêng với thời gian xét duyệt đổi hoặc hoàn tiền.",
+    "chunk_id": 24,
+    "text": "phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền. Các quy trình cần được đối chiếu riêng theo nội dung tương ứng.\nTình huống minh họa\nKhách hàng có địa chỉ nhận hàng tại một tỉnh và nhận được thông báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng",
+    "source": "sample.pdf",
+    "page_number": 4
+  },
+  {
+    "parent_id": 4,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 04 / 13\nMỤC 03\nGiao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính\ntừ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời\ngian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp dụng\nKhoảng giao hàng từ 3 đến 5 ngày làm việc dành cho địa chỉ ngoại thành Hà Nội hoặc các tỉnh. Đây\nlà thời gian vận chuyển, không phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền. Các quy trình cần được đối chiếu riêng theo nội dung tương ứng.\nTình huống minh họa\nKhách hàng có địa chỉ nhận hàng tại một tỉnh và nhận được thông báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng không sử dụng thời gian hoàn tiền để suy ra lịch giao hàng.\nĐối chiếu thời gian giao hàng riêng với thời gian xét duyệt đổi hoặc hoàn tiền.",
+    "chunk_id": 25,
+    "text": "báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng không sử dụng thời gian hoàn tiền để suy ra lịch giao hàng.\nĐối chiếu thời gian giao hàng riêng với thời gian xét duyệt đổi hoặc hoàn tiền.",
+    "source": "sample.pdf",
+    "page_number": 4
+  },
+  {
+    "parent_id": 5,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 05 / 13\nMỤC 04\nThời hạn đổi sản phẩm\nQuy định chính\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này\nđược tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua\nemail hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời\ngian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận\ntiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.\nDiễn giải áp dụng\nĐiều kiện về thời gian được kiểm tra dựa trên ngày khách hàng gửi yêu cầu qua email hỗ trợ. Mốc\n14 ngày sử dụng ngày lịch, nên cuối tuần và ngày lễ vẫn được tính. Việc đáp ứng thời hạn chỉ là\nmột phần của quá trình xem xét yêu cầu đổi.\nTình huống minh họa\nKhách hàng gửi email khi vẫn còn trong thời hạn đổi. Bộ phận tiếp nhận sử dụng ngày gửi email để\nđối chiếu thời gian, sau đó tiếp tục kiểm tra hồ sơ và tình trạng sản phẩm trước khi thông báo kết\nquả.\nGửi yêu cầu đúng hạn chưa đồng nghĩa với việc được chấp thuận đổi.",
+    "chunk_id": 26,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 05 / 13\nMỤC 04\nThời hạn đổi sản phẩm\nQuy định chính\nKhách hàng có thể gửi yêu cầu đổi",
+    "source": "sample.pdf",
+    "page_number": 5
+  },
+  {
+    "parent_id": 5,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 05 / 13\nMỤC 04\nThời hạn đổi sản phẩm\nQuy định chính\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này\nđược tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua\nemail hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời\ngian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận\ntiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.\nDiễn giải áp dụng\nĐiều kiện về thời gian được kiểm tra dựa trên ngày khách hàng gửi yêu cầu qua email hỗ trợ. Mốc\n14 ngày sử dụng ngày lịch, nên cuối tuần và ngày lễ vẫn được tính. Việc đáp ứng thời hạn chỉ là\nmột phần của quá trình xem xét yêu cầu đổi.\nTình huống minh họa\nKhách hàng gửi email khi vẫn còn trong thời hạn đổi. Bộ phận tiếp nhận sử dụng ngày gửi email để\nđối chiếu thời gian, sau đó tiếp tục kiểm tra hồ sơ và tình trạng sản phẩm trước khi thông báo kết\nquả.\nGửi yêu cầu đúng hạn chưa đồng nghĩa với việc được chấp thuận đổi.",
+    "chunk_id": 27,
+    "text": "Thời hạn đổi sản phẩm\nQuy định chính\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này\nđược tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua\nemail hỗ trợ trong thời hạn nêu trên",
+    "source": "sample.pdf",
+    "page_number": 5
+  },
+  {
+    "parent_id": 5,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 05 / 13\nMỤC 04\nThời hạn đổi sản phẩm\nQuy định chính\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này\nđược tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua\nemail hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời\ngian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận\ntiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.\nDiễn giải áp dụng\nĐiều kiện về thời gian được kiểm tra dựa trên ngày khách hàng gửi yêu cầu qua email hỗ trợ. Mốc\n14 ngày sử dụng ngày lịch, nên cuối tuần và ngày lễ vẫn được tính. Việc đáp ứng thời hạn chỉ là\nmột phần của quá trình xem xét yêu cầu đổi.\nTình huống minh họa\nKhách hàng gửi email khi vẫn còn trong thời hạn đổi. Bộ phận tiếp nhận sử dụng ngày gửi email để\nđối chiếu thời gian, sau đó tiếp tục kiểm tra hồ sơ và tình trạng sản phẩm trước khi thông báo kết\nquả.\nGửi yêu cầu đúng hạn chưa đồng nghĩa với việc được chấp thuận đổi.",
+    "chunk_id": 28,
+    "text": "lễ. Yêu cầu phải được gửi qua\nemail hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời\ngian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận\ntiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ",
+    "source": "sample.pdf",
+    "page_number": 5
+  },
+  {
+    "parent_id": 5,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 05 / 13\nMỤC 04\nThời hạn đổi sản phẩm\nQuy định chính\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này\nđược tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua\nemail hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời\ngian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận\ntiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.\nDiễn giải áp dụng\nĐiều kiện về thời gian được kiểm tra dựa trên ngày khách hàng gửi yêu cầu qua email hỗ trợ. Mốc\n14 ngày sử dụng ngày lịch, nên cuối tuần và ngày lễ vẫn được tính. Việc đáp ứng thời hạn chỉ là\nmột phần của quá trình xem xét yêu cầu đổi.\nTình huống minh họa\nKhách hàng gửi email khi vẫn còn trong thời hạn đổi. Bộ phận tiếp nhận sử dụng ngày gửi email để\nđối chiếu thời gian, sau đó tiếp tục kiểm tra hồ sơ và tình trạng sản phẩm trước khi thông báo kết\nquả.\nGửi yêu cầu đúng hạn chưa đồng nghĩa với việc được chấp thuận đổi.",
+    "chunk_id": 29,
+    "text": "thuận. Bộ phận\ntiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.\nDiễn giải áp dụng\nĐiều kiện về thời gian được kiểm tra dựa trên ngày khách hàng gửi yêu cầu qua email hỗ trợ. Mốc\n14 ngày sử dụng ngày lịch, nên cuối tuần và ngày lễ vẫn được tính",
+    "source": "sample.pdf",
+    "page_number": 5
+  },
+  {
+    "parent_id": 5,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 05 / 13\nMỤC 04\nThời hạn đổi sản phẩm\nQuy định chính\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này\nđược tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua\nemail hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời\ngian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận\ntiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.\nDiễn giải áp dụng\nĐiều kiện về thời gian được kiểm tra dựa trên ngày khách hàng gửi yêu cầu qua email hỗ trợ. Mốc\n14 ngày sử dụng ngày lịch, nên cuối tuần và ngày lễ vẫn được tính. Việc đáp ứng thời hạn chỉ là\nmột phần của quá trình xem xét yêu cầu đổi.\nTình huống minh họa\nKhách hàng gửi email khi vẫn còn trong thời hạn đổi. Bộ phận tiếp nhận sử dụng ngày gửi email để\nđối chiếu thời gian, sau đó tiếp tục kiểm tra hồ sơ và tình trạng sản phẩm trước khi thông báo kết\nquả.\nGửi yêu cầu đúng hạn chưa đồng nghĩa với việc được chấp thuận đổi.",
+    "chunk_id": 30,
+    "text": "14 ngày sử dụng ngày lịch, nên cuối tuần và ngày lễ vẫn được tính. Việc đáp ứng thời hạn chỉ là\nmột phần của quá trình xem xét yêu cầu đổi.\nTình huống minh họa\nKhách hàng gửi email khi vẫn còn trong thời hạn đổi. Bộ phận tiếp nhận sử dụng ngày gửi email để\nđối chiếu thời",
+    "source": "sample.pdf",
+    "page_number": 5
+  },
+  {
+    "parent_id": 5,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 05 / 13\nMỤC 04\nThời hạn đổi sản phẩm\nQuy định chính\nKhách hàng có thể gửi yêu cầu đổi sản phẩm trong 14 ngày kể từ ngày nhận hàng. Thời hạn này\nđược tính theo ngày lịch, bao gồm cả thứ Bảy, Chủ nhật và ngày lễ. Yêu cầu phải được gửi qua\nemail hỗ trợ trong thời hạn nêu trên; ngày gửi yêu cầu được dùng để kiểm tra điều kiện về thời\ngian. Việc gửi yêu cầu đúng hạn chưa đồng nghĩa với việc yêu cầu đã được chấp thuận. Bộ phận\ntiếp nhận còn phải kiểm tra tình trạng sản phẩm và hồ sơ của khách hàng.\nDiễn giải áp dụng\nĐiều kiện về thời gian được kiểm tra dựa trên ngày khách hàng gửi yêu cầu qua email hỗ trợ. Mốc\n14 ngày sử dụng ngày lịch, nên cuối tuần và ngày lễ vẫn được tính. Việc đáp ứng thời hạn chỉ là\nmột phần của quá trình xem xét yêu cầu đổi.\nTình huống minh họa\nKhách hàng gửi email khi vẫn còn trong thời hạn đổi. Bộ phận tiếp nhận sử dụng ngày gửi email để\nđối chiếu thời gian, sau đó tiếp tục kiểm tra hồ sơ và tình trạng sản phẩm trước khi thông báo kết\nquả.\nGửi yêu cầu đúng hạn chưa đồng nghĩa với việc được chấp thuận đổi.",
+    "chunk_id": 31,
+    "text": "hạn đổi. Bộ phận tiếp nhận sử dụng ngày gửi email để\nđối chiếu thời gian, sau đó tiếp tục kiểm tra hồ sơ và tình trạng sản phẩm trước khi thông báo kết\nquả.\nGửi yêu cầu đúng hạn chưa đồng nghĩa với việc được chấp thuận đổi.",
+    "source": "sample.pdf",
+    "page_number": 5
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 06 / 13\nMỤC 05\nĐiều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản\nphẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông\ntin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn\nchuyển sang mẫu khác.\nDiễn giải áp dụng\nLỗi kỹ thuật do nhà sản xuất và việc giao sai sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi cần có cả mã đơn và hóa đơn điện tử. Các điều kiện về phụ kiện, số sê-ri, tem bảo hành và\ntình trạng sản phẩm vẫn cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và đã cung cấp mã đơn cùng hóa đơn điện tử. Bộ phận tiếp nhận\nvẫn đối chiếu phụ kiện, số sê-ri và tình trạng sản phẩm; việc nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi sản phẩm cần mã đơn và hóa đơn điện tử.",
+    "chunk_id": 32,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 06 / 13\nMỤC 05\nĐiều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét",
+    "source": "sample.pdf",
+    "page_number": 6
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 06 / 13\nMỤC 05\nĐiều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản\nphẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông\ntin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn\nchuyển sang mẫu khác.\nDiễn giải áp dụng\nLỗi kỹ thuật do nhà sản xuất và việc giao sai sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi cần có cả mã đơn và hóa đơn điện tử. Các điều kiện về phụ kiện, số sê-ri, tem bảo hành và\ntình trạng sản phẩm vẫn cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và đã cung cấp mã đơn cùng hóa đơn điện tử. Bộ phận tiếp nhận\nvẫn đối chiếu phụ kiện, số sê-ri và tình trạng sản phẩm; việc nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi sản phẩm cần mã đơn và hóa đơn điện tử.",
+    "chunk_id": 33,
+    "text": "Điều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản\nphẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện",
+    "source": "sample.pdf",
+    "page_number": 6
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 06 / 13\nMỤC 05\nĐiều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản\nphẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông\ntin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn\nchuyển sang mẫu khác.\nDiễn giải áp dụng\nLỗi kỹ thuật do nhà sản xuất và việc giao sai sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi cần có cả mã đơn và hóa đơn điện tử. Các điều kiện về phụ kiện, số sê-ri, tem bảo hành và\ntình trạng sản phẩm vẫn cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và đã cung cấp mã đơn cùng hóa đơn điện tử. Bộ phận tiếp nhận\nvẫn đối chiếu phụ kiện, số sê-ri và tình trạng sản phẩm; việc nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi sản phẩm cần mã đơn và hóa đơn điện tử.",
+    "chunk_id": 34,
+    "text": "và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông\ntin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản",
+    "source": "sample.pdf",
+    "page_number": 6
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 06 / 13\nMỤC 05\nĐiều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản\nphẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông\ntin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn\nchuyển sang mẫu khác.\nDiễn giải áp dụng\nLỗi kỹ thuật do nhà sản xuất và việc giao sai sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi cần có cả mã đơn và hóa đơn điện tử. Các điều kiện về phụ kiện, số sê-ri, tem bảo hành và\ntình trạng sản phẩm vẫn cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và đã cung cấp mã đơn cùng hóa đơn điện tử. Bộ phận tiếp nhận\nvẫn đối chiếu phụ kiện, số sê-ri và tình trạng sản phẩm; việc nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi sản phẩm cần mã đơn và hóa đơn điện tử.",
+    "chunk_id": 35,
+    "text": "dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn\nchuyển sang mẫu khác.\nDiễn giải áp dụng\nLỗi kỹ thuật do nhà sản xuất và việc giao sai sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi",
+    "source": "sample.pdf",
+    "page_number": 6
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 06 / 13\nMỤC 05\nĐiều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản\nphẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông\ntin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn\nchuyển sang mẫu khác.\nDiễn giải áp dụng\nLỗi kỹ thuật do nhà sản xuất và việc giao sai sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi cần có cả mã đơn và hóa đơn điện tử. Các điều kiện về phụ kiện, số sê-ri, tem bảo hành và\ntình trạng sản phẩm vẫn cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và đã cung cấp mã đơn cùng hóa đơn điện tử. Bộ phận tiếp nhận\nvẫn đối chiếu phụ kiện, số sê-ri và tình trạng sản phẩm; việc nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi sản phẩm cần mã đơn và hóa đơn điện tử.",
+    "chunk_id": 36,
+    "text": "sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi cần có cả mã đơn và hóa đơn điện tử. Các điều kiện về phụ kiện, số sê-ri, tem bảo hành và\ntình trạng sản phẩm vẫn cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và",
+    "source": "sample.pdf",
+    "page_number": 6
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 06 / 13\nMỤC 05\nĐiều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản\nphẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông\ntin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn\nchuyển sang mẫu khác.\nDiễn giải áp dụng\nLỗi kỹ thuật do nhà sản xuất và việc giao sai sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi cần có cả mã đơn và hóa đơn điện tử. Các điều kiện về phụ kiện, số sê-ri, tem bảo hành và\ntình trạng sản phẩm vẫn cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và đã cung cấp mã đơn cùng hóa đơn điện tử. Bộ phận tiếp nhận\nvẫn đối chiếu phụ kiện, số sê-ri và tình trạng sản phẩm; việc nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi sản phẩm cần mã đơn và hóa đơn điện tử.",
+    "chunk_id": 37,
+    "text": "cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và đã cung cấp mã đơn cùng hóa đơn điện tử. Bộ phận tiếp nhận\nvẫn đối chiếu phụ kiện, số sê-ri và tình trạng sản phẩm; việc nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi",
+    "source": "sample.pdf",
+    "page_number": 6
+  },
+  {
+    "parent_id": 6,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 06 / 13\nMỤC 05\nĐiều kiện chấp thuận đổi sản phẩm\nQuy định chính\nYêu cầu đổi được xem xét khi sản phẩm có lỗi kỹ thuật do nhà sản xuất hoặc cửa hàng giao sai sản\nphẩm so với đơn đã xác nhận. Khách hàng cần cung cấp mã đơn và hóa đơn điện tử. Sản phẩm\nphải được gửi kèm đầy đủ phụ kiện đã nhận ban đầu. Số sê-ri trên sản phẩm cần khớp với thông\ntin của đơn hàng, tem bảo hành còn nguyên vẹn và sản phẩm không có dấu hiệu hư hỏng do người\nsử dụng. Cửa hàng không áp dụng đổi sản phẩm chỉ vì khách hàng thay đổi sở thích hoặc muốn\nchuyển sang mẫu khác.\nDiễn giải áp dụng\nLỗi kỹ thuật do nhà sản xuất và việc giao sai sản phẩm là hai căn cứ được nêu để xem xét đổi. Hồ\nsơ đổi cần có cả mã đơn và hóa đơn điện tử. Các điều kiện về phụ kiện, số sê-ri, tem bảo hành và\ntình trạng sản phẩm vẫn cần được kiểm tra.\nTình huống minh họa\nKhách hàng nhận sai sản phẩm và đã cung cấp mã đơn cùng hóa đơn điện tử. Bộ phận tiếp nhận\nvẫn đối chiếu phụ kiện, số sê-ri và tình trạng sản phẩm; việc nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi sản phẩm cần mã đơn và hóa đơn điện tử.",
+    "chunk_id": 38,
+    "text": "nêu đúng lý do chưa thay thế các bước\nkiểm tra này.\nHồ sơ đổi sản phẩm cần mã đơn và hóa đơn điện tử.",
+    "source": "sample.pdf",
+    "page_number": 6
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 07 / 13\nMỤC 06\nQuy trình gửi yêu cầu đổi\nQuy định chính\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu\ncó thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp\nnhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn\nsau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ\nphận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.\nDiễn giải áp dụng\nPhản hồi hướng dẫn tiếp nhận và thông báo kết quả xét duyệt là hai bước riêng biệt. Mốc 1 ngày\nlàm việc bắt đầu khi bộ phận hỗ trợ nhận đủ thông tin; mốc 2 ngày làm việc gắn với thời điểm bộ\nphận tiếp nhận nhận được sản phẩm. Ảnh hoặc video được đính kèm nếu có thể.\nTình huống minh họa\nKhách hàng nhận email xác nhận tiếp nhận rồi gửi sản phẩm theo hướng dẫn. Email này hướng\ndẫn bước gửi hàng, còn kết quả xét duyệt được thông báo sau khi sản phẩm được kiểm tra.\nNhận đủ thông tin và nhận được sản phẩm là hai mốc khác nhau.",
+    "chunk_id": 39,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 07 / 13\nMỤC 06\nQuy trình gửi yêu cầu đổi\nQuy định chính\nĐầu tiên, khách hàng gửi email",
+    "source": "sample.pdf",
+    "page_number": 7
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 07 / 13\nMỤC 06\nQuy trình gửi yêu cầu đổi\nQuy định chính\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu\ncó thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp\nnhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn\nsau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ\nphận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.\nDiễn giải áp dụng\nPhản hồi hướng dẫn tiếp nhận và thông báo kết quả xét duyệt là hai bước riêng biệt. Mốc 1 ngày\nlàm việc bắt đầu khi bộ phận hỗ trợ nhận đủ thông tin; mốc 2 ngày làm việc gắn với thời điểm bộ\nphận tiếp nhận nhận được sản phẩm. Ảnh hoặc video được đính kèm nếu có thể.\nTình huống minh họa\nKhách hàng nhận email xác nhận tiếp nhận rồi gửi sản phẩm theo hướng dẫn. Email này hướng\ndẫn bước gửi hàng, còn kết quả xét duyệt được thông báo sau khi sản phẩm được kiểm tra.\nNhận đủ thông tin và nhận được sản phẩm là hai mốc khác nhau.",
+    "chunk_id": 40,
+    "text": "Quy trình gửi yêu cầu đổi\nQuy định chính\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu\ncó thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp\nnhận trong 1 ngày làm việc kể",
+    "source": "sample.pdf",
+    "page_number": 7
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 07 / 13\nMỤC 06\nQuy trình gửi yêu cầu đổi\nQuy định chính\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu\ncó thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp\nnhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn\nsau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ\nphận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.\nDiễn giải áp dụng\nPhản hồi hướng dẫn tiếp nhận và thông báo kết quả xét duyệt là hai bước riêng biệt. Mốc 1 ngày\nlàm việc bắt đầu khi bộ phận hỗ trợ nhận đủ thông tin; mốc 2 ngày làm việc gắn với thời điểm bộ\nphận tiếp nhận nhận được sản phẩm. Ảnh hoặc video được đính kèm nếu có thể.\nTình huống minh họa\nKhách hàng nhận email xác nhận tiếp nhận rồi gửi sản phẩm theo hướng dẫn. Email này hướng\ndẫn bước gửi hàng, còn kết quả xét duyệt được thông báo sau khi sản phẩm được kiểm tra.\nNhận đủ thông tin và nhận được sản phẩm là hai mốc khác nhau.",
+    "chunk_id": 41,
+    "text": "Bộ phận hỗ trợ phản hồi hướng dẫn tiếp\nnhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn\nsau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ\nphận tiếp nhận kiểm tra và thông báo kết quả",
+    "source": "sample.pdf",
+    "page_number": 7
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 07 / 13\nMỤC 06\nQuy trình gửi yêu cầu đổi\nQuy định chính\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu\ncó thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp\nnhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn\nsau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ\nphận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.\nDiễn giải áp dụng\nPhản hồi hướng dẫn tiếp nhận và thông báo kết quả xét duyệt là hai bước riêng biệt. Mốc 1 ngày\nlàm việc bắt đầu khi bộ phận hỗ trợ nhận đủ thông tin; mốc 2 ngày làm việc gắn với thời điểm bộ\nphận tiếp nhận nhận được sản phẩm. Ảnh hoặc video được đính kèm nếu có thể.\nTình huống minh họa\nKhách hàng nhận email xác nhận tiếp nhận rồi gửi sản phẩm theo hướng dẫn. Email này hướng\ndẫn bước gửi hàng, còn kết quả xét duyệt được thông báo sau khi sản phẩm được kiểm tra.\nNhận đủ thông tin và nhận được sản phẩm là hai mốc khác nhau.",
+    "chunk_id": 42,
+    "text": "nhận được sản phẩm, bộ\nphận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.\nDiễn giải áp dụng\nPhản hồi hướng dẫn tiếp nhận và thông báo kết quả xét duyệt là hai bước riêng biệt. Mốc 1 ngày\nlàm việc bắt đầu khi bộ phận hỗ trợ nhận đủ thông tin",
+    "source": "sample.pdf",
+    "page_number": 7
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 07 / 13\nMỤC 06\nQuy trình gửi yêu cầu đổi\nQuy định chính\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu\ncó thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp\nnhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn\nsau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ\nphận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.\nDiễn giải áp dụng\nPhản hồi hướng dẫn tiếp nhận và thông báo kết quả xét duyệt là hai bước riêng biệt. Mốc 1 ngày\nlàm việc bắt đầu khi bộ phận hỗ trợ nhận đủ thông tin; mốc 2 ngày làm việc gắn với thời điểm bộ\nphận tiếp nhận nhận được sản phẩm. Ảnh hoặc video được đính kèm nếu có thể.\nTình huống minh họa\nKhách hàng nhận email xác nhận tiếp nhận rồi gửi sản phẩm theo hướng dẫn. Email này hướng\ndẫn bước gửi hàng, còn kết quả xét duyệt được thông báo sau khi sản phẩm được kiểm tra.\nNhận đủ thông tin và nhận được sản phẩm là hai mốc khác nhau.",
+    "chunk_id": 43,
+    "text": "ốc 1 ngày\nlàm việc bắt đầu khi bộ phận hỗ trợ nhận đủ thông tin; mốc 2 ngày làm việc gắn với thời điểm bộ\nphận tiếp nhận nhận được sản phẩm. Ảnh hoặc video được đính kèm nếu có thể.\nTình huống minh họa\nKhách hàng nhận email xác nhận tiếp nhận rồi gửi sản phẩm theo hướng",
+    "source": "sample.pdf",
+    "page_number": 7
+  },
+  {
+    "parent_id": 7,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 07 / 13\nMỤC 06\nQuy trình gửi yêu cầu đổi\nQuy định chính\nĐầu tiên, khách hàng gửi email nêu mã đơn, tên sản phẩm, ngày nhận hàng và mô tả vấn đề. Nếu\ncó thể, khách hàng đính kèm ảnh hoặc video thể hiện lỗi. Bộ phận hỗ trợ phản hồi hướng dẫn tiếp\nnhận trong 1 ngày làm việc kể từ khi nhận đủ thông tin. Khách hàng gửi sản phẩm theo hướng dẫn\nsau khi có email xác nhận tiếp nhận. Trong 2 ngày làm việc kể từ khi nhận được sản phẩm, bộ\nphận tiếp nhận kiểm tra và thông báo kết quả xét duyệt yêu cầu đổi.\nDiễn giải áp dụng\nPhản hồi hướng dẫn tiếp nhận và thông báo kết quả xét duyệt là hai bước riêng biệt. Mốc 1 ngày\nlàm việc bắt đầu khi bộ phận hỗ trợ nhận đủ thông tin; mốc 2 ngày làm việc gắn với thời điểm bộ\nphận tiếp nhận nhận được sản phẩm. Ảnh hoặc video được đính kèm nếu có thể.\nTình huống minh họa\nKhách hàng nhận email xác nhận tiếp nhận rồi gửi sản phẩm theo hướng dẫn. Email này hướng\ndẫn bước gửi hàng, còn kết quả xét duyệt được thông báo sau khi sản phẩm được kiểm tra.\nNhận đủ thông tin và nhận được sản phẩm là hai mốc khác nhau.",
+    "chunk_id": 44,
+    "text": "minh họa\nKhách hàng nhận email xác nhận tiếp nhận rồi gửi sản phẩm theo hướng dẫn. Email này hướng\ndẫn bước gửi hàng, còn kết quả xét duyệt được thông báo sau khi sản phẩm được kiểm tra.\nNhận đủ thông tin và nhận được sản phẩm là hai mốc khác nhau.",
+    "source": "sample.pdf",
+    "page_number": 7
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 08 / 13\nMỤC 07\nKết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang\nsản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email.\nKhoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp\nthuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi\nthường hoặc lãi phát sinh khi chờ hoàn tiền.\nDiễn giải áp dụng\nPhương án sau xét duyệt phụ thuộc vào việc sản phẩm cùng mẫu còn hàng hay đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu cầu đổi ban đầu, mà từ ngày phương án hoàn tiền được\nchấp thuận. Phương thức nhận tiền hoàn là phương thức thanh toán ban đầu.\nTình huống minh họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng. Khách hàng chọn nhận\nhoàn tiền và xác nhận qua email. Bộ phận hỗ trợ đối chiếu ngày phương án hoàn tiền được chấp\nthuận để tính thời gian xử lý.\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận.",
+    "chunk_id": 45,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 08 / 13\nMỤC 07\nKết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được",
+    "source": "sample.pdf",
+    "page_number": 8
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 08 / 13\nMỤC 07\nKết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang\nsản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email.\nKhoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp\nthuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi\nthường hoặc lãi phát sinh khi chờ hoàn tiền.\nDiễn giải áp dụng\nPhương án sau xét duyệt phụ thuộc vào việc sản phẩm cùng mẫu còn hàng hay đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu cầu đổi ban đầu, mà từ ngày phương án hoàn tiền được\nchấp thuận. Phương thức nhận tiền hoàn là phương thức thanh toán ban đầu.\nTình huống minh họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng. Khách hàng chọn nhận\nhoàn tiền và xác nhận qua email. Bộ phận hỗ trợ đối chiếu ngày phương án hoàn tiền được chấp\nthuận để tính thời gian xử lý.\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận.",
+    "chunk_id": 46,
+    "text": "Kết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang\nsản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực",
+    "source": "sample.pdf",
+    "page_number": 8
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 08 / 13\nMỤC 07\nKết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang\nsản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email.\nKhoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp\nthuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi\nthường hoặc lãi phát sinh khi chờ hoàn tiền.\nDiễn giải áp dụng\nPhương án sau xét duyệt phụ thuộc vào việc sản phẩm cùng mẫu còn hàng hay đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu cầu đổi ban đầu, mà từ ngày phương án hoàn tiền được\nchấp thuận. Phương thức nhận tiền hoàn là phương thức thanh toán ban đầu.\nTình huống minh họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng. Khách hàng chọn nhận\nhoàn tiền và xác nhận qua email. Bộ phận hỗ trợ đối chiếu ngày phương án hoàn tiền được chấp\nthuận để tính thời gian xử lý.\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận.",
+    "chunk_id": 47,
+    "text": "có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email.\nKhoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp\nthuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu",
+    "source": "sample.pdf",
+    "page_number": 8
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 08 / 13\nMỤC 07\nKết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang\nsản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email.\nKhoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp\nthuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi\nthường hoặc lãi phát sinh khi chờ hoàn tiền.\nDiễn giải áp dụng\nPhương án sau xét duyệt phụ thuộc vào việc sản phẩm cùng mẫu còn hàng hay đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu cầu đổi ban đầu, mà từ ngày phương án hoàn tiền được\nchấp thuận. Phương thức nhận tiền hoàn là phương thức thanh toán ban đầu.\nTình huống minh họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng. Khách hàng chọn nhận\nhoàn tiền và xác nhận qua email. Bộ phận hỗ trợ đối chiếu ngày phương án hoàn tiền được chấp\nthuận để tính thời gian xử lý.\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận.",
+    "chunk_id": 48,
+    "text": "Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi\nthường hoặc lãi phát sinh khi chờ hoàn tiền.\nDiễn giải áp dụng\nPhương án sau xét duyệt phụ thuộc vào việc sản phẩm cùng mẫu còn hàng hay đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu",
+    "source": "sample.pdf",
+    "page_number": 8
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 08 / 13\nMỤC 07\nKết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang\nsản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email.\nKhoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp\nthuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi\nthường hoặc lãi phát sinh khi chờ hoàn tiền.\nDiễn giải áp dụng\nPhương án sau xét duyệt phụ thuộc vào việc sản phẩm cùng mẫu còn hàng hay đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu cầu đổi ban đầu, mà từ ngày phương án hoàn tiền được\nchấp thuận. Phương thức nhận tiền hoàn là phương thức thanh toán ban đầu.\nTình huống minh họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng. Khách hàng chọn nhận\nhoàn tiền và xác nhận qua email. Bộ phận hỗ trợ đối chiếu ngày phương án hoàn tiền được chấp\nthuận để tính thời gian xử lý.\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận.",
+    "chunk_id": 49,
+    "text": "đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu cầu đổi ban đầu, mà từ ngày phương án hoàn tiền được\nchấp thuận. Phương thức nhận tiền hoàn là phương thức thanh toán ban đầu.\nTình huống minh họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng.",
+    "source": "sample.pdf",
+    "page_number": 8
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 08 / 13\nMỤC 07\nKết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang\nsản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email.\nKhoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp\nthuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi\nthường hoặc lãi phát sinh khi chờ hoàn tiền.\nDiễn giải áp dụng\nPhương án sau xét duyệt phụ thuộc vào việc sản phẩm cùng mẫu còn hàng hay đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu cầu đổi ban đầu, mà từ ngày phương án hoàn tiền được\nchấp thuận. Phương thức nhận tiền hoàn là phương thức thanh toán ban đầu.\nTình huống minh họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng. Khách hàng chọn nhận\nhoàn tiền và xác nhận qua email. Bộ phận hỗ trợ đối chiếu ngày phương án hoàn tiền được chấp\nthuận để tính thời gian xử lý.\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận.",
+    "chunk_id": 50,
+    "text": "họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng. Khách hàng chọn nhận\nhoàn tiền và xác nhận qua email. Bộ phận hỗ trợ đối chiếu ngày phương án hoàn tiền được chấp\nthuận để tính thời gian xử lý.\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận",
+    "source": "sample.pdf",
+    "page_number": 8
+  },
+  {
+    "parent_id": 8,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 08 / 13\nMỤC 07\nKết quả xét duyệt đổi và hoàn tiền\nQuy định chính\nNếu yêu cầu đổi được chấp thuận và sản phẩm cùng mẫu còn hàng, cửa hàng tiến hành đổi sang\nsản phẩm cùng mẫu. Nếu sản phẩm cùng mẫu đã hết hàng, khách hàng có thể chọn chờ bổ sung\nhàng hoặc nhận hoàn tiền. Phương án được thực hiện sau khi khách hàng xác nhận qua email.\nKhoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp\nthuận. Tiền được hoàn về phương thức thanh toán ban đầu. Chính sách này không nêu mức bồi\nthường hoặc lãi phát sinh khi chờ hoàn tiền.\nDiễn giải áp dụng\nPhương án sau xét duyệt phụ thuộc vào việc sản phẩm cùng mẫu còn hàng hay đã hết hàng. Mốc\nxử lý hoàn tiền không bắt đầu từ email yêu cầu đổi ban đầu, mà từ ngày phương án hoàn tiền được\nchấp thuận. Phương thức nhận tiền hoàn là phương thức thanh toán ban đầu.\nTình huống minh họa\nYêu cầu đổi đã được chấp thuận nhưng sản phẩm cùng mẫu hết hàng. Khách hàng chọn nhận\nhoàn tiền và xác nhận qua email. Bộ phận hỗ trợ đối chiếu ngày phương án hoàn tiền được chấp\nthuận để tính thời gian xử lý.\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận.",
+    "chunk_id": 51,
+    "text": ".\nThời gian hoàn tiền được tính từ ngày phương án hoàn tiền được chấp thuận.",
+    "source": "sample.pdf",
+    "page_number": 8
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+    "chunk_id": 52,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong",
+    "source": "sample.pdf",
+    "page_number": 9
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+    "chunk_id": 53,
+    "text": "Thời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa",
+    "source": "sample.pdf",
+    "page_number": 9
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+    "chunk_id": 54,
+    "text": "thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có",
+    "source": "sample.pdf",
+    "page_number": 9
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+    "chunk_id": 55,
+    "text": ". Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo",
+    "source": "sample.pdf",
+    "page_number": 9
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+    "chunk_id": 56,
+    "text": "ốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa",
+    "source": "sample.pdf",
+    "page_number": 9
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+    "chunk_id": 57,
+    "text": "phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được",
+    "source": "sample.pdf",
+    "page_number": 9
+  },
+  {
+    "parent_id": 9,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+    "chunk_id": 58,
+    "text": "thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+    "source": "sample.pdf",
+    "page_number": 9
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 10 / 13\nMỤC 09\nCác trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc\ntự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông\nthường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa\ncho các trường hợp ngoài phạm vi bảo hành.\nDiễn giải áp dụng\nViệc sản phẩm còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi bảo\nhành. Nguyên nhân hư hỏng và tình trạng thực tế cần được kiểm tra theo các trường hợp đã nêu.\nHao mòn ngoại hình thông thường được phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột sản phẩm còn trong thời hạn bảo hành bị hư hỏng sau khi rơi vỡ. Trường hợp rơi vỡ nằm\nngoài phạm vi bảo hành được mô tả; tài liệu không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu lực và nguyên nhân hư hỏng cần được xem xét riêng.",
+    "chunk_id": 59,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 10 / 13\nMỤC 09\nCác trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng",
+    "source": "sample.pdf",
+    "page_number": 10
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 10 / 13\nMỤC 09\nCác trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc\ntự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông\nthường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa\ncho các trường hợp ngoài phạm vi bảo hành.\nDiễn giải áp dụng\nViệc sản phẩm còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi bảo\nhành. Nguyên nhân hư hỏng và tình trạng thực tế cần được kiểm tra theo các trường hợp đã nêu.\nHao mòn ngoại hình thông thường được phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột sản phẩm còn trong thời hạn bảo hành bị hư hỏng sau khi rơi vỡ. Trường hợp rơi vỡ nằm\nngoài phạm vi bảo hành được mô tả; tài liệu không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu lực và nguyên nhân hư hỏng cần được xem xét riêng.",
+    "chunk_id": 60,
+    "text": "Các trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc\ntự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm",
+    "source": "sample.pdf",
+    "page_number": 10
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 10 / 13\nMỤC 09\nCác trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc\ntự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông\nthường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa\ncho các trường hợp ngoài phạm vi bảo hành.\nDiễn giải áp dụng\nViệc sản phẩm còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi bảo\nhành. Nguyên nhân hư hỏng và tình trạng thực tế cần được kiểm tra theo các trường hợp đã nêu.\nHao mòn ngoại hình thông thường được phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột sản phẩm còn trong thời hạn bảo hành bị hư hỏng sau khi rơi vỡ. Trường hợp rơi vỡ nằm\nngoài phạm vi bảo hành được mô tả; tài liệu không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu lực và nguyên nhân hư hỏng cần được xem xét riêng.",
+    "chunk_id": 61,
+    "text": "sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông\nthường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng",
+    "source": "sample.pdf",
+    "page_number": 10
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 10 / 13\nMỤC 09\nCác trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc\ntự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông\nthường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa\ncho các trường hợp ngoài phạm vi bảo hành.\nDiễn giải áp dụng\nViệc sản phẩm còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi bảo\nhành. Nguyên nhân hư hỏng và tình trạng thực tế cần được kiểm tra theo các trường hợp đã nêu.\nHao mòn ngoại hình thông thường được phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột sản phẩm còn trong thời hạn bảo hành bị hư hỏng sau khi rơi vỡ. Trường hợp rơi vỡ nằm\nngoài phạm vi bảo hành được mô tả; tài liệu không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu lực và nguyên nhân hư hỏng cần được xem xét riêng.",
+    "chunk_id": 62,
+    "text": "lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa\ncho các trường hợp ngoài phạm vi bảo hành.\nDiễn giải áp dụng\nViệc sản phẩm còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi",
+    "source": "sample.pdf",
+    "page_number": 10
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 10 / 13\nMỤC 09\nCác trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc\ntự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông\nthường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa\ncho các trường hợp ngoài phạm vi bảo hành.\nDiễn giải áp dụng\nViệc sản phẩm còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi bảo\nhành. Nguyên nhân hư hỏng và tình trạng thực tế cần được kiểm tra theo các trường hợp đã nêu.\nHao mòn ngoại hình thông thường được phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột sản phẩm còn trong thời hạn bảo hành bị hư hỏng sau khi rơi vỡ. Trường hợp rơi vỡ nằm\nngoài phạm vi bảo hành được mô tả; tài liệu không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu lực và nguyên nhân hư hỏng cần được xem xét riêng.",
+    "chunk_id": 63,
+    "text": "còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi bảo\nhành. Nguyên nhân hư hỏng và tình trạng thực tế cần được kiểm tra theo các trường hợp đã nêu.\nHao mòn ngoại hình thông thường được phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột",
+    "source": "sample.pdf",
+    "page_number": 10
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 10 / 13\nMỤC 09\nCác trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc\ntự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông\nthường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa\ncho các trường hợp ngoài phạm vi bảo hành.\nDiễn giải áp dụng\nViệc sản phẩm còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi bảo\nhành. Nguyên nhân hư hỏng và tình trạng thực tế cần được kiểm tra theo các trường hợp đã nêu.\nHao mòn ngoại hình thông thường được phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột sản phẩm còn trong thời hạn bảo hành bị hư hỏng sau khi rơi vỡ. Trường hợp rơi vỡ nằm\nngoài phạm vi bảo hành được mô tả; tài liệu không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu lực và nguyên nhân hư hỏng cần được xem xét riêng.",
+    "chunk_id": 64,
+    "text": "phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột sản phẩm còn trong thời hạn bảo hành bị hư hỏng sau khi rơi vỡ. Trường hợp rơi vỡ nằm\nngoài phạm vi bảo hành được mô tả; tài liệu không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu",
+    "source": "sample.pdf",
+    "page_number": 10
+  },
+  {
+    "parent_id": 10,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 10 / 13\nMỤC 09\nCác trường hợp ngoài phạm vi bảo hành\nQuy định chính\nBảo hành không áp dụng cho hư hỏng do rơi vỡ, va đập, vào nước, sử dụng sai hướng dẫn hoặc\ntự ý thay đổi kết cấu sản phẩm. Sản phẩm đã được sửa chữa hoặc thay linh kiện tại nơi không\nđược cửa hàng xác nhận cũng nằm ngoài phạm vi bảo hành. Những hao mòn ngoại hình thông\nthường, như trầy xước vỏ trong quá trình sử dụng, không được xem là lỗi kỹ thuật do nhà sản xuất.\nBộ phận kỹ thuật kiểm tra tình trạng thực tế trước khi kết luận. Tài liệu không quy định giá sửa chữa\ncho các trường hợp ngoài phạm vi bảo hành.\nDiễn giải áp dụng\nViệc sản phẩm còn trong thời hạn 18 tháng không có nghĩa mọi hư hỏng đều thuộc phạm vi bảo\nhành. Nguyên nhân hư hỏng và tình trạng thực tế cần được kiểm tra theo các trường hợp đã nêu.\nHao mòn ngoại hình thông thường được phân biệt với lỗi kỹ thuật do nhà sản xuất.\nTình huống minh họa\nMột sản phẩm còn trong thời hạn bảo hành bị hư hỏng sau khi rơi vỡ. Trường hợp rơi vỡ nằm\nngoài phạm vi bảo hành được mô tả; tài liệu không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu lực và nguyên nhân hư hỏng cần được xem xét riêng.",
+    "chunk_id": 65,
+    "text": "không cung cấp mức giá sửa chữa cho tình huống\nnày.\nThời hạn còn hiệu lực và nguyên nhân hư hỏng cần được xem xét riêng.",
+    "source": "sample.pdf",
+    "page_number": 10
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 11 / 13\nMỤC 10\nTiếp nhận và xử lý bảo hành\nQuy định chính\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày\nlàm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong\ntối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình\ntrạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau.\nTài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.\nDiễn giải áp dụng\nThời gian kiểm tra lỗi được tính từ khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng. Thời gian\nsửa chữa được tính từ ngày xác nhận lỗi và chỉ áp dụng theo điều kiện về phạm vi bảo hành cùng\ntình trạng linh kiện. Hai mốc này không được sử dụng thay thế cho nhau.\nTình huống minh họa\nBộ phận kỹ thuật xác nhận lỗi thuộc phạm vi bảo hành nhưng cần chờ linh kiện. Khách hàng nhận\nemail về tình trạng và thời gian dự kiến; tài liệu không cam kết tổng thời gian hoàn tất trong trường\nhợp chờ này.\nTrường hợp chờ linh kiện chưa có cam kết tổng thời gian hoàn tất.",
+    "chunk_id": 66,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 11 / 13\nMỤC 10\nTiếp nhận và xử lý bảo hành\nQuy định chính\nSau khi tiếp nhận sản phẩm",
+    "source": "sample.pdf",
+    "page_number": 11
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 11 / 13\nMỤC 10\nTiếp nhận và xử lý bảo hành\nQuy định chính\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày\nlàm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong\ntối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình\ntrạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau.\nTài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.\nDiễn giải áp dụng\nThời gian kiểm tra lỗi được tính từ khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng. Thời gian\nsửa chữa được tính từ ngày xác nhận lỗi và chỉ áp dụng theo điều kiện về phạm vi bảo hành cùng\ntình trạng linh kiện. Hai mốc này không được sử dụng thay thế cho nhau.\nTình huống minh họa\nBộ phận kỹ thuật xác nhận lỗi thuộc phạm vi bảo hành nhưng cần chờ linh kiện. Khách hàng nhận\nemail về tình trạng và thời gian dự kiến; tài liệu không cam kết tổng thời gian hoàn tất trong trường\nhợp chờ này.\nTrường hợp chờ linh kiện chưa có cam kết tổng thời gian hoàn tất.",
+    "chunk_id": 67,
+    "text": "Tiếp nhận và xử lý bảo hành\nQuy định chính\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày\nlàm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong\ntối đa 7 ngày làm việc kể",
+    "source": "sample.pdf",
+    "page_number": 11
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 11 / 13\nMỤC 10\nTiếp nhận và xử lý bảo hành\nQuy định chính\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày\nlàm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong\ntối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình\ntrạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau.\nTài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.\nDiễn giải áp dụng\nThời gian kiểm tra lỗi được tính từ khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng. Thời gian\nsửa chữa được tính từ ngày xác nhận lỗi và chỉ áp dụng theo điều kiện về phạm vi bảo hành cùng\ntình trạng linh kiện. Hai mốc này không được sử dụng thay thế cho nhau.\nTình huống minh họa\nBộ phận kỹ thuật xác nhận lỗi thuộc phạm vi bảo hành nhưng cần chờ linh kiện. Khách hàng nhận\nemail về tình trạng và thời gian dự kiến; tài liệu không cam kết tổng thời gian hoàn tất trong trường\nhợp chờ này.\nTrường hợp chờ linh kiện chưa có cam kết tổng thời gian hoàn tất.",
+    "chunk_id": 68,
+    "text": "có sẵn, việc sửa chữa hoàn tất trong\ntối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình\ntrạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau.\nTài liệu không cam kết tổng",
+    "source": "sample.pdf",
+    "page_number": 11
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 11 / 13\nMỤC 10\nTiếp nhận và xử lý bảo hành\nQuy định chính\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày\nlàm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong\ntối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình\ntrạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau.\nTài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.\nDiễn giải áp dụng\nThời gian kiểm tra lỗi được tính từ khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng. Thời gian\nsửa chữa được tính từ ngày xác nhận lỗi và chỉ áp dụng theo điều kiện về phạm vi bảo hành cùng\ntình trạng linh kiện. Hai mốc này không được sử dụng thay thế cho nhau.\nTình huống minh họa\nBộ phận kỹ thuật xác nhận lỗi thuộc phạm vi bảo hành nhưng cần chờ linh kiện. Khách hàng nhận\nemail về tình trạng và thời gian dự kiến; tài liệu không cam kết tổng thời gian hoàn tất trong trường\nhợp chờ này.\nTrường hợp chờ linh kiện chưa có cam kết tổng thời gian hoàn tất.",
+    "chunk_id": 69,
+    "text": "gian sửa chữa là hai giai đoạn khác nhau.\nTài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.\nDiễn giải áp dụng\nThời gian kiểm tra lỗi được tính từ khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng. Thời gian\nsửa chữa được tính từ ngày xác nhận lỗi và",
+    "source": "sample.pdf",
+    "page_number": 11
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 11 / 13\nMỤC 10\nTiếp nhận và xử lý bảo hành\nQuy định chính\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày\nlàm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong\ntối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình\ntrạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau.\nTài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.\nDiễn giải áp dụng\nThời gian kiểm tra lỗi được tính từ khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng. Thời gian\nsửa chữa được tính từ ngày xác nhận lỗi và chỉ áp dụng theo điều kiện về phạm vi bảo hành cùng\ntình trạng linh kiện. Hai mốc này không được sử dụng thay thế cho nhau.\nTình huống minh họa\nBộ phận kỹ thuật xác nhận lỗi thuộc phạm vi bảo hành nhưng cần chờ linh kiện. Khách hàng nhận\nemail về tình trạng và thời gian dự kiến; tài liệu không cam kết tổng thời gian hoàn tất trong trường\nhợp chờ này.\nTrường hợp chờ linh kiện chưa có cam kết tổng thời gian hoàn tất.",
+    "chunk_id": 70,
+    "text": "tin đơn hàng. Thời gian\nsửa chữa được tính từ ngày xác nhận lỗi và chỉ áp dụng theo điều kiện về phạm vi bảo hành cùng\ntình trạng linh kiện. Hai mốc này không được sử dụng thay thế cho nhau.\nTình huống minh họa\nBộ phận kỹ thuật xác nhận lỗi thuộc phạm vi bảo hành nhưng cần",
+    "source": "sample.pdf",
+    "page_number": 11
+  },
+  {
+    "parent_id": 11,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 11 / 13\nMỤC 10\nTiếp nhận và xử lý bảo hành\nQuy định chính\nSau khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng, bộ phận kỹ thuật kiểm tra lỗi trong 3 ngày\nlàm việc. Nếu lỗi thuộc phạm vi bảo hành và linh kiện cần thiết có sẵn, việc sửa chữa hoàn tất trong\ntối đa 7 ngày làm việc kể từ ngày xác nhận lỗi. Nếu cần chờ linh kiện, cửa hàng gửi email nêu tình\ntrạng và thời gian dự kiến. Thời gian kiểm tra lỗi và thời gian sửa chữa là hai giai đoạn khác nhau.\nTài liệu không cam kết tổng thời gian hoàn tất trong trường hợp phải chờ linh kiện.\nDiễn giải áp dụng\nThời gian kiểm tra lỗi được tính từ khi tiếp nhận sản phẩm cùng đủ thông tin đơn hàng. Thời gian\nsửa chữa được tính từ ngày xác nhận lỗi và chỉ áp dụng theo điều kiện về phạm vi bảo hành cùng\ntình trạng linh kiện. Hai mốc này không được sử dụng thay thế cho nhau.\nTình huống minh họa\nBộ phận kỹ thuật xác nhận lỗi thuộc phạm vi bảo hành nhưng cần chờ linh kiện. Khách hàng nhận\nemail về tình trạng và thời gian dự kiến; tài liệu không cam kết tổng thời gian hoàn tất trong trường\nhợp chờ này.\nTrường hợp chờ linh kiện chưa có cam kết tổng thời gian hoàn tất.",
+    "chunk_id": 71,
+    "text": "minh họa\nBộ phận kỹ thuật xác nhận lỗi thuộc phạm vi bảo hành nhưng cần chờ linh kiện. Khách hàng nhận\nemail về tình trạng và thời gian dự kiến; tài liệu không cam kết tổng thời gian hoàn tất trong trường\nhợp chờ này.\nTrường hợp chờ linh kiện chưa có cam kết tổng thời gian hoàn tất.",
+    "source": "sample.pdf",
+    "page_number": 11
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+    "chunk_id": 72,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập",
+    "source": "sample.pdf",
+    "page_number": 12
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+    "chunk_id": 73,
+    "text": "Địa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sá",
+    "source": "sample.pdf",
+    "page_number": 12
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+    "chunk_id": 74,
+    "text": "phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở",
+    "source": "sample.pdf",
+    "page_number": 12
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+    "chunk_id": 75,
+    "text": "chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng",
+    "source": "sample.pdf",
+    "page_number": 12
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+    "chunk_id": 76,
+    "text": "tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng",
+    "source": "sample.pdf",
+    "page_number": 12
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+    "chunk_id": 77,
+    "text": "cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác",
+    "source": "sample.pdf",
+    "page_number": 12
+  },
+  {
+    "parent_id": 12,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+    "chunk_id": 78,
+    "text": "địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+    "source": "sample.pdf",
+    "page_number": 12
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 13 / 13\nMỤC 12\nKênh hỗ trợ\nQuy định chính\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu\nđổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ\nđể được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng\nxã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu\nkhông liệt kê chi nhánh hoặc đại lý tiếp nhận khác.\nDiễn giải áp dụng\nEmail hỗ trợ được sử dụng cho nhiều nội dung, gồm yêu cầu đổi, đăng ký bảo hành và hỏi trạng\nthái đơn. Việc nêu mã đơn cùng nội dung cần hỗ trợ giúp xác định yêu cầu để chuyển đến bộ phận\nphù hợp. Tài liệu không cung cấp các kênh liên hệ khác ngoài những thông tin đã ghi.\nTình huống minh họa\nKhách hàng muốn hỏi trạng thái đơn và gửi email đến hotro@cuahangmau.example. Email nêu mã\nđơn cùng nội dung cần kiểm tra; khách hàng không tìm số điện thoại hỗ trợ trong tài liệu này.\nTài liệu không công bố số điện thoại hỗ trợ.",
+    "chunk_id": 79,
+    "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 13 / 13\nMỤC 12\nKênh hỗ trợ\nQuy định chính\nEmail hỗ trợ giả lập là hotro",
+    "source": "sample.pdf",
+    "page_number": 13
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 13 / 13\nMỤC 12\nKênh hỗ trợ\nQuy định chính\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu\nđổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ\nđể được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng\nxã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu\nkhông liệt kê chi nhánh hoặc đại lý tiếp nhận khác.\nDiễn giải áp dụng\nEmail hỗ trợ được sử dụng cho nhiều nội dung, gồm yêu cầu đổi, đăng ký bảo hành và hỏi trạng\nthái đơn. Việc nêu mã đơn cùng nội dung cần hỗ trợ giúp xác định yêu cầu để chuyển đến bộ phận\nphù hợp. Tài liệu không cung cấp các kênh liên hệ khác ngoài những thông tin đã ghi.\nTình huống minh họa\nKhách hàng muốn hỏi trạng thái đơn và gửi email đến hotro@cuahangmau.example. Email nêu mã\nđơn cùng nội dung cần kiểm tra; khách hàng không tìm số điện thoại hỗ trợ trong tài liệu này.\nTài liệu không công bố số điện thoại hỗ trợ.",
+    "chunk_id": 80,
+    "text": "Kênh hỗ trợ\nQuy định chính\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu\nđổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ\nđể được",
+    "source": "sample.pdf",
+    "page_number": 13
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 13 / 13\nMỤC 12\nKênh hỗ trợ\nQuy định chính\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu\nđổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ\nđể được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng\nxã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu\nkhông liệt kê chi nhánh hoặc đại lý tiếp nhận khác.\nDiễn giải áp dụng\nEmail hỗ trợ được sử dụng cho nhiều nội dung, gồm yêu cầu đổi, đăng ký bảo hành và hỏi trạng\nthái đơn. Việc nêu mã đơn cùng nội dung cần hỗ trợ giúp xác định yêu cầu để chuyển đến bộ phận\nphù hợp. Tài liệu không cung cấp các kênh liên hệ khác ngoài những thông tin đã ghi.\nTình huống minh họa\nKhách hàng muốn hỏi trạng thái đơn và gửi email đến hotro@cuahangmau.example. Email nêu mã\nđơn cùng nội dung cần kiểm tra; khách hàng không tìm số điện thoại hỗ trợ trong tài liệu này.\nTài liệu không công bố số điện thoại hỗ trợ.",
+    "chunk_id": 81,
+    "text": ". Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ\nđể được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng\nxã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu\nkhông liệt kê",
+    "source": "sample.pdf",
+    "page_number": 13
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 13 / 13\nMỤC 12\nKênh hỗ trợ\nQuy định chính\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu\nđổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ\nđể được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng\nxã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu\nkhông liệt kê chi nhánh hoặc đại lý tiếp nhận khác.\nDiễn giải áp dụng\nEmail hỗ trợ được sử dụng cho nhiều nội dung, gồm yêu cầu đổi, đăng ký bảo hành và hỏi trạng\nthái đơn. Việc nêu mã đơn cùng nội dung cần hỗ trợ giúp xác định yêu cầu để chuyển đến bộ phận\nphù hợp. Tài liệu không cung cấp các kênh liên hệ khác ngoài những thông tin đã ghi.\nTình huống minh họa\nKhách hàng muốn hỏi trạng thái đơn và gửi email đến hotro@cuahangmau.example. Email nêu mã\nđơn cùng nội dung cần kiểm tra; khách hàng không tìm số điện thoại hỗ trợ trong tài liệu này.\nTài liệu không công bố số điện thoại hỗ trợ.",
+    "chunk_id": 82,
+    "text": "trụ sở tiếp nhận được mô tả ở mục 11, tài liệu\nkhông liệt kê chi nhánh hoặc đại lý tiếp nhận khác.\nDiễn giải áp dụng\nEmail hỗ trợ được sử dụng cho nhiều nội dung, gồm yêu cầu đổi, đăng ký bảo hành và hỏi trạng\nthái đơn. Việc nêu mã đơn cùng nội dung cần hỗ",
+    "source": "sample.pdf",
+    "page_number": 13
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 13 / 13\nMỤC 12\nKênh hỗ trợ\nQuy định chính\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu\nđổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ\nđể được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng\nxã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu\nkhông liệt kê chi nhánh hoặc đại lý tiếp nhận khác.\nDiễn giải áp dụng\nEmail hỗ trợ được sử dụng cho nhiều nội dung, gồm yêu cầu đổi, đăng ký bảo hành và hỏi trạng\nthái đơn. Việc nêu mã đơn cùng nội dung cần hỗ trợ giúp xác định yêu cầu để chuyển đến bộ phận\nphù hợp. Tài liệu không cung cấp các kênh liên hệ khác ngoài những thông tin đã ghi.\nTình huống minh họa\nKhách hàng muốn hỏi trạng thái đơn và gửi email đến hotro@cuahangmau.example. Email nêu mã\nđơn cùng nội dung cần kiểm tra; khách hàng không tìm số điện thoại hỗ trợ trong tài liệu này.\nTài liệu không công bố số điện thoại hỗ trợ.",
+    "chunk_id": 83,
+    "text": "hành và hỏi trạng\nthái đơn. Việc nêu mã đơn cùng nội dung cần hỗ trợ giúp xác định yêu cầu để chuyển đến bộ phận\nphù hợp. Tài liệu không cung cấp các kênh liên hệ khác ngoài những thông tin đã ghi.\nTình huống minh họa\nKhách hàng muốn hỏi trạng thái đơn và gửi email đến hotro",
+    "source": "sample.pdf",
+    "page_number": 13
+  },
+  {
+    "parent_id": 13,
+    "parent_text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 13 / 13\nMỤC 12\nKênh hỗ trợ\nQuy định chính\nEmail hỗ trợ giả lập là hotro@cuahangmau.example. Khách hàng dùng email này để gửi yêu cầu\nđổi, đăng ký bảo hành hoặc hỏi về trạng thái đơn. Mỗi email cần nêu mã đơn và nội dung cần hỗ trợ\nđể được chuyển đến bộ phận phù hợp. Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng\nxã hội hoặc đường dẫn tra cứu trực tuyến. Ngoài trụ sở tiếp nhận được mô tả ở mục 11, tài liệu\nkhông liệt kê chi nhánh hoặc đại lý tiếp nhận khác.\nDiễn giải áp dụng\nEmail hỗ trợ được sử dụng cho nhiều nội dung, gồm yêu cầu đổi, đăng ký bảo hành và hỏi trạng\nthái đơn. Việc nêu mã đơn cùng nội dung cần hỗ trợ giúp xác định yêu cầu để chuyển đến bộ phận\nphù hợp. Tài liệu không cung cấp các kênh liên hệ khác ngoài những thông tin đã ghi.\nTình huống minh họa\nKhách hàng muốn hỏi trạng thái đơn và gửi email đến hotro@cuahangmau.example. Email nêu mã\nđơn cùng nội dung cần kiểm tra; khách hàng không tìm số điện thoại hỗ trợ trong tài liệu này.\nTài liệu không công bố số điện thoại hỗ trợ.",
+    "chunk_id": 84,
+    "text": "huống minh họa\nKhách hàng muốn hỏi trạng thái đơn và gửi email đến hotro@cuahangmau.example. Email nêu mã\nđơn cùng nội dung cần kiểm tra; khách hàng không tìm số điện thoại hỗ trợ trong tài liệu này.\nTài liệu không công bố số điện thoại hỗ trợ.",
+    "source": "sample.pdf",
+    "page_number": 13
+  }
+]

@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 import numpy as np
 
-def save_index(knowledge, index_idr):
-    output_path = Path(index_idr)
+def save_index(knowledge, index_dir):
+    output_path = Path(index_dir)
 
     output_path.mkdir(parents=True, exist_ok=True)
     json_text = json.dumps(knowledge["chunk_records"], ensure_ascii=False, indent=2)
