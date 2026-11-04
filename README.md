@@ -10,7 +10,7 @@ Tài liệu chính là [store_policy_demo.txt](store_policy_demo.txt), mô tả 
 
 [sample.pdf](sample.pdf) là tài liệu thực hành **13 trang có lớp văn bản**, được biên soạn từ chính sách TXT của dự án. Trang đầu là phần giới thiệu và mục lục; 12 trang sau trình bày từng mục chính sách, kèm diễn giải và tình huống minh họa. Cửa hàng, địa chỉ, email và tình huống đều là giả lập.
 
-PDF này dùng để kiểm tra truy xuất nội dung ở các trang khác nhau, trả lời theo nguồn và giữ số trang qua API đến giao diện. Bốn phản hồi đã chạy thử được lưu trong [pdf_evaluation_result.json](pdf_evaluation_result.json); đây là các ca kiểm tra thủ công trên dữ liệu thực hành.
+PDF này dùng để kiểm tra truy xuất nội dung ở các trang khác nhau, trả lời theo nguồn và giữ số trang qua API đến giao diện. Bốn phản hồi thử thủ công ban đầu nằm trong [pdf_evaluation_result.json](pdf_evaluation_result.json). Bộ câu hỏi tương ứng được khai báo trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py), và kết quả lần chạy đánh giá tự động qua API được lưu trong [pdf_evaluation_report.json](pdf_evaluation_report.json).
 
 Ví dụ câu hỏi:
 
@@ -33,6 +33,7 @@ Câu hỏi cuối dùng để kiểm tra cách hệ thống phản hồi khi tà
 - Cung cấp FastAPI backend, Streamlit UI và chế độ hỏi đáp trên terminal.
 - Chọn index TXT hoặc PDF cho API và CLI bằng `INDEX_DIR` trong `config.py`.
 - Lưu kết quả đánh giá vào JSON; kiểm tra cụm đáp án mong đợi và ID trích dẫn ngoài context.
+- Chạy bộ kiểm tra PDF qua API, đối chiếu tên file và trang của nguồn thực sự được trích dẫn, rồi ghi kết quả từng ca vào báo cáo JSON.
 
 ## Luồng xử lý
 
@@ -381,7 +382,50 @@ Ollama và model đã có sẵn trên máy. Đây là kiểm tra môi trường 
 
 Cả **4/4 ca này** có câu trả lời phù hợp với nội dung nguồn và trích đúng trang. Ở câu hỏi số điện thoại, mô hình nêu giới hạn thông tin của tài liệu, không tự tạo số điện thoại.
 
-Đây là một snapshot được lưu từ các lần hỏi qua API, chưa có script riêng tự chạy và chấm bộ PDF này. `evaluation_report.py` vẫn đọc kết quả TXT, không tổng hợp file PDF trên. Bốn ca kiểm tra trên một tài liệu giả lập chưa đo được chất lượng tổng quát của ứng dụng hoặc khả năng xử lý mọi PDF dài.
+`pdf_evaluation_result.json` là snapshot lưu thủ công từ các lần hỏi ban đầu. Bộ đánh giá tự động dưới đây dùng cùng bốn câu hỏi và ghi báo cáo riêng. Bốn ca kiểm tra trên một tài liệu giả lập chưa đo được chất lượng tổng quát của ứng dụng hoặc khả năng xử lý mọi PDF dài.
+
+Phiên bản PDF cũng đã được thử trên bản clone GitHub có sẵn trên cùng máy: cập nhật code và thư viện, tạo lại 84 chunk/vector, nạp API và hỏi qua Streamlit về hoàn tiền cùng số điện thoại. Lần kiểm tra này tái sử dụng `.venv` của bản clone, bổ sung phụ thuộc mới; đây chưa phải một lần tạo môi trường Python hoàn toàn mới cho bản PDF.
+
+## Đánh giá PDF qua API
+
+Bộ câu hỏi nằm trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py). Mỗi ca khai báo câu hỏi, danh sách cụm mong đợi, tên file và trang nguồn mong đợi.
+
+Trước khi chạy, tạo index PDF theo hướng dẫn bên trên, chọn `INDEX_DIR = "index_pdf"` trong `config.py`, rồi khởi động API. Kiểm tra `/health` có `chunk_count: 84` với dữ liệu mẫu. Giữ Ollama và FastAPI hoạt động, mở terminal khác trong thư mục dự án và chạy:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 pdf_evaluation.py
+```
+
+[pdf_evaluation.py](pdf_evaluation.py) lần lượt gửi từng câu hỏi tới `POST http://127.0.0.1:8000/ask` và kiểm tra phản hồi của backend đang chạy. Script dùng index đã được API nạp; việc chọn index và tạo embedding tài liệu được thực hiện ở các bước chuẩn bị trước đó.
+
+### Điều kiện chấm từng ca
+
+| Trường trong báo cáo | Cách kiểm tra |
+| --- | --- |
+| `missing_facts` | Các cụm trong `expected_facts` chưa xuất hiện trong câu trả lời; cả hai phía được chuyển thành chữ thường và gộp khoảng trắng trước khi so khớp |
+| `invalid_ids` | Các ID dạng `[chunk_ID]` được trích nhưng không thuộc `retrieved_sources` của câu đó |
+| `source_match` | Có ít nhất một nguồn **được câu trả lời trích dẫn**, khớp đồng thời tên file và số trang mong đợi trên cùng bản ghi |
+| `passed` | `missing_facts` rỗng, `invalid_ids` rỗng và `source_match` là `True` |
+
+Trang mong đợi chỉ xuất hiện trong context chưa đủ để đạt `source_match`; câu trả lời phải trích ID của nguồn đó. Câu trả lời không có trích dẫn cũng sẽ có `source_match: false`.
+
+### Báo cáo và kết quả đã ghi nhận
+
+Sau khi hoàn thành toàn bộ ca, script ghi UTF-8 vào [pdf_evaluation_report.json](pdf_evaluation_report.json), đặt cạnh script. Mỗi bản ghi lưu `query`, `answer`, toàn bộ `retrieved_sources`, `missing_facts`, `invalid_ids`, `source_match` và `passed`. Tập ID không hợp lệ được chuyển thành danh sách trước khi ghi JSON.
+
+| Nội dung kiểm tra | Kết quả của lần chạy đã lưu |
+| --- | --- |
+| Tổng số ca | 4 |
+| Ca đạt đồng thời ba điều kiện | 4/4 |
+| Ca thiếu cụm mong đợi | 0/4 |
+| Ca có ID trích dẫn ngoài context | 0/4 |
+| Ca trích đúng tên file và trang mong đợi | 4/4 |
+
+Các nguồn được trích trong báo cáo là `[chunk_51]` ở trang 8 cho hoàn tiền, `[chunk_17]` ở trang 3 cho mốc xác nhận đúng 15 giờ, `[chunk_80]` ở trang 13 cho email và `[chunk_84]` ở trang 13 cho thông tin số điện thoại không được công bố.
+
+Mỗi lần hoàn thành sẽ **ghi đè báo cáo tự động** bằng kết quả mới. Script hiện dừng nếu gặp lỗi kết nối, HTTP hoặc xử lý phản hồi; nếu lỗi xảy ra trước bước ghi file, báo cáo cũ vẫn còn. Cần xác nhận lần chạy đã hoàn thành khi đọc kết quả. `evaluation_report.py` vẫn đọc kết quả TXT; báo cáo PDF được tạo trực tiếp bởi `pdf_evaluation.py`.
+
+Đây là bốn ca phát triển trên một PDF giả lập. `passed` phản ánh việc khớp cụm từ và metadata nguồn; các cách diễn đạt tương đương có thể không khớp chuỗi, và việc khớp chuỗi chưa xác nhận đầy đủ ý nghĩa của câu trả lời. Phép kiểm tra nguồn xác nhận ID, tên file và trang, chưa tự đánh giá từng phát biểu có được nội dung nguồn hỗ trợ hay không.
 
 ## Đánh giá trên bộ TXT
 
@@ -417,7 +461,7 @@ Thử nghiệm này cho thấy cần kiểm tra cả danh sách ứng viên trư
 
 ## Tài liệu dài
 
-Pipeline có thể lập index nhiều chunk và chọn phần liên quan để trả lời câu hỏi. Toàn bộ tài liệu được dùng khi tạo index; mỗi lần hỏi chỉ chọn một phần nội dung làm context. Dự án đã chạy thử PDF có lớp văn bản gồm **13 trang, 84 child chunk**, với bốn câu hỏi được đối chiếu ở phần trên. Chưa đo giới hạn số trang, hiệu năng trên dữ liệu lớn hoặc chất lượng trên tài liệu dài và bố cục phức tạp hơn.
+Pipeline có thể lập index nhiều chunk và chọn phần liên quan để trả lời câu hỏi. Toàn bộ tài liệu được dùng khi tạo index; mỗi lần hỏi chỉ chọn một phần nội dung làm context. Dự án đã chạy thử PDF có lớp văn bản gồm **13 trang, 84 child chunk**, với bốn câu hỏi được kiểm tra tự động qua API và đọc đối chiếu nguồn. Chưa đo giới hạn số trang, hiệu năng trên dữ liệu lớn hoặc chất lượng trên tài liệu dài và bố cục phức tạp hơn.
 
 Các điểm cần kiểm tra khi mở rộng dữ liệu:
 
@@ -445,6 +489,9 @@ Các điểm cần kiểm tra khi mở rộng dữ liệu:
 | [api_server.py](api_server.py), [ui.py](ui.py), [app.py](app.py) | Backend, giao diện web và CLI |
 | [policy_evaluation.py](policy_evaluation.py), [evaluation.py](evaluation.py), [evaluation_report.py](evaluation_report.py) | Chạy đánh giá, lấy ID trích dẫn và tổng hợp kết quả |
 | [pdf_evaluation_result.json](pdf_evaluation_result.json) | Lưu thủ công bốn phản hồi API trên PDF 13 trang, kèm nội dung nguồn và số trang |
+| [pdf_evaluation_cases.py](pdf_evaluation_cases.py) | Khai báo bốn câu hỏi PDF, cụm mong đợi và tên file/trang nguồn mong đợi |
+| [pdf_evaluation.py](pdf_evaluation.py) | Gọi API cho từng ca, kiểm tra cụm đáp án và trích dẫn, ghi báo cáo JSON |
+| [pdf_evaluation_report.json](pdf_evaluation_report.json) | Kết quả chạy đánh giá PDF tự động, gồm phản hồi và các điều kiện đạt/trượt |
 
 Các file như `embedding_demo.py`, `tokenizer_demo.py`, `rerank_demo.py` và `knowledge.txt` lưu những bài thực hành trước đó. [pdf_demo.py](pdf_demo.py) là bài thử trích xuất văn bản PDF; việc tạo index PDF được thực hiện bằng `pdf_index_demo.py`.
 
@@ -462,7 +509,8 @@ Các file như `embedding_demo.py`, `tokenizer_demo.py`, `rerank_demo.py` và `k
 
 - Khóa đầy đủ dependency, phiên bản PyTorch và ghi nhận phiên bản model; thử cài mới lại bản có hỗ trợ PDF.
 - Mở rộng bộ đánh giá với câu diễn đạt lại, câu cần nhiều mục và câu thiếu thông tin; tách bộ phát triển và bộ test.
-- Tự động hóa việc chạy và chấm các ca PDF; mở rộng sang tài liệu dài hơn, câu hỏi cần nhiều trang và các cách diễn đạt khác.
+- Mở rộng bộ PDF sang tài liệu dài hơn, câu hỏi cần nhiều trang và các cách diễn đạt khác.
+- Bổ sung thời điểm chạy, cấu hình, phiên bản model và lỗi từng ca vào báo cáo đánh giá.
 - Giới hạn kích thước parent và tổng token context để xử lý tài liệu dài phù hợp với từng mô hình.
 - Đo chất lượng retrieval, độ đầy đủ của câu trả lời và thời gian xử lý để so sánh cấu hình.
 - Thêm thông tin phiên bản index để phát hiện thay đổi tài liệu hoặc embedding model trước khi hỏi đáp.
