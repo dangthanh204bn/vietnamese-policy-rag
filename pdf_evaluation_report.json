@@ -25,7 +25,8 @@
     "missing_facts": [],
     "invalid_ids": [],
     "source_match": true,
-    "passed": true
+    "passed": true,
+    "error": null
   },
   {
     "query": "Đơn nội thành xác nhận đúng 15 giờ bắt đầu tính thời gian giao từ ngày nào?",
@@ -53,11 +54,12 @@
     "missing_facts": [],
     "invalid_ids": [],
     "source_match": true,
-    "passed": true
+    "passed": true,
+    "error": null
   },
   {
     "query": "Địa chỉ email hỗ trợ của cửa hàng là gì?",
-    "answer": "Địa chỉ email hỗ trợ của cửa hàng là hotro@cuahangmau.example [chunk_80].",
+    "answer": "hotro@cuahangmau.example [chunk_80]",
     "retrieved_sources": [
       {
         "chunk_id": 80,
@@ -81,11 +83,12 @@
     "missing_facts": [],
     "invalid_ids": [],
     "source_match": true,
-    "passed": true
+    "passed": true,
+    "error": null
   },
   {
     "query": "Số điện thoại hỗ trợ của cửa hàng là gì?",
-    "answer": "Số điện thoại hỗ trợ của cửa hàng không được công bố trong tài liệu. Tài liệu chỉ nêu rõ: \"Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng xã hội hoặc đường dẫn tra cứu trực tuyến\" [chunk_84].",
+    "answer": "Số điện thoại hỗ trợ của cửa hàng không được công bố trong tài liệu. Tài liệu chỉ nêu rõ: \"Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng xã hội hoặc đường dẫn tra cứu trực tuyến\" [chunk_84]. Do đó, thông tin số điện thoại hỗ trợ không có trong các đoạn văn bản được cung cấp.",
     "retrieved_sources": [
       {
         "chunk_id": 84,
@@ -109,6 +112,7 @@
     "missing_facts": [],
     "invalid_ids": [],
     "source_match": true,
-    "passed": true
+    "passed": true,
+    "error": null
   }
 ]

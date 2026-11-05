@@ -33,7 +33,7 @@ Câu hỏi cuối dùng để kiểm tra cách hệ thống phản hồi khi tà
 - Cung cấp FastAPI backend, Streamlit UI và chế độ hỏi đáp trên terminal.
 - Chọn index TXT hoặc PDF cho API và CLI bằng `INDEX_DIR` trong `config.py`.
 - Lưu kết quả đánh giá vào JSON; kiểm tra cụm đáp án mong đợi và ID trích dẫn ngoài context.
-- Chạy bộ kiểm tra PDF qua API, đối chiếu tên file và trang của nguồn thực sự được trích dẫn, rồi ghi kết quả từng ca vào báo cáo JSON.
+- Chạy bộ kiểm tra PDF qua API với nhóm cách diễn đạt được chấp nhận, đối chiếu nguồn được trích theo tên file và số trang, ghi báo cáo JSON cùng lỗi từng ca.
 
 ## Luồng xử lý
 
@@ -388,7 +388,7 @@ Phiên bản PDF cũng đã được thử trên bản clone GitHub có sẵn tr
 
 ## Đánh giá PDF qua API
 
-Bộ câu hỏi nằm trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py). Mỗi ca khai báo câu hỏi, danh sách cụm mong đợi, tên file và trang nguồn mong đợi.
+Bộ câu hỏi nằm trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py). Mỗi ca khai báo `query`, `expected_fact_groups`, `expected_source` và `expected_page`.
 
 Trước khi chạy, tạo index PDF theo hướng dẫn bên trên, chọn `INDEX_DIR = "index_pdf"` trong `config.py`, rồi khởi động API. Kiểm tra `/health` có `chunk_count: 84` với dữ liệu mẫu. Giữ Ollama và FastAPI hoạt động, mở terminal khác trong thư mục dự án và chạy:
 
@@ -398,34 +398,67 @@ Trước khi chạy, tạo index PDF theo hướng dẫn bên trên, chọn `IND
 
 [pdf_evaluation.py](pdf_evaluation.py) lần lượt gửi từng câu hỏi tới `POST http://127.0.0.1:8000/ask` và kiểm tra phản hồi của backend đang chạy. Script dùng index đã được API nạp; việc chọn index và tạo embedding tài liệu được thực hiện ở các bước chuẩn bị trước đó.
 
+### Nhóm cụm từ mong đợi
+
+`expected_fact_groups` là danh sách các nhóm; mỗi nhóm chứa một hoặc nhiều cụm diễn đạt cùng một ý. Quy tắc là **OR trong nhóm, AND giữa các nhóm**: một nhóm khớp khi có ít nhất một phương án xuất hiện, và câu trả lời phải khớp tất cả các nhóm bắt buộc.
+
+Ví dụ, câu hoàn tiền cần đủ thời hạn và mốc bắt đầu:
+
+```python
+expected_fact_groups = [
+    ["5 ngày làm việc"],
+    ["ngày phương án hoàn tiền được chấp thuận"]
+]
+```
+
+Câu số điện thoại chấp nhận hai cách diễn đạt của cùng một ý:
+
+```python
+expected_fact_groups = [
+    ["không được công bố", "không công bố"]
+]
+```
+
+Cách chấm này được bổ sung sau khi câu trả lời đúng về nghĩa “Tài liệu không công bố số điện thoại...” từng bị chấm trượt vì cụm cố định là “không được công bố”. Các phương án được khai báo trong bộ câu hỏi và được chuyển thành chữ thường, gộp khoảng trắng trước khi so khớp với câu trả lời.
+
 ### Điều kiện chấm từng ca
 
 | Trường trong báo cáo | Cách kiểm tra |
 | --- | --- |
-| `missing_facts` | Các cụm trong `expected_facts` chưa xuất hiện trong câu trả lời; cả hai phía được chuyển thành chữ thường và gộp khoảng trắng trước khi so khớp |
+| `missing_facts` | Các nhóm trong `expected_fact_groups` chưa khớp phương án nào; mỗi phần tử là cả một nhóm, nên kết quả có dạng danh sách lồng nhau |
 | `invalid_ids` | Các ID dạng `[chunk_ID]` được trích nhưng không thuộc `retrieved_sources` của câu đó |
 | `source_match` | Có ít nhất một nguồn **được câu trả lời trích dẫn**, khớp đồng thời tên file và số trang mong đợi trên cùng bản ghi |
-| `passed` | `missing_facts` rỗng, `invalid_ids` rỗng và `source_match` là `True` |
+| `passed` | Với ca chấm được phản hồi: `missing_facts` rỗng, `invalid_ids` rỗng và `source_match` là `True`; ca gặp lỗi request được đặt là `False` |
+| `error` | `null` khi ca đã xử lý được phản hồi; chuỗi mô tả ngoại lệ khi bắt được `requests.exceptions.RequestException` |
 
 Trang mong đợi chỉ xuất hiện trong context chưa đủ để đạt `source_match`; câu trả lời phải trích ID của nguồn đó. Câu trả lời không có trích dẫn cũng sẽ có `source_match: false`.
 
+`missing_facts: []` nghĩa là mọi nhóm thông tin bắt buộc đã khớp. Nếu câu hoàn tiền chỉ nêu thời hạn, kết quả thiếu là `[["ngày phương án hoàn tiền được chấp thuận"]]`.
+
+### Xử lý lỗi từng ca
+
+Mỗi lượt gọi và chấm được đặt trong `try/except`. Nếu bắt được `requests.exceptions.RequestException`, như lỗi kết nối, timeout, HTTP hoặc lỗi giải mã JSON của Requests, script thêm bản ghi lỗi rồi tiếp tục câu hỏi kế tiếp.
+
+Trong bản ghi lỗi, `answer` là `null`, `retrieved_sources` là `[]`, `passed` là `false` và `error` chứa chuỗi mô tả ngoại lệ. Các trường `missing_facts`, `invalid_ids` và `source_match` là `null`, biểu thị các phép kiểm tra chưa được thực hiện. Với ca xử lý được phản hồi, `error` là `null`; ca đó vẫn có thể trượt điều kiện chấm.
+
 ### Báo cáo và kết quả đã ghi nhận
 
-Sau khi hoàn thành toàn bộ ca, script ghi UTF-8 vào [pdf_evaluation_report.json](pdf_evaluation_report.json), đặt cạnh script. Mỗi bản ghi lưu `query`, `answer`, toàn bộ `retrieved_sources`, `missing_facts`, `invalid_ids`, `source_match` và `passed`. Tập ID không hợp lệ được chuyển thành danh sách trước khi ghi JSON.
+Sau khi duyệt xong các ca, script ghi một lần bằng UTF-8 vào [pdf_evaluation_report.json](pdf_evaluation_report.json), đặt cạnh script. Mỗi bản ghi lưu `query`, `answer`, toàn bộ `retrieved_sources`, `missing_facts`, `invalid_ids`, `source_match`, `passed` và `error`. Với ca chấm được phản hồi, tập ID không hợp lệ được chuyển thành danh sách trước khi ghi JSON.
 
 | Nội dung kiểm tra | Kết quả của lần chạy đã lưu |
 | --- | --- |
 | Tổng số ca | 4 |
 | Ca đạt đồng thời ba điều kiện | 4/4 |
-| Ca thiếu cụm mong đợi | 0/4 |
+| Ca có lỗi request được ghi nhận | 0/4 |
+| Ca thiếu nhóm thông tin mong đợi | 0/4 |
 | Ca có ID trích dẫn ngoài context | 0/4 |
 | Ca trích đúng tên file và trang mong đợi | 4/4 |
 
 Các nguồn được trích trong báo cáo là `[chunk_51]` ở trang 8 cho hoàn tiền, `[chunk_17]` ở trang 3 cho mốc xác nhận đúng 15 giờ, `[chunk_80]` ở trang 13 cho email và `[chunk_84]` ở trang 13 cho thông tin số điện thoại không được công bố.
 
-Mỗi lần hoàn thành sẽ **ghi đè báo cáo tự động** bằng kết quả mới. Script hiện dừng nếu gặp lỗi kết nối, HTTP hoặc xử lý phản hồi; nếu lỗi xảy ra trước bước ghi file, báo cáo cũ vẫn còn. Cần xác nhận lần chạy đã hoàn thành khi đọc kết quả. `evaluation_report.py` vẫn đọc kết quả TXT; báo cáo PDF được tạo trực tiếp bởi `pdf_evaluation.py`.
+Mỗi lần duyệt xong bộ câu hỏi sẽ **ghi đè báo cáo tự động** bằng kết quả mới, kể cả khi mọi ca đều gặp `RequestException`. Ngoại lệ khác, như `KeyError` hoặc `TypeError`, vẫn có thể dừng chương trình; nếu lỗi xảy ra trước bước ghi file, báo cáo cũ vẫn còn. Cần xác nhận lần chạy đã hoàn thành khi đọc kết quả. `evaluation_report.py` vẫn đọc kết quả TXT; báo cáo PDF được tạo trực tiếp bởi `pdf_evaluation.py`.
 
-Đây là bốn ca phát triển trên một PDF giả lập. `passed` phản ánh việc khớp cụm từ và metadata nguồn; các cách diễn đạt tương đương có thể không khớp chuỗi, và việc khớp chuỗi chưa xác nhận đầy đủ ý nghĩa của câu trả lời. Phép kiểm tra nguồn xác nhận ID, tên file và trang, chưa tự đánh giá từng phát biểu có được nội dung nguồn hỗ trợ hay không.
+Đây là bốn ca phát triển trên một PDF giả lập, đã được dùng để điều chỉnh bộ chấm. `passed` phản ánh việc khớp các phương án cụm từ được khai báo và metadata nguồn. Cách diễn đạt chưa có trong nhóm vẫn có thể bị chấm trượt; việc khớp chuỗi cũng chưa xác nhận đầy đủ ý nghĩa của câu trả lời. Phép kiểm tra nguồn xác nhận ID, tên file và trang, chưa tự đánh giá từng phát biểu có được nội dung nguồn hỗ trợ hay không.
 
 ## Đánh giá trên bộ TXT
 
@@ -489,9 +522,9 @@ Các điểm cần kiểm tra khi mở rộng dữ liệu:
 | [api_server.py](api_server.py), [ui.py](ui.py), [app.py](app.py) | Backend, giao diện web và CLI |
 | [policy_evaluation.py](policy_evaluation.py), [evaluation.py](evaluation.py), [evaluation_report.py](evaluation_report.py) | Chạy đánh giá, lấy ID trích dẫn và tổng hợp kết quả |
 | [pdf_evaluation_result.json](pdf_evaluation_result.json) | Lưu thủ công bốn phản hồi API trên PDF 13 trang, kèm nội dung nguồn và số trang |
-| [pdf_evaluation_cases.py](pdf_evaluation_cases.py) | Khai báo bốn câu hỏi PDF, cụm mong đợi và tên file/trang nguồn mong đợi |
-| [pdf_evaluation.py](pdf_evaluation.py) | Gọi API cho từng ca, kiểm tra cụm đáp án và trích dẫn, ghi báo cáo JSON |
-| [pdf_evaluation_report.json](pdf_evaluation_report.json) | Kết quả chạy đánh giá PDF tự động, gồm phản hồi và các điều kiện đạt/trượt |
+| [pdf_evaluation_cases.py](pdf_evaluation_cases.py) | Khai báo bốn câu hỏi PDF, các nhóm cách diễn đạt và tên file/trang nguồn mong đợi |
+| [pdf_evaluation.py](pdf_evaluation.py) | Gọi API, chấm nhóm thông tin và trích dẫn, ghi lỗi từng ca và báo cáo JSON |
+| [pdf_evaluation_report.json](pdf_evaluation_report.json) | Kết quả đánh giá PDF, gồm phản hồi, điều kiện đạt/trượt và trường lỗi request |
 
 Các file như `embedding_demo.py`, `tokenizer_demo.py`, `rerank_demo.py` và `knowledge.txt` lưu những bài thực hành trước đó. [pdf_demo.py](pdf_demo.py) là bài thử trích xuất văn bản PDF; việc tạo index PDF được thực hiện bằng `pdf_index_demo.py`.
 
@@ -510,7 +543,7 @@ Các file như `embedding_demo.py`, `tokenizer_demo.py`, `rerank_demo.py` và `k
 - Khóa đầy đủ dependency, phiên bản PyTorch và ghi nhận phiên bản model; thử cài mới lại bản có hỗ trợ PDF.
 - Mở rộng bộ đánh giá với câu diễn đạt lại, câu cần nhiều mục và câu thiếu thông tin; tách bộ phát triển và bộ test.
 - Mở rộng bộ PDF sang tài liệu dài hơn, câu hỏi cần nhiều trang và các cách diễn đạt khác.
-- Bổ sung thời điểm chạy, cấu hình, phiên bản model và lỗi từng ca vào báo cáo đánh giá.
+- Bổ sung thời điểm chạy, cấu hình, phiên bản model và phân loại lỗi vào báo cáo đánh giá.
 - Giới hạn kích thước parent và tổng token context để xử lý tài liệu dài phù hợp với từng mô hình.
 - Đo chất lượng retrieval, độ đầy đủ của câu trả lời và thời gian xử lý để so sánh cấu hình.
 - Thêm thông tin phiên bản index để phát hiện thay đổi tài liệu hoặc embedding model trước khi hỏi đáp.
