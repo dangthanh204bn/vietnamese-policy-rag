@@ -1,7 +1,7 @@
 [
   {
     "query": "Khoản hoàn tiền được xử lý trong bao lâu và tính từ mốc nào?",
-    "answer": "Khoản hoàn tiền được xử lý trong 5 ngày làm việc và tính từ ngày phương án hoàn tiền được chấp thuận [chunk_51].",
+    "answer": "Khoản hoàn tiền được xử lý trong 5 ngày làm việc kể từ ngày phương án hoàn tiền được chấp thuận. [chunk_51]",
     "retrieved_sources": [
       {
         "chunk_id": 51,
@@ -26,11 +26,12 @@
     "invalid_ids": [],
     "source_match": true,
     "passed": true,
-    "error": null
+    "error": null,
+    "citation_check_passed": true
   },
   {
     "query": "Đơn nội thành xác nhận đúng 15 giờ bắt đầu tính thời gian giao từ ngày nào?",
-    "answer": "Ngày làm việc kế tiếp [chunk_17]",
+    "answer": "ngày làm việc kế tiếp [chunk_17]",
     "retrieved_sources": [
       {
         "chunk_id": 17,
@@ -55,7 +56,8 @@
     "invalid_ids": [],
     "source_match": true,
     "passed": true,
-    "error": null
+    "error": null,
+    "citation_check_passed": true
   },
   {
     "query": "Địa chỉ email hỗ trợ của cửa hàng là gì?",
@@ -84,11 +86,12 @@
     "invalid_ids": [],
     "source_match": true,
     "passed": true,
-    "error": null
+    "error": null,
+    "citation_check_passed": true
   },
   {
     "query": "Số điện thoại hỗ trợ của cửa hàng là gì?",
-    "answer": "Số điện thoại hỗ trợ của cửa hàng không được công bố trong tài liệu. Tài liệu chỉ nêu rõ: \"Tài liệu không công bố số điện thoại hỗ trợ, tài khoản mạng xã hội hoặc đường dẫn tra cứu trực tuyến\" [chunk_84]. Do đó, thông tin số điện thoại hỗ trợ không có trong các đoạn văn bản được cung cấp.",
+    "answer": "Tài liệu không công bố số điện thoại hỗ trợ [chunk_84]",
     "retrieved_sources": [
       {
         "chunk_id": 84,
@@ -113,6 +116,37 @@
     "invalid_ids": [],
     "source_match": true,
     "passed": true,
-    "error": null
+    "error": null,
+    "citation_check_passed": true
+  },
+  {
+    "query": "Phí vận chuyển khi gửi sản phẩm đi bảo hành là bao nhiêu?",
+    "answer": "Các đoạn được cung cấp chưa đủ thông tin để trả lời câu hỏi này.",
+    "retrieved_sources": [
+      {
+        "chunk_id": 54,
+        "source": "sample.pdf",
+        "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 09 / 13\nMỤC 08\nThời hạn và phạm vi bảo hành\nQuy định chính\nSản phẩm được bảo hành trong 18 tháng kể từ ngày giao hàng thành công được ghi nhận trên\nđơn. Bảo hành áp dụng với lỗi kỹ thuật do nhà sản xuất trong điều kiện sử dụng thông thường. Khi\ngửi yêu cầu, khách hàng cung cấp mã đơn hoặc hóa đơn điện tử để đối chiếu thời hạn và thông tin\nsản phẩm. Thời hạn bảo hành 18 tháng khác với thời hạn gửi yêu cầu đổi sản phẩm 14 ngày. Khi\nđã hết thời hạn đổi, một sản phẩm còn bảo hành vẫn có thể được xem xét theo quy trình bảo hành\nnếu đáp ứng các điều kiện liên quan.\nDiễn giải áp dụng\nNgày giao hàng thành công ghi trên đơn là mốc bắt đầu thời hạn bảo hành 18 tháng. Khi đối chiếu\nthông tin bảo hành, khách hàng có thể cung cấp mã đơn hoặc hóa đơn điện tử; quy định ở đây\nkhông yêu cầu đồng thời cả hai như hồ sơ đổi sản phẩm. Lỗi vẫn phải thuộc phạm vi bảo hành.\nTình huống minh họa\nKhách hàng đã hết thời hạn gửi yêu cầu đổi nhưng sản phẩm vẫn còn bảo hành. Khách hàng còn\nhóa đơn điện tử để đối chiếu thông tin và có thể đề nghị xem xét theo quy trình bảo hành.\nHồ sơ bảo hành được đối chiếu bằng mã đơn hoặc hóa đơn điện tử.",
+        "page_number": 9
+      },
+      {
+        "chunk_id": 76,
+        "source": "sample.pdf",
+        "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 12 / 13\nMỤC 11\nĐịa chỉ và thời gian tiếp nhận\nQuy định chính\nĐịa chỉ tiếp nhận giả lập là Trung tâm hỗ trợ Cửa hàng Mẫu, số 12 Đường Dữ Liệu, phường Mô\nPhỏng, Hà Nội. Trung tâm tiếp nhận sản phẩm từ 8 giờ 30 đến 17 giờ 30, từ thứ Hai đến thứ Sáu,\ntrừ ngày lễ. Khách hàng đến trực tiếp cần có mã tiếp nhận đã được xác nhận qua email. Khách\nhàng gửi sản phẩm qua đơn vị vận chuyển cần ghi mã tiếp nhận trên kiện hàng. Địa chỉ và tên\nphường ở đây được đặt riêng cho bài thực hành, không phải thông tin hướng dẫn tìm đến một cơ\nsở có thật.\nDiễn giải áp dụng\nKhung giờ tiếp nhận tại trung tâm và thời gian xử lý một yêu cầu là hai nội dung riêng. Khi đến trực\ntiếp, khách hàng cần có mã tiếp nhận được xác nhận qua email. Với sản phẩm gửi qua đơn vị vận\nchuyển, mã tiếp nhận cần được ghi trên kiện hàng để đối chiếu.\nTình huống minh họa\nKhách hàng chuẩn bị gửi sản phẩm đến địa chỉ giả lập của trung tâm. Khách hàng sử dụng mã tiếp\nnhận đã được xác nhận và ghi mã trên kiện hàng; địa chỉ này chỉ phục vụ bài thực hành.\nMã tiếp nhận cần được xác nhận qua email trước bước tiếp nhận tương ứng.",
+        "page_number": 12
+      },
+      {
+        "chunk_id": 23,
+        "source": "sample.pdf",
+        "text": "CỬA HÀNG MẪU\nTÀI LIỆU GIẢ LẬP / THỰC HÀNH RAG\nDữ liệu minh họa - không đại diện cho doanh nghiệp thực tế\nTrang 04 / 13\nMỤC 03\nGiao hàng ngoại thành và các tỉnh\nQuy định chính\nĐơn giao đến ngoại thành Hà Nội hoặc các tỉnh được giao trong khoảng 3 đến 5 ngày làm việc, tính\ntừ ngày xác nhận đơn. Thời gian cụ thể phụ thuộc vào địa chỉ nhận hàng. Nếu phát sinh chậm giao,\nbộ phận hỗ trợ gửi email thông báo lịch giao dự kiến mới. Thời gian giao hàng không phải là thời\ngian xét duyệt đổi sản phẩm hoặc thời gian hoàn tiền. Tài liệu không quy định phí giao hàng và\nkhông mô tả dịch vụ giao hàng quốc tế.\nDiễn giải áp dụng\nKhoảng giao hàng từ 3 đến 5 ngày làm việc dành cho địa chỉ ngoại thành Hà Nội hoặc các tỉnh. Đây\nlà thời gian vận chuyển, không phải khoảng thời gian để kiểm tra sản phẩm đổi hoặc xử lý hoàn\ntiền. Các quy trình cần được đối chiếu riêng theo nội dung tương ứng.\nTình huống minh họa\nKhách hàng có địa chỉ nhận hàng tại một tỉnh và nhận được thông báo chậm giao. Email hỗ trợ\ncung cấp lịch dự kiến mới; khách hàng không sử dụng thời gian hoàn tiền để suy ra lịch giao hàng.\nĐối chiếu thời gian giao hàng riêng với thời gian xét duyệt đổi hoặc hoàn tiền.",
+        "page_number": 4
+      }
+    ],
+    "missing_facts": [],
+    "invalid_ids": [],
+    "source_match": null,
+    "passed": true,
+    "error": null,
+    "citation_check_passed": true
   }
 ]

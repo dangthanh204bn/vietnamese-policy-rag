@@ -31,5 +31,12 @@ test_cases = [
         ],
         "expected_source": "sample.pdf",
         "expected_page": 13
+    },
+    {
+        "query": "Phí vận chuyển khi gửi sản phẩm đi bảo hành là bao nhiêu?",
+        "expected_fact_groups": [
+            ["Các đoạn được cung cấp chưa đủ thông tin để trả lời câu hỏi này."]
+        ],
+        "expect_citations": False
     }
 ]

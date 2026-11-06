@@ -5,6 +5,31 @@ if "last_response" not in st.session_state:
     st.session_state["last_response"] = None
 
 st.title("Hỏi đáp tài liệu")
+uploaded_file = st.file_uploader("Chọn tài liệu PDF", type=["pdf"])
+
+if st.button("Nạp tài liệu"):
+    if uploaded_file is None:
+        st.warning("Chưa chọn PDF")
+    else:
+        try:
+            files = {
+                "file": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")
+            }
+            uploaded_response = requests.post(url="http://127.0.0.1:8000/upload", files=files, timeout=180)
+            uploaded_response.raise_for_status()
+            st.session_state["last_response"] = None
+            st.write("File", uploaded_file.name)
+            st.write("Kích thước", uploaded_file.size)
+            upload_data = uploaded_response.json()
+            st.success(f"Tên tài liệu: {upload_data["filename"]}")
+            st.success(f"Số chunk từ: {upload_data["chunk_count"]}")
+        except requests.exceptions.HTTPError:
+            st.error("API không nạp được tài liệu.")
+        except requests.exceptions.Timeout:
+            st.error("Hết thời gian chờ nạp tài liệu.")
+        except requests.exceptions.ConnectionError:
+            st.error("Không kết nối được API.")
+
 query = st.text_input("Nhập câu hỏi")
 if st.button("Gửi câu hỏi"):
     st.session_state["last_response"] = None

@@ -47,15 +47,26 @@ if __name__ == "__main__":
     for case in test_cases:
         try:
             result = ask_api(case["query"])
+            except_citations = case.get("expect_citations", True)
+            if except_citations:
+                source_match = has_expected_cited_source(
+                    result["answer"], result["retrieved_sources"],
+                    case["expected_source"], case["expected_page"]
+                )
+                citation_check_passed = source_match
+            else:
+                source_match = None
+                citation_check_passed = not extract_citation_ids(result["answer"])
 
-            source_match = has_expected_cited_source(result["answer"], result["retrieved_sources"], case["expected_source"], case["expected_page"])
+            print("Đạt kiểm tra trích dẫn:", citation_check_passed)
+
             print("Trích dẫn đúng nguồn và trang:", source_match)
             invalid_ids = find_invalid_citation_ids(result["answer"], result["retrieved_sources"])
             print("ID trích dẫn ngoài context:", invalid_ids)
             missing_facts = find_missing_facts(result["answer"], case["expected_fact_groups"])
             print("Các cụm còn thiếu:", missing_facts)
             print(result["answer"])
-            passed = not missing_facts and not invalid_ids and source_match
+            passed = not missing_facts and not invalid_ids and citation_check_passed
             evaluation_results.append({
                 "query": case["query"],
                 "answer": result["answer"],
@@ -64,7 +75,8 @@ if __name__ == "__main__":
                 "invalid_ids": sorted(invalid_ids),
                 "source_match": source_match,
                 "passed": passed,
-                "error": None
+                "error": None,
+                "citation_check_passed": citation_check_passed
             })
 
             print("Câu hỏi:", case["query"])
@@ -78,7 +90,8 @@ if __name__ == "__main__":
                 "invalid_ids": None,
                 "source_match": None,
                 "passed": False,
-                "error": str(error)
+                "error": str(error),
+                "citation_check_passed": None
             })
             continue
     output_path = Path(__file__).with_name("pdf_evaluation_report.json")

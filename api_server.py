@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 from contextlib import asynccontextmanager
 from pathlib import Path
 from index_store import load_index
@@ -6,13 +6,18 @@ from fastembed import TextEmbedding
 from sentence_transformers import CrossEncoder
 from rag_pipeline import answer_question
 from config import RETRIEVAL_K, RERANK_TOP_N, RETRIEVAL_MIN_SCORE
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile
 import requests
+from pypdf import PdfReader
+from pypdf.errors import PdfReadError
 from config import INDEX_DIR
+from pdf_loader import extract_pdf_pages
+from tokenizers import Tokenizer
+from knowledge_base import prepare_knowledge_from_documents
+
 
 class AskRequest(BaseModel):
     query: str
-
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -21,6 +26,9 @@ async def lifespan(app: FastAPI):
     app.state.knowledge = load_index(index_dir)
     app.state.embedding_model = TextEmbedding( model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
     app.state.reranker = CrossEncoder("cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",device="cpu")
+    app.state.tokenizer = Tokenizer.from_pretrained("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+    app.state.tokenizer.no_padding()
+    app.state.tokenizer.no_truncation()
     yield
     print("Dừng ứng dụng")
 
@@ -39,8 +47,9 @@ def ask(payload: AskRequest):
         raise HTTPException(status_code=504, detail="Chờ phản hồi từ Ollama quá lâu")
     except requests.exceptions.ConnectionError:
         raise HTTPException(status_code=503, detail="Không kết nối được với Ollama")
-    
-
+    except ValidationError:
+        raise HTTPException(status_code=502,
+                            detail="Phản hồi từ mô hình không đúng định dạng.")
 
     retrieved_sources = []
     for score, record in rag_result["retrieved_results"]:
@@ -61,3 +70,23 @@ def health():
     return{"status": "ok",
            "chunk_count": len(app.state.knowledge["chunk_records"])
            }
+
+@app.post("/upload")
+def upload_document(file: UploadFile):
+    try:
+        reader = PdfReader(file.file)
+        page_count = len(reader.pages)
+        pages = extract_pdf_pages(reader, file.filename)
+    except PdfReadError:
+        raise HTTPException(status_code=400, detail="Không đọc được file PDF.")
+    if not pages:
+        raise HTTPException(status_code=400, detail="PDF không có văn bản để xử lý.")
+    new_knowledge = prepare_knowledge_from_documents(documents=pages, model=app.state.embedding_model, tokenizer=app.state.tokenizer, chunk_size=64, overlap=16)
+    app.state.knowledge = new_knowledge
+    return {
+        "filename": file.filename,
+        "content_type": file.content_type,
+        "page_count": page_count,
+        "text_page_count": len(pages),
+        "chunk_count": len(new_knowledge["chunk_records"])
+    }

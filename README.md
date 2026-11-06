@@ -1,6 +1,6 @@
 # Vietnamese Policy RAG
 
-Ứng dụng RAG hỏi đáp trên tài liệu TXT và PDF có lớp văn bản, kết hợp tìm kiếm ngữ nghĩa, reranking và mô hình ngôn ngữ chạy qua Ollama. Người dùng nhập câu hỏi trên Streamlit, nhận câu trả lời kèm nhãn trích dẫn và mở nội dung nguồn; với PDF, hộp nguồn hiển thị thêm số trang.
+Ứng dụng RAG hỏi đáp tiếng Việt trên tài liệu TXT và PDF có lớp văn bản, kết hợp tìm kiếm ngữ nghĩa, reranking và Qwen3 4B chạy local qua Ollama. Người dùng có thể **nạp PDF trực tiếp trên Streamlit**, hỏi về tài liệu vừa nạp và đối chiếu câu trả lời với nội dung nguồn cùng số trang.
 
 Dự án được xây dựng để học cách triển khai một ứng dụng AI từ xử lý tài liệu đến API, giao diện và đánh giá kết quả. Các bước chunking, tính cosine similarity, chọn kết quả và xây dựng context được viết thành các module Python riêng để dễ kiểm tra luồng xử lý.
 
@@ -10,7 +10,7 @@ Tài liệu chính là [store_policy_demo.txt](store_policy_demo.txt), mô tả 
 
 [sample.pdf](sample.pdf) là tài liệu thực hành **13 trang có lớp văn bản**, được biên soạn từ chính sách TXT của dự án. Trang đầu là phần giới thiệu và mục lục; 12 trang sau trình bày từng mục chính sách, kèm diễn giải và tình huống minh họa. Cửa hàng, địa chỉ, email và tình huống đều là giả lập.
 
-PDF này dùng để kiểm tra truy xuất nội dung ở các trang khác nhau, trả lời theo nguồn và giữ số trang qua API đến giao diện. Bốn phản hồi thử thủ công ban đầu nằm trong [pdf_evaluation_result.json](pdf_evaluation_result.json). Bộ câu hỏi tương ứng được khai báo trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py), và kết quả lần chạy đánh giá tự động qua API được lưu trong [pdf_evaluation_report.json](pdf_evaluation_report.json).
+PDF này dùng để kiểm tra truy xuất nội dung ở các trang khác nhau, trả lời theo nguồn và giữ số trang qua API đến giao diện. [pdf_evaluation_result.json](pdf_evaluation_result.json) giữ bốn phản hồi thủ công ban đầu. Bộ đánh giá hiện có **5 ca phát triển** trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py); [báo cáo mới nhất](pdf_evaluation_report.json) ghi nhận **5/5 ca đạt**, không có lỗi request. Đây là kết quả trên bộ ca nhỏ đã dùng trong quá trình điều chỉnh hệ thống, không phải độ chính xác tổng quát.
 
 Ví dụ câu hỏi:
 
@@ -19,21 +19,23 @@ Ví dụ câu hỏi:
 - Sản phẩm không bị lỗi nhưng tôi muốn đổi sang mẫu khác thì có được không?
 - Phí vận chuyển khi gửi sản phẩm đi bảo hành là bao nhiêu?
 
-Câu hỏi cuối dùng để kiểm tra cách hệ thống phản hồi khi tài liệu thiếu thông tin. Prompt yêu cầu mô hình trả lời theo tài liệu, trích dẫn nguồn và nêu rõ khi không đủ thông tin.
+Câu hỏi cuối dùng để kiểm tra việc từ chối trả lời khi thiếu căn cứ. Model đề xuất trạng thái trả lời và các ID nguồn dưới dạng JSON; Python kiểm tra cấu trúc rồi định dạng câu trả lời. Schema không tự xác minh được model đã chọn đúng trạng thái hay bằng chứng hay chưa.
 
 ## Chức năng hiện có
 
 - Đọc TXT UTF-8 hoặc trích xuất văn bản từ PDF bằng pypdf, chuẩn hóa đầu ra thành các record có nội dung và metadata nguồn.
+- Nạp PDF qua Streamlit hoặc `POST /upload`; tạo index trong RAM và chuyển các câu hỏi tiếp theo sang tài liệu mới.
 - Dùng mỗi đoạn TXT hoặc mỗi trang PDF có văn bản làm parent, sau đó chia thành các child chunk theo token.
-- Tạo embedding cho child chunk; lưu metadata vào JSON và vector vào NumPy `.npy`.
+- Tạo embedding cho child chunk; các script build lưu metadata vào JSON và vector vào NumPy `.npy`.
 - Truy xuất bằng cosine similarity, lọc theo ngưỡng và chọn các ứng viên có điểm cao nhất.
 - Loại các ứng viên trùng parent, rerank theo nội dung đầy đủ của parent rồi dùng nội dung đó làm context.
-- Sinh câu trả lời tiếng Việt qua Ollama với nhãn nguồn dạng `[chunk_23]`.
+- Yêu cầu Ollama sinh JSON theo schema Pydantic, gồm `status`, `answer` và `cited_chunk_ids`.
+- Dùng formatter để ghép nhãn `[chunk_ID]` khi model báo có căn cứ; trả câu thông báo cố định không kèm trích dẫn khi model báo thiếu thông tin.
 - Giữ số trang PDF trong metadata, context, nguồn trả về của API và nhãn hộp nguồn trên Streamlit.
 - Cung cấp FastAPI backend, Streamlit UI và chế độ hỏi đáp trên terminal.
-- Chọn index TXT hoặc PDF cho API và CLI bằng `INDEX_DIR` trong `config.py`.
+- Chọn index TXT hoặc PDF được nạp lúc khởi động bằng `INDEX_DIR` trong `config.py`; API có thể thay index đang dùng bằng PDF upload.
 - Lưu kết quả đánh giá vào JSON; kiểm tra cụm đáp án mong đợi và ID trích dẫn ngoài context.
-- Chạy bộ kiểm tra PDF qua API với nhóm cách diễn đạt được chấp nhận, đối chiếu nguồn được trích theo tên file và số trang, ghi báo cáo JSON cùng lỗi từng ca.
+- Chạy bộ kiểm tra PDF qua API với nhóm cách diễn đạt được chấp nhận, đối chiếu nguồn/trang hoặc yêu cầu không có trích dẫn; ghi báo cáo JSON cùng lỗi từng ca.
 
 ## Luồng xử lý
 
@@ -56,6 +58,12 @@ Record mới lưu `chunk_id`, `text`, `parent_id`, `parent_text`, `source` và `
 | `index/` | `store_policy_demo.txt` | 14 | 37 | `37 × 384` |
 | `index_pdf/` | `sample.pdf` | 13 | 84 | `84 × 384` |
 
+### Nạp PDF khi API đang chạy
+
+UI gửi file bằng multipart/form-data tới `POST /upload`. API đọc từng trang, bỏ qua trang không có văn bản rồi dùng chung phần chia chunk và tạo embedding với các script build. Chỉ sau khi xử lý thành công, kết quả mới được gán vào `app.state.knowledge`.
+
+Upload thay **toàn bộ index đang dùng trong RAM của tiến trình API**. Ứng dụng chưa lưu PDF hoặc index upload để sử dụng lại; index đang hoạt động chỉ được giữ trong RAM. Mọi client dùng cùng tiến trình API chia sẻ index này; khi khởi động lại, API nạp lại thư mục `INDEX_DIR` thay vì khôi phục PDF upload.
+
 ### Trả lời câu hỏi
 
 ```mermaid
@@ -67,8 +75,10 @@ flowchart TD
     E --> F[Rerank cặp câu hỏi và parent text]
     F --> G[Lấy tối đa 3 parent làm context]
     G --> H{Có kết quả?}
-    H -- Có --> I[Prompt và Ollama]
-    I --> J[Câu trả lời và nguồn]
+    H -- Có --> I[Prompt và Ollama với JSON schema]
+    I --> J[Pydantic kiểm tra phản hồi]
+    J --> L[Formatter theo trạng thái]
+    L --> M[Chuỗi trả lời và nguồn]
     H -- Không --> K[Thông báo không có đoạn đạt ngưỡng]
 ```
 
@@ -78,6 +88,40 @@ Chunk nhỏ giúp tìm vị trí liên quan. Parent cung cấp thêm các điề
 
 Với PDF, context và nguồn API có thêm số trang. Nhãn `[chunk_ID]` vẫn là ID của child, không phải số trang. Với cấu hình hiện tại, mỗi câu hỏi dùng tối đa 3 parent; khi đọc PDF, đó là tối đa 3 trang được chọn.
 
+### Đầu ra có cấu trúc và định dạng câu trả lời
+
+[answer_schema.py](answer_schema.py) khai báo lớp `LLMAnswer`. Client truyền `LLMAnswer.model_json_schema()` vào trường `format` của Ollama, đọc `message.content` bằng `model_validate_json()` và chuyển kết quả thành dictionary. [answer_formatter.py](answer_formatter.py) tạo chuỗi trả lời cuối cùng. Xem [tài liệu structured outputs của Ollama](https://docs.ollama.com/capabilities/structured-outputs).
+
+Ví dụ đầu ra nội bộ cho một thông tin phủ định được nguồn nói rõ:
+
+```json
+{
+  "status": "supported",
+  "answer": "Tài liệu không công bố số điện thoại hỗ trợ.",
+  "cited_chunk_ids": [84]
+}
+```
+
+Formatter ghép thành `Tài liệu không công bố số điện thoại hỗ trợ. [chunk_84]`. Thông tin “không được công bố” có thể là câu trả lời có căn cứ, không mặc định là thiếu context.
+
+Ví dụ đầu ra nội bộ khi chưa đủ căn cứ:
+
+```json
+{
+  "status": "insufficient_context",
+  "answer": "",
+  "cited_chunk_ids": []
+}
+```
+
+Với trạng thái này, formatter luôn trả câu cố định bên dưới, bỏ qua nội dung và ID model đề xuất:
+
+> Các đoạn được cung cấp chưa đủ thông tin để trả lời câu hỏi này.
+
+Đây là hai trạng thái nội bộ; `POST /ask` vẫn trả `answer` dưới dạng chuỗi. Nếu retrieval không tìm được đoạn đạt ngưỡng, pipeline không gọi Ollama và trả `Không có đoạn nào đạt ngưỡng tìm kiếm.`
+
+Pydantic kiểm tra các trường bắt buộc, kiểu dữ liệu và hai giá trị trạng thái. Nó chưa kiểm tra model phân loại đúng hay không, ID có thuộc context không, hoặc nội dung nguồn có hỗ trợ phát biểu không. Với `supported`, formatter giữ nội dung model trả về và ghép các ID được đề xuất; đây chưa phải cơ chế kiểm chứng ngữ nghĩa.
+
 ## Công nghệ và cấu hình
 
 | Thành phần | Công nghệ / giá trị |
@@ -85,14 +129,18 @@ Với PDF, context và nguồn API có thêm số trang. Nhãn `[chunk_ID]` vẫ
 | Embedding | [paraphrase-multilingual-MiniLM-L12-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2), chạy qua FastEmbed |
 | Reranker | [mmarco-mMiniLMv2-L12-H384-v1](https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1), dùng CrossEncoder trên CPU |
 | Sinh câu trả lời | [Qwen3 4B](https://ollama.com/library/qwen3:4b) qua Ollama `/api/chat`, không streaming |
-| Chunking khi build index | 64 token/chunk, overlap 16 token; chưa tính special tokens |
+| Cấu hình sinh | `temperature = 0`, `seed = 42` trong `llm_client.py` |
+| Đầu ra model | JSON schema từ Pydantic; kiểm tra trước khi định dạng |
+| Chunking tại script build và API upload | 64 token/chunk, overlap 16 token; chưa tính special tokens |
 | Truy xuất | `RETRIEVAL_K = 16`, `RETRIEVAL_MIN_SCORE = 0.3` |
 | Sau reranking | `RERANK_TOP_N = 3` |
 | Đọc PDF | [pypdf](https://pypdf.readthedocs.io/en/stable/user/extract-text.html) |
-| Backend / UI | FastAPI / Streamlit |
+| Backend / UI | FastAPI / Streamlit; `python-multipart` để nhận file upload |
 | Lưu index | JSON metadata và NumPy `float32` array |
 
 Các tham số truy xuất và lựa chọn index nằm trong [config.py](config.py). Tên model và tham số chunking hiện vẫn được khai báo trong các script tương ứng.
+
+Cấu hình sinh cố định giúp so sánh các lượt thử rõ hơn, không bảo đảm câu trả lời luôn đúng hoặc giống hệt trên mọi môi trường. Server hiện in trạng thái và ID model chọn ra terminal để hỗ trợ quan sát khi thử nghiệm. Xem [tham số Ollama](https://docs.ollama.com/modelfile#valid-parameters-and-values).
 
 `RETRIEVAL_K` là số **child chunk trước khi loại trùng parent**, không phải số đoạn parent. Điểm của reranker có thể âm và không cùng thang đo với cosine similarity; ngưỡng `0.3` chỉ dùng ở bước truy xuất ban đầu.
 
@@ -109,7 +157,9 @@ INDEX_DIR = "index_pdf"
 | `"index"` | Chính sách TXT trong `index/` | `chunk_count: 37` |
 | `"index_pdf"` | PDF 13 trang trong `index_pdf/` | `chunk_count: 84` |
 
-Đổi giá trị rồi **khởi động lại API hoặc CLI** để nạp index mới. Mỗi lần chạy chọn một index. Trên Streamlit, gửi một câu hỏi mới để nhận phản hồi từ bộ dữ liệu vừa chọn; phản hồi trước đó có thể vẫn còn trong session.
+Đổi giá trị rồi **khởi động lại API hoặc CLI** để nạp index mới. Với API, đây là index ban đầu; upload thành công sẽ thay nó trong RAM. `/health` báo số chunk của index đang hoạt động, nên sau upload số này có thể khác bảng trên.
+
+CLI tự nạp index trên đĩa và không gọi API. Upload qua Streamlit không thay đổi index của CLI.
 
 `INDEX_DIR` điều khiển index được đọc khi hỏi đáp. Hai script build bên dưới có nguồn và thư mục lưu riêng; chúng không đổi đích lưu theo biến này.
 
@@ -144,7 +194,7 @@ Reranker hiện chạy trên CPU. Cài PyTorch CPU, sau đó cài các thư vi�
 
 Tham khảo [hướng dẫn cài PyTorch](https://pytorch.org/get-started/locally/) và [các lệnh cài bản CPU](https://pytorch.org/get-started/previous-versions/).
 
-Các thư viện ứng dụng, gồm `pypdf==6.21.4`, được cố định phiên bản trong [requirements.txt](requirements.txt). PyTorch CPU được cài riêng theo lệnh phía trên và hiện chưa cố định phiên bản.
+Các thư viện ứng dụng, gồm `pypdf==6.21.4` và `python-multipart==0.0.32`, được cố định phiên bản trong [requirements.txt](requirements.txt). `python-multipart` phục vụ endpoint nhận file. PyTorch CPU được cài riêng theo lệnh phía trên và hiện chưa cố định phiên bản.
 
 Phiên bản ghi nhận trên môi trường phát triển:
 
@@ -161,6 +211,7 @@ Phiên bản ghi nhận trên môi trường phát triển:
 | uvicorn | 0.54.0 |
 | streamlit | 1.66.1 |
 | pypdf | 6.21.4 |
+| python-multipart | 0.0.32 |
 
 Đây là thông tin môi trường đã sử dụng; `requirements.txt` chưa khóa toàn bộ phụ thuộc bắc cầu hoặc phiên bản PyTorch. Kết quả thử cài mới bản TXT được ghi riêng ở phần kiểm tra bên dưới.
 
@@ -218,7 +269,7 @@ Với PDF mẫu hiện tại, kết quả là **84 chunk và 84 vector**, mỗi 
 
 Sau khi tạo lại index, khởi động lại API hoặc CLI để nạp dữ liệu mới. Để hỏi trên TXT, đổi thành `INDEX_DIR = "index"` rồi khởi động lại.
 
-Để thử tài liệu khác, sửa biến `file_path` trong script build tương ứng rồi tạo lại index. PDF đầu vào cần có lớp văn bản để trích xuất; bước này dùng pypdf, chưa thực hiện OCR cho trang chỉ chứa ảnh scan.
+Để lưu index của tài liệu khác xuống đĩa, sửa biến `file_path` trong script build tương ứng rồi tạo lại index. Để thử nhanh một PDF khi API đang chạy, dùng chức năng upload trên Streamlit. PDF đầu vào cần có lớp văn bản để trích xuất; dự án chưa thực hiện OCR cho trang chỉ chứa ảnh scan.
 
 ## Chạy ứng dụng
 
@@ -227,22 +278,33 @@ Sau khi tạo lại index, khởi động lại API hoặc CLI để nạp dữ 
 **Terminal 1 — FastAPI:**
 
 ```powershell
-.\.venv\Scripts\python.exe -X utf8 -m uvicorn api_server:app --host 127.0.0.1 --port 8000
+.\.venv\Scripts\python.exe -X utf8 -m uvicorn api_server:app --app-dir . --host 127.0.0.1 --port 8000
 ```
 
-Backend tải index, embedding model và reranker một lần khi tiến trình server khởi động. Mỗi câu hỏi vẫn cần tạo embedding cho query, truy xuất, rerank và gọi Ollama nếu có context.
+Backend tải index, embedding model, reranker và tokenizer một lần khi tiến trình server khởi động. Cần có index hợp lệ trong `INDEX_DIR` trước khi khởi động, kể cả khi định dùng upload. Mỗi câu hỏi vẫn cần tạo embedding cho query, truy xuất, rerank và gọi Ollama nếu có context.
+
+Lệnh trên không bật tự nạp lại code. Khi sửa code, prompt hoặc cấu hình, dừng API bằng `Ctrl+C` rồi chạy lại và đợi `Application startup complete`. Sau khi khởi động lại, cần nạp lại PDF upload nếu muốn tiếp tục dùng nó.
 
 **Terminal 2 — Streamlit:**
 
 ```powershell
-.\.venv\Scripts\python.exe -m streamlit run ui.py
+.\.venv\Scripts\python.exe -X utf8 -m streamlit run ui.py --server.address 127.0.0.1 --server.port 8501
 ```
 
 - Giao diện: [http://localhost:8501](http://localhost:8501).
 - Swagger UI để thử API: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 - Kiểm tra backend: [http://127.0.0.1:8000/health](http://127.0.0.1:8000/health).
 
-Nhập câu hỏi, bấm **Gửi câu hỏi** và mở các hộp nguồn để đối chiếu câu trả lời. UI giữ phản hồi gần nhất trong session; các câu hỏi được xử lý độc lập, chưa có lịch sử hội thoại đưa vào model. Tham khảo [cách chạy Streamlit](https://docs.streamlit.io/get-started/installation/command-line).
+Trên giao diện:
+
+1. Có thể hỏi ngay trên index API đã nạp lúc khởi động.
+2. Để dùng một PDF khác, chọn file ở **Chọn tài liệu PDF**, rồi bấm **Nạp tài liệu**. Chỉ chọn file chưa gửi yêu cầu tạo index.
+3. Khi upload thành công, UI hiển thị tên file, kích thước byte và số chunk, đồng thời xóa câu trả lời trước đó.
+4. Nhập câu hỏi, bấm **Gửi câu hỏi** và mở các hộp nguồn để đối chiếu nội dung, tên file và số trang.
+
+UI giữ phản hồi gần nhất trong session; các câu hỏi được xử lý độc lập, chưa có lịch sử hội thoại đưa vào model. Các hộp nguồn là những đoạn đã truy xuất, có thể vẫn hiện khi câu trả lời từ chối hoặc không trích dẫn chúng.
+
+Nếu Streamlit hỏi `Email:` ở lần chạy đầu, có thể nhấn Enter để bỏ qua. Tham khảo [cách chạy Streamlit](https://docs.streamlit.io/get-started/installation/command-line).
 
 Có thể dùng CLI thay cho API và UI:
 
@@ -276,7 +338,33 @@ Với cấu hình hiện tại `INDEX_DIR = "index_pdf"` và PDF 13 trang:
 }
 ```
 
-Endpoint này xác nhận backend đã tải index; chưa kiểm tra khả năng kết nối hoặc sinh câu trả lời của Ollama.
+Endpoint này báo số chunk của index đang hoạt động, gồm cả index vừa upload. Hai ví dụ trên chỉ áp dụng cho index mẫu tương ứng. Health check chưa kiểm tra khả năng kết nối hoặc sinh câu trả lời của Ollama.
+
+### `POST /upload`
+
+Nhận PDF qua multipart/form-data với trường **`file`**. Có thể dùng Swagger UI: chọn `POST /upload` → **Try it out** → chọn file → **Execute**.
+
+Ví dụ response với `sample.pdf`:
+
+```json
+{
+  "filename": "sample.pdf",
+  "content_type": "application/pdf",
+  "page_count": 13,
+  "text_page_count": 13,
+  "chunk_count": 84
+}
+```
+
+`page_count` là tổng số trang vật lý; `text_page_count` chỉ đếm trang có văn bản trích xuất được. Tên nguồn trong metadata lấy từ tên file upload. Với tài liệu khác, các số đếm sẽ thay đổi.
+
+| HTTP status | Trường hợp |
+| --- | --- |
+| `200` | Đọc PDF, tạo chunk/vector thành công và thay index trong RAM |
+| `400` | Bắt được `PdfReadError`, hoặc không có văn bản để xử lý |
+| `422` | Request không hợp lệ, ví dụ thiếu trường `file` |
+
+Nếu đọc hoặc tạo index thất bại, bước gán index mới chưa thực hiện nên index đang dùng được giữ lại. Lỗi build/embedding chưa có ánh xạ HTTP riêng. Ứng dụng chưa lưu PDF và index upload để khôi phục cho lần chạy sau. Upload không đổi `INDEX_DIR` và không có index riêng cho từng phiên người dùng.
 
 ### `POST /ask`
 
@@ -345,10 +433,11 @@ Nguồn TXT trả `page_number: null` và không thêm số trang vào nhãn. AP
 | `200` | Xử lý thành công, bao gồm cả phản hồi không đủ thông tin hoặc không có đoạn đạt ngưỡng |
 | `400` | `query` rỗng hoặc chỉ chứa khoảng trắng |
 | `422` | Request không hợp lệ theo schema, ví dụ thiếu trường `query` |
+| `502` | Nội dung model trả về không vượt qua kiểm tra JSON/schema của Pydantic (`ValidationError`) |
 | `503` | Không kết nối được Ollama khi cần gọi sinh câu trả lời |
 | `504` | Quá thời gian chờ phản hồi Ollama |
 
-Nếu chính FastAPI đã dừng, UI nhận lỗi kết nối HTTP, không nhận được response `503` từ backend. Các lỗi ngoài hai nhóm kết nối và timeout Ollama hiện chưa được ánh xạ riêng trong API.
+Nếu chính FastAPI đã dừng, UI nhận lỗi kết nối HTTP, không nhận được response `503` từ backend. Nhánh `502` chỉ xử lý `ValidationError`; các lỗi upstream HTTP, cấu trúc envelope hoặc lỗi chương trình khác chưa được ánh xạ đầy đủ.
 
 ## Kiểm tra cài đặt và chạy thử
 
@@ -380,17 +469,21 @@ Ollama và model đã có sẵn trên máy. Đây là kiểm tra môi trường 
 | Địa chỉ email hỗ trợ của cửa hàng là gì? | `hotro@cuahangmau.example` | `[chunk_80]` | 13 |
 | Số điện thoại hỗ trợ của cửa hàng là gì? | Tài liệu không công bố số điện thoại hỗ trợ | `[chunk_84]` | 13 |
 
-Cả **4/4 ca này** có câu trả lời phù hợp với nội dung nguồn và trích đúng trang. Ở câu hỏi số điện thoại, mô hình nêu giới hạn thông tin của tài liệu, không tự tạo số điện thoại.
+Bốn phản hồi này đã được đọc đối chiếu thủ công với nội dung nguồn và số trang. Ở câu hỏi số điện thoại, mô hình nêu thông tin không được công bố trong tài liệu.
 
-`pdf_evaluation_result.json` là snapshot lưu thủ công từ các lần hỏi ban đầu. Bộ đánh giá tự động dưới đây dùng cùng bốn câu hỏi và ghi báo cáo riêng. Bốn ca kiểm tra trên một tài liệu giả lập chưa đo được chất lượng tổng quát của ứng dụng hoặc khả năng xử lý mọi PDF dài.
+`pdf_evaluation_result.json` là snapshot lưu thủ công từ các lần hỏi ban đầu, không phải báo cáo chấm điểm. Bộ đánh giá tự động hiện dùng bốn câu hỏi đó và thêm một ca thiếu thông tin về phí gửi đi bảo hành; kết quả được ghi vào báo cáo riêng.
 
 Phiên bản PDF cũng đã được thử trên bản clone GitHub có sẵn trên cùng máy: cập nhật code và thư viện, tạo lại 84 chunk/vector, nạp API và hỏi qua Streamlit về hoàn tiền cùng số điện thoại. Lần kiểm tra này tái sử dụng `.venv` của bản clone, bổ sung phụ thuộc mới; đây chưa phải một lần tạo môi trường Python hoàn toàn mới cho bản PDF.
 
+Luồng mới Streamlit → upload PDF → tạo index trong RAM → hỏi đáp đã được thử thủ công bằng bản sao của `sample.pdf` có tên khác. Nguồn trả về đổi theo tên file upload. Ca thiếu thông tin cũng đã cho cùng câu từ chối và trạng thái `insufficient_context` trong ba lượt hỏi liên tiếp với cấu hình sinh hiện tại. Những lượt thử này không thay thế đánh giá trên nhiều tài liệu hoặc môi trường mới. Phiên bản có upload và structured output chưa được kiểm tra lại bằng một lần cài mới hoàn toàn từ GitHub.
+
 ## Đánh giá PDF qua API
 
-Bộ câu hỏi nằm trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py). Mỗi ca khai báo `query`, `expected_fact_groups`, `expected_source` và `expected_page`.
+Bộ năm câu hỏi nằm trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py). Mỗi ca có `query` và `expected_fact_groups`. Bốn ca cần nguồn khai báo thêm `expected_source`, `expected_page`; ca từ chối khai báo `expect_citations: False` và không yêu cầu hai trường nguồn/trang.
 
-Trước khi chạy, tạo index PDF theo hướng dẫn bên trên, chọn `INDEX_DIR = "index_pdf"` trong `config.py`, rồi khởi động API. Kiểm tra `/health` có `chunk_count: 84` với dữ liệu mẫu. Giữ Ollama và FastAPI hoạt động, mở terminal khác trong thư mục dự án và chạy:
+Trước khi chạy, bảo đảm API đang dùng đúng `sample.pdf` 13 trang của dự án, với cách chunking hiện tại. Có thể khởi động lại API với `INDEX_DIR = "index_pdf"` và index mẫu đã build, hoặc nạp lại chính `sample.pdf` qua UI. Nếu trước đó đã upload PDF khác, evaluator sẽ dùng index upload đang hoạt động; nó không tự phục hồi dữ liệu mẫu.
+
+Bốn ca đối chiếu tên file chính xác là `sample.pdf`. Một bản sao có tên khác dù cùng nội dung vẫn có thể trượt phần kiểm tra nguồn. `/health` báo 84 chunk chưa đủ xác nhận đúng tên file. Giữ Ollama và FastAPI hoạt động, mở terminal khác trong thư mục dự án và chạy:
 
 ```powershell
 .\.venv\Scripts\python.exe -X utf8 pdf_evaluation.py
@@ -423,15 +516,35 @@ Cách chấm này được bổ sung sau khi câu trả lời đúng về nghĩa
 
 ### Điều kiện chấm từng ca
 
+`expect_citations` mặc định là `True` khi không được khai báo:
+
+- Với `True`, câu trả lời phải trích ít nhất một nguồn khớp đồng thời tên file và trang mong đợi.
+- Với `False`, câu trả lời phải không có bất kỳ nhãn `[chunk_ID]` nào được parser nhận dạng. Một ID có tồn tại trong context vẫn làm ca này trượt.
+
+Ca thứ năm dùng cấu trúc:
+
+```python
+{
+    "query": "Phí vận chuyển khi gửi sản phẩm đi bảo hành là bao nhiêu?",
+    "expected_fact_groups": [
+        ["Các đoạn được cung cấp chưa đủ thông tin để trả lời câu hỏi này."]
+    ],
+    "expect_citations": False
+}
+```
+
+Câu số điện thoại vẫn cần trích dẫn vì nguồn nói rõ thông tin không được công bố. Câu phí gửi đi bảo hành kiểm tra việc từ chối khi các đoạn được cung cấp không có căn cứ trả lời.
+
 | Trường trong báo cáo | Cách kiểm tra |
 | --- | --- |
 | `missing_facts` | Các nhóm trong `expected_fact_groups` chưa khớp phương án nào; mỗi phần tử là cả một nhóm, nên kết quả có dạng danh sách lồng nhau |
 | `invalid_ids` | Các ID dạng `[chunk_ID]` được trích nhưng không thuộc `retrieved_sources` của câu đó |
-| `source_match` | Có ít nhất một nguồn **được câu trả lời trích dẫn**, khớp đồng thời tên file và số trang mong đợi trên cùng bản ghi |
-| `passed` | Với ca chấm được phản hồi: `missing_facts` rỗng, `invalid_ids` rỗng và `source_match` là `True`; ca gặp lỗi request được đặt là `False` |
+| `source_match` | Với ca cần trích dẫn: có ít nhất một nguồn **được câu trả lời trích dẫn**, khớp tên file và số trang trên cùng bản ghi. Là `null` ở ca `expect_citations=False` vì phép kiểm tra này không áp dụng |
+| `citation_check_passed` | Kết quả kiểm tra trích dẫn theo loại ca: đúng nguồn/trang khi cần nguồn, hoặc không có nhãn khi ca yêu cầu từ chối không trích dẫn |
+| `passed` | Với ca chấm được phản hồi: `missing_facts` rỗng, `invalid_ids` rỗng và `citation_check_passed` là `True`; ca gặp lỗi request là `False` |
 | `error` | `null` khi ca đã xử lý được phản hồi; chuỗi mô tả ngoại lệ khi bắt được `requests.exceptions.RequestException` |
 
-Trang mong đợi chỉ xuất hiện trong context chưa đủ để đạt `source_match`; câu trả lời phải trích ID của nguồn đó. Câu trả lời không có trích dẫn cũng sẽ có `source_match: false`.
+Ở ca cần nguồn, trang mong đợi chỉ xuất hiện trong context chưa đủ để đạt `source_match`; câu trả lời phải trích ID của nguồn đó. Không có trích dẫn sẽ làm ca này trượt. Với ca từ chối đúng yêu cầu, `source_match: null` đi cùng `citation_check_passed: true` và `passed: true` là kết quả hợp lệ.
 
 `missing_facts: []` nghĩa là mọi nhóm thông tin bắt buộc đã khớp. Nếu câu hoàn tiền chỉ nêu thời hạn, kết quả thiếu là `[["ngày phương án hoàn tiền được chấp thuận"]]`.
 
@@ -439,26 +552,31 @@ Trang mong đợi chỉ xuất hiện trong context chưa đủ để đạt `so
 
 Mỗi lượt gọi và chấm được đặt trong `try/except`. Nếu bắt được `requests.exceptions.RequestException`, như lỗi kết nối, timeout, HTTP hoặc lỗi giải mã JSON của Requests, script thêm bản ghi lỗi rồi tiếp tục câu hỏi kế tiếp.
 
-Trong bản ghi lỗi, `answer` là `null`, `retrieved_sources` là `[]`, `passed` là `false` và `error` chứa chuỗi mô tả ngoại lệ. Các trường `missing_facts`, `invalid_ids` và `source_match` là `null`, biểu thị các phép kiểm tra chưa được thực hiện. Với ca xử lý được phản hồi, `error` là `null`; ca đó vẫn có thể trượt điều kiện chấm.
+Trong bản ghi lỗi, `answer` là `null`, `retrieved_sources` là `[]`, `passed` là `false` và `error` chứa chuỗi mô tả ngoại lệ. Các trường `missing_facts`, `invalid_ids`, `source_match` và `citation_check_passed` là `null`, biểu thị các phép kiểm tra chưa được thực hiện. Với ca xử lý được phản hồi, `error` là `null`; ca đó vẫn có thể trượt điều kiện chấm.
 
 ### Báo cáo và kết quả đã ghi nhận
 
-Sau khi duyệt xong các ca, script ghi một lần bằng UTF-8 vào [pdf_evaluation_report.json](pdf_evaluation_report.json), đặt cạnh script. Mỗi bản ghi lưu `query`, `answer`, toàn bộ `retrieved_sources`, `missing_facts`, `invalid_ids`, `source_match`, `passed` và `error`. Với ca chấm được phản hồi, tập ID không hợp lệ được chuyển thành danh sách trước khi ghi JSON.
+Sau khi duyệt xong các ca, script ghi một lần bằng UTF-8 vào [pdf_evaluation_report.json](pdf_evaluation_report.json), đặt cạnh script. Mỗi bản ghi lưu `query`, `answer`, toàn bộ `retrieved_sources`, `missing_facts`, `invalid_ids`, `source_match`, `citation_check_passed`, `passed` và `error`. Với ca chấm được phản hồi, tập ID không hợp lệ được chuyển thành danh sách trước khi ghi JSON.
 
-| Nội dung kiểm tra | Kết quả của lần chạy đã lưu |
-| --- | --- |
-| Tổng số ca | 4 |
-| Ca đạt đồng thời ba điều kiện | 4/4 |
-| Ca có lỗi request được ghi nhận | 0/4 |
-| Ca thiếu nhóm thông tin mong đợi | 0/4 |
-| Ca có ID trích dẫn ngoài context | 0/4 |
-| Ca trích đúng tên file và trang mong đợi | 4/4 |
+| Nội dung kiểm tra | [Mốc trước khi cố định tham số sinh](pdf_evaluation_report_before_sampling.json) | [Báo cáo mới nhất](pdf_evaluation_report.json) |
+| --- | --- | --- |
+| Tổng số ca | 5 | 5 |
+| Ca đạt điều kiện bộ chấm | 4/5 | **5/5** |
+| Ca có lỗi request được ghi nhận | 0/5 | 0/5 |
+| Ca thiếu nhóm thông tin mong đợi | 1/5 | 0/5 |
+| Ca có ID trích dẫn ngoài context | 0/5 | 0/5 |
+| Ca cần nguồn trích đúng tên file và trang | 4/4 | 4/4 |
+| Ca từ chối đúng câu mong đợi và không có nhãn | 0/1 | 1/1 |
 
-Các nguồn được trích trong báo cáo là `[chunk_51]` ở trang 8 cho hoàn tiền, `[chunk_17]` ở trang 3 cho mốc xác nhận đúng 15 giờ, `[chunk_80]` ở trang 13 cho email và `[chunk_84]` ở trang 13 cho thông tin số điện thoại không được công bố.
+Trong báo cáo mới nhất, bốn ca cần nguồn trích `[chunk_51]` ở trang 8 cho hoàn tiền, `[chunk_17]` ở trang 3 cho mốc xác nhận đúng 15 giờ, `[chunk_80]` ở trang 13 cho email và `[chunk_84]` ở trang 13 cho thông tin số điện thoại không được công bố.
+
+Ở mốc 4/5, câu phí gửi đi bảo hành nhận `Tài liệu không quy định phí giao hàng [chunk_23]`. ID này có trong context nhưng đoạn chỉ nói về giao hàng, không đủ căn cứ cho phí gửi đi bảo hành. Bộ chấm đánh trượt vì câu không khớp cách từ chối mong đợi và vẫn có nhãn trích dẫn. Trong báo cáo mới, câu này là `Các đoạn được cung cấp chưa đủ thông tin để trả lời câu hỏi này.`, không kèm nhãn.
+
+Code hiện tại khai báo `temperature=0`, `seed=42`. Hai báo cáo là các snapshot ghi nhận trong quá trình phát triển, chưa chứa timestamp, phiên bản model, cấu hình sinh hay prompt của từng lượt. So sánh này không chứng minh riêng thay đổi tham số sinh sẽ luôn cải thiện kết quả.
 
 Mỗi lần duyệt xong bộ câu hỏi sẽ **ghi đè báo cáo tự động** bằng kết quả mới, kể cả khi mọi ca đều gặp `RequestException`. Ngoại lệ khác, như `KeyError` hoặc `TypeError`, vẫn có thể dừng chương trình; nếu lỗi xảy ra trước bước ghi file, báo cáo cũ vẫn còn. Cần xác nhận lần chạy đã hoàn thành khi đọc kết quả. `evaluation_report.py` vẫn đọc kết quả TXT; báo cáo PDF được tạo trực tiếp bởi `pdf_evaluation.py`.
 
-Đây là bốn ca phát triển trên một PDF giả lập, đã được dùng để điều chỉnh bộ chấm. `passed` phản ánh việc khớp các phương án cụm từ được khai báo và metadata nguồn. Cách diễn đạt chưa có trong nhóm vẫn có thể bị chấm trượt; việc khớp chuỗi cũng chưa xác nhận đầy đủ ý nghĩa của câu trả lời. Phép kiểm tra nguồn xác nhận ID, tên file và trang, chưa tự đánh giá từng phát biểu có được nội dung nguồn hỗ trợ hay không.
+Đây là **năm ca phát triển trên một PDF giả lập**, đã được dùng để điều chỉnh prompt, bộ chấm và cấu hình. `5/5` không phải “độ chính xác 100%” trên câu hỏi mới. `passed` phản ánh việc khớp cụm từ và quy tắc trích dẫn được khai báo. Cách diễn đạt chưa có trong nhóm vẫn có thể bị chấm trượt; việc khớp chuỗi cũng chưa xác nhận đầy đủ ý nghĩa. Phép kiểm tra nguồn xác nhận ID, tên file và trang, chưa tự đánh giá từng phát biểu có được nội dung nguồn hỗ trợ hay không.
 
 ## Đánh giá trên bộ TXT
 
@@ -471,7 +589,7 @@ Bộ câu hỏi nằm trong [policy_evaluation_cases.py](policy_evaluation_cases
 
 Evaluator hiện **đọc TXT và tạo lại embedding trong bộ nhớ**, sau đó gọi trực tiếp pipeline. Nó không dùng index đã lưu, không chọn nguồn theo `INDEX_DIR` và không gửi request qua FastAPI hoặc Streamlit. Lệnh đầu ghi đè file kết quả tương ứng với cấu hình và số ca hiện tại.
 
-Snapshot TXT hiện có: [evaluation_policy_rerank_k16_n8.json](evaluation_policy_rerank_k16_n8.json), cấu hình `k=16`, `min_score=0.3`, `top_n=3`. Các kết quả bên dưới không phải kết quả đánh giá PDF.
+Snapshot TXT từ giai đoạn trước: [evaluation_policy_rerank_k16_n8.json](evaluation_policy_rerank_k16_n8.json), cấu hình `k=16`, `min_score=0.3`, `top_n=3`. Các kết quả bên dưới mô tả snapshot này, không phải kết quả PDF hoặc một lần chạy lại TXT sau khi bổ sung upload và structured output.
 
 `evaluation_report.py` hiện đọc cố định file `evaluation_policy_rerank_k16_n8.json`. Khi đổi `k` hoặc số ca đánh giá, cần cập nhật đường dẫn đầu vào của report để đọc đúng file kết quả mới.
 
@@ -494,7 +612,7 @@ Thử nghiệm này cho thấy cần kiểm tra cả danh sách ứng viên trư
 
 ## Tài liệu dài
 
-Pipeline có thể lập index nhiều chunk và chọn phần liên quan để trả lời câu hỏi. Toàn bộ tài liệu được dùng khi tạo index; mỗi lần hỏi chỉ chọn một phần nội dung làm context. Dự án đã chạy thử PDF có lớp văn bản gồm **13 trang, 84 child chunk**, với bốn câu hỏi được kiểm tra tự động qua API và đọc đối chiếu nguồn. Chưa đo giới hạn số trang, hiệu năng trên dữ liệu lớn hoặc chất lượng trên tài liệu dài và bố cục phức tạp hơn.
+Pipeline có thể lập index nhiều chunk và chọn phần liên quan để trả lời câu hỏi. Toàn bộ tài liệu được dùng khi tạo index; mỗi lần hỏi chỉ chọn một phần nội dung làm context. Dự án đã chạy thử PDF có lớp văn bản gồm **13 trang, 84 child chunk**, với bộ năm ca phát triển kiểm tra qua API. Chưa đo giới hạn số trang, hiệu năng trên dữ liệu lớn hoặc chất lượng trên tài liệu dài và bố cục phức tạp hơn.
 
 Các điểm cần kiểm tra khi mở rộng dữ liệu:
 
@@ -510,37 +628,40 @@ Các điểm cần kiểm tra khi mở rộng dữ liệu:
 | [build_index.py](build_index.py) | Tạo index TXT trong `index/` |
 | [pdf_index_demo.py](pdf_index_demo.py) | Tạo và lưu index PDF mẫu trong `index_pdf/` |
 | [document_loader.py](document_loader.py) | Chọn loader theo đuôi file và chuẩn hóa cấu trúc đầu ra |
-| [load_documents.py](load_documents.py), [pdf_loader.py](pdf_loader.py) | Đọc đoạn TXT hoặc văn bản từng trang PDF |
+| [load_documents.py](load_documents.py), [pdf_loader.py](pdf_loader.py) | Đọc TXT; dùng chung hàm trích xuất trang PDF cho file trên đĩa và file upload |
 | [chunking.py](chunking.py) | Chia văn bản thành các chunk theo token |
-| [knowledge_base.py](knowledge_base.py), [index_store.py](index_store.py) | Tạo records/vector, lưu và nạp index |
+| [knowledge_base.py](knowledge_base.py), [index_store.py](index_store.py) | Tạo records/vector từ đường dẫn hoặc danh sách trang; lưu và nạp index trên đĩa |
 | [retrieval.py](retrieval.py), [semantic_retrieval.py](semantic_retrieval.py) | Tính cosine và chọn child chunk |
 | [reranking.py](reranking.py) | Chấm lại và sắp xếp các parent ứng viên |
 | [context_builder.py](context_builder.py), [prompt_builder.py](prompt_builder.py) | Ghép nguồn và xây prompt |
-| [llm_client.py](llm_client.py) | Gọi Ollama |
+| [llm_client.py](llm_client.py) | Gửi schema và cấu hình sinh tới Ollama, kiểm tra nội dung JSON, ghi trạng thái/ID ra terminal |
+| [answer_schema.py](answer_schema.py), [answer_formatter.py](answer_formatter.py) | Định nghĩa cấu trúc phản hồi model và định dạng chuỗi trả lời theo trạng thái |
 | [rag_pipeline.py](rag_pipeline.py) | Điều phối các bước hỏi đáp |
 | [config.py](config.py) | Chọn index, tham số truy xuất và số kết quả rerank |
-| [api_server.py](api_server.py), [ui.py](ui.py), [app.py](app.py) | Backend, giao diện web và CLI |
+| [api_server.py](api_server.py), [ui.py](ui.py), [app.py](app.py) | Backend nhận upload/hỏi đáp, giao diện web và CLI độc lập |
 | [policy_evaluation.py](policy_evaluation.py), [evaluation.py](evaluation.py), [evaluation_report.py](evaluation_report.py) | Chạy đánh giá, lấy ID trích dẫn và tổng hợp kết quả |
 | [pdf_evaluation_result.json](pdf_evaluation_result.json) | Lưu thủ công bốn phản hồi API trên PDF 13 trang, kèm nội dung nguồn và số trang |
-| [pdf_evaluation_cases.py](pdf_evaluation_cases.py) | Khai báo bốn câu hỏi PDF, các nhóm cách diễn đạt và tên file/trang nguồn mong đợi |
+| [pdf_evaluation_cases.py](pdf_evaluation_cases.py) | Khai báo năm ca PDF, nhóm cách diễn đạt và yêu cầu có/không có trích dẫn |
 | [pdf_evaluation.py](pdf_evaluation.py) | Gọi API, chấm nhóm thông tin và trích dẫn, ghi lỗi từng ca và báo cáo JSON |
-| [pdf_evaluation_report.json](pdf_evaluation_report.json) | Kết quả đánh giá PDF, gồm phản hồi, điều kiện đạt/trượt và trường lỗi request |
+| [pdf_evaluation_report.json](pdf_evaluation_report.json) | Báo cáo mới nhất: 5/5 ca đạt, gồm phản hồi, kiểm tra trích dẫn và lỗi request |
+| [pdf_evaluation_report_before_sampling.json](pdf_evaluation_report_before_sampling.json) | Mốc 4/5 lưu trước khi cố định tham số sinh để đối chiếu |
 
 Các file như `embedding_demo.py`, `tokenizer_demo.py`, `rerank_demo.py` và `knowledge.txt` lưu những bài thực hành trước đó. [pdf_demo.py](pdf_demo.py) là bài thử trích xuất văn bản PDF; việc tạo index PDF được thực hiện bằng `pdf_index_demo.py`.
 
 ## Giới hạn hiện tại
 
-- Mỗi script build đang có một đường dẫn tài liệu được khai báo trong code. Mỗi runtime đọc một index được chọn; chưa có upload, gom nhiều tài liệu hoặc tìm kiếm đồng thời nhiều index.
+- Mỗi script build có một đường dẫn tài liệu khai báo trong code. API hỗ trợ upload một PDF để thay index trong RAM; chưa lưu index upload, gom nhiều tài liệu hoặc tách dữ liệu theo phiên/người dùng. CLI dùng index trên đĩa riêng.
 - PDF hiện hỗ trợ trích xuất lớp văn bản. Chưa có OCR cho trang chỉ chứa ảnh; bố cục nhiều cột và bảng biểu chưa được đánh giá. Xem [giới hạn trích xuất văn bản của pypdf](https://pypdf.readthedocs.io/en/stable/user/extract-text.html).
 - Retrieval quét tuyến tính toàn bộ vector bằng cosine; index JSON/NumPy chưa có tìm kiếm ANN hay vector database.
 - Chưa tự phát hiện index cũ; cần tự đảm bảo embedding model khi hỏi khớp với model đã dùng để build.
 - Chưa đo độ trễ, tải đồng thời hoặc chất lượng trên bộ câu hỏi độc lập lớn hơn.
-- Prompt hướng dẫn trích dẫn và từ chối khi thiếu dữ liệu; API chưa tự kiểm chứng ngữ nghĩa câu trả lời hay tính hợp lệ của citation trước khi trả về.
+- Schema kiểm tra cấu trúc phản hồi, không chứng minh câu trả lời đúng. Formatter kiểm soát nhánh `insufficient_context`, nhưng model vẫn có thể chọn `supported` sai. API chưa tự đối chiếu ID với context hoặc kiểm chứng trích dẫn có hỗ trợ từng phát biểu.
 - Phiên bản hiện tại phục vụ chạy local; chưa có xác thực người dùng, đóng gói triển khai hoặc streaming.
 
 ## Hướng phát triển
 
 - Khóa đầy đủ dependency, phiên bản PyTorch và ghi nhận phiên bản model; thử cài mới lại bản có hỗ trợ PDF.
+- Bổ sung lưu trữ file/index upload và cơ chế chọn tài liệu rõ ràng; tách index theo tài liệu hoặc người dùng khi mở rộng.
 - Mở rộng bộ đánh giá với câu diễn đạt lại, câu cần nhiều mục và câu thiếu thông tin; tách bộ phát triển và bộ test.
 - Mở rộng bộ PDF sang tài liệu dài hơn, câu hỏi cần nhiều trang và các cách diễn đạt khác.
 - Bổ sung thời điểm chạy, cấu hình, phiên bản model và phân loại lỗi vào báo cáo đánh giá.
