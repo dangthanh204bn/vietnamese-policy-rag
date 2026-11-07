@@ -10,7 +10,7 @@ Tài liệu chính là [store_policy_demo.txt](store_policy_demo.txt), mô tả 
 
 [sample.pdf](sample.pdf) là tài liệu thực hành **13 trang có lớp văn bản**, được biên soạn từ chính sách TXT của dự án. Trang đầu là phần giới thiệu và mục lục; 12 trang sau trình bày từng mục chính sách, kèm diễn giải và tình huống minh họa. Cửa hàng, địa chỉ, email và tình huống đều là giả lập.
 
-PDF này dùng để kiểm tra truy xuất nội dung ở các trang khác nhau, trả lời theo nguồn và giữ số trang qua API đến giao diện. [pdf_evaluation_result.json](pdf_evaluation_result.json) giữ bốn phản hồi thủ công ban đầu. Bộ đánh giá hiện có **5 ca phát triển** trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py); [báo cáo mới nhất](pdf_evaluation_report.json) ghi nhận **5/5 ca đạt**, không có lỗi request. Đây là kết quả trên bộ ca nhỏ đã dùng trong quá trình điều chỉnh hệ thống, không phải độ chính xác tổng quát.
+PDF này dùng để kiểm tra truy xuất nội dung ở các trang khác nhau, trả lời theo nguồn và giữ số trang qua API đến giao diện. Bộ đánh giá gồm **5 ca phát triển** và ghi nhận **5/5 ca đạt** trên môi trường phát triển. [Bộ câu hỏi](pdf_evaluation_cases.py) · [Báo cáo môi trường phát triển](pdf_evaluation_report.json)
 
 Ví dụ câu hỏi:
 
@@ -451,7 +451,7 @@ Trước khi bổ sung PDF, bản TXT đã được thử bằng một `.venv` m
 - FastAPI `/health` trả về 37 chunk.
 - Đã thử thủ công Streamlit → API → Ollama với câu có thông tin và câu thiếu thông tin.
 
-Ollama và model đã có sẵn trên máy. Đây là kiểm tra môi trường Python mới trên cùng máy; chưa xác nhận lại toàn bộ tính năng PDF bằng một lần cài mới từ GitHub.
+Lượt kiểm tra này chỉ áp dụng cho bản TXT. Môi trường Python được tạo mới trên cùng máy, dùng lại Ollama và model đã tải.
 
 ### Chạy thử PDF 13 trang
 
@@ -473,9 +473,17 @@ Bốn phản hồi này đã được đọc đối chiếu thủ công với n�
 
 `pdf_evaluation_result.json` là snapshot lưu thủ công từ các lần hỏi ban đầu, không phải báo cáo chấm điểm. Bộ đánh giá tự động hiện dùng bốn câu hỏi đó và thêm một ca thiếu thông tin về phí gửi đi bảo hành; kết quả được ghi vào báo cáo riêng.
 
-Phiên bản PDF cũng đã được thử trên bản clone GitHub có sẵn trên cùng máy: cập nhật code và thư viện, tạo lại 84 chunk/vector, nạp API và hỏi qua Streamlit về hoàn tiền cùng số điện thoại. Lần kiểm tra này tái sử dụng `.venv` của bản clone, bổ sung phụ thuộc mới; đây chưa phải một lần tạo môi trường Python hoàn toàn mới cho bản PDF.
+Một lượt thử PDF trước đó dùng bản clone GitHub và `.venv` có sẵn. Sau khi cập nhật code và cài thêm phụ thuộc, lượt thử tạo lại 84 chunk và 84 vector, khởi động API rồi hỏi qua Streamlit về hoàn tiền và số điện thoại.
 
-Luồng mới Streamlit → upload PDF → tạo index trong RAM → hỏi đáp đã được thử thủ công bằng bản sao của `sample.pdf` có tên khác. Nguồn trả về đổi theo tên file upload. Ca thiếu thông tin cũng đã cho cùng câu từ chối và trạng thái `insufficient_context` trong ba lượt hỏi liên tiếp với cấu hình sinh hiện tại. Những lượt thử này không thay thế đánh giá trên nhiều tài liệu hoặc môi trường mới. Phiên bản có upload và structured output chưa được kiểm tra lại bằng một lần cài mới hoàn toàn từ GitHub.
+Luồng Streamlit → upload PDF → tạo index trong RAM → hỏi đáp đã được thử trên môi trường phát triển với bản sao của `sample.pdf` mang tên khác. Nguồn trả về đổi theo tên file upload. Ca thiếu thông tin cho cùng câu từ chối và trạng thái `insufficient_context` trong ba lượt hỏi liên tiếp.
+
+### Kiểm tra bản clone với môi trường Python mới
+
+Bản clone ở commit `22f40c9` được thử trên cùng máy với `.venv` mới, Python `3.12.10` và PyTorch `2.15.0+cpu`, dùng lại Ollama và model đã tải. `pip check` đạt, tạo lại được 84 chunk và 84 vector từ `sample.pdf`. Sau khi nạp PDF qua Streamlit, câu hỏi về thời hạn hoàn tiền trả đúng nội dung và dẫn nguồn đến trang 8.
+
+Lượt đánh giá tự động đạt **4/5** và cả năm request đều thành công. Ca hỏi về phí gửi sản phẩm đi bảo hành trượt vì câu trả lời gắn `[chunk_23]` về phí giao hàng. Bộ chấm kỳ vọng câu từ chối cố định và danh sách trích dẫn rỗng. [Báo cáo bản clone](pdf_evaluation_report_clean_clone.json)
+
+Lượt thử thủ công bổ sung đạt **4/4** trên bốn câu khác. Hai câu có căn cứ trích đúng trang 7 và 11. Hai câu thiếu thông tin được phân loại là `insufficient_context` với danh sách ID rỗng.
 
 ## Đánh giá PDF qua API
 
@@ -558,7 +566,7 @@ Trong bản ghi lỗi, `answer` là `null`, `retrieved_sources` là `[]`, `passe
 
 Sau khi duyệt xong các ca, script ghi một lần bằng UTF-8 vào [pdf_evaluation_report.json](pdf_evaluation_report.json), đặt cạnh script. Mỗi bản ghi lưu `query`, `answer`, toàn bộ `retrieved_sources`, `missing_facts`, `invalid_ids`, `source_match`, `citation_check_passed`, `passed` và `error`. Với ca chấm được phản hồi, tập ID không hợp lệ được chuyển thành danh sách trước khi ghi JSON.
 
-| Nội dung kiểm tra | [Mốc trước khi cố định tham số sinh](pdf_evaluation_report_before_sampling.json) | [Báo cáo mới nhất](pdf_evaluation_report.json) |
+| Nội dung kiểm tra | [Mốc trước khi cố định tham số sinh](pdf_evaluation_report_before_sampling.json) | [Báo cáo môi trường phát triển](pdf_evaluation_report.json) |
 | --- | --- | --- |
 | Tổng số ca | 5 | 5 |
 | Ca đạt điều kiện bộ chấm | 4/5 | **5/5** |
@@ -568,9 +576,9 @@ Sau khi duyệt xong các ca, script ghi một lần bằng UTF-8 vào [pdf_eval
 | Ca cần nguồn trích đúng tên file và trang | 4/4 | 4/4 |
 | Ca từ chối đúng câu mong đợi và không có nhãn | 0/1 | 1/1 |
 
-Trong báo cáo mới nhất, bốn ca cần nguồn trích `[chunk_51]` ở trang 8 cho hoàn tiền, `[chunk_17]` ở trang 3 cho mốc xác nhận đúng 15 giờ, `[chunk_80]` ở trang 13 cho email và `[chunk_84]` ở trang 13 cho thông tin số điện thoại không được công bố.
+Trong báo cáo 5/5 trên môi trường phát triển, bốn ca cần nguồn trích `[chunk_51]` ở trang 8 cho hoàn tiền, `[chunk_17]` ở trang 3 cho mốc xác nhận đúng 15 giờ, `[chunk_80]` ở trang 13 cho email và `[chunk_84]` ở trang 13 cho thông tin số điện thoại không được công bố.
 
-Ở mốc 4/5, câu phí gửi đi bảo hành nhận `Tài liệu không quy định phí giao hàng [chunk_23]`. ID này có trong context nhưng đoạn chỉ nói về giao hàng, không đủ căn cứ cho phí gửi đi bảo hành. Bộ chấm đánh trượt vì câu không khớp cách từ chối mong đợi và vẫn có nhãn trích dẫn. Trong báo cáo mới, câu này là `Các đoạn được cung cấp chưa đủ thông tin để trả lời câu hỏi này.`, không kèm nhãn.
+Ở mốc 4/5 trước khi cố định tham số sinh, câu phí gửi đi bảo hành nhận `Tài liệu không quy định phí giao hàng [chunk_23]`. ID này có trong context nhưng đoạn chỉ nói về giao hàng, không đủ căn cứ cho phí gửi đi bảo hành. Bộ chấm đánh trượt vì câu không khớp cách từ chối mong đợi và vẫn có nhãn trích dẫn. Trong báo cáo 5/5 trên môi trường phát triển, câu này là `Các đoạn được cung cấp chưa đủ thông tin để trả lời câu hỏi này.`, không kèm nhãn.
 
 Code hiện tại khai báo `temperature=0`, `seed=42`. Hai báo cáo là các snapshot ghi nhận trong quá trình phát triển, chưa chứa timestamp, phiên bản model, cấu hình sinh hay prompt của từng lượt. So sánh này không chứng minh riêng thay đổi tham số sinh sẽ luôn cải thiện kết quả.
 
@@ -643,8 +651,9 @@ Các điểm cần kiểm tra khi mở rộng dữ liệu:
 | [pdf_evaluation_result.json](pdf_evaluation_result.json) | Lưu thủ công bốn phản hồi API trên PDF 13 trang, kèm nội dung nguồn và số trang |
 | [pdf_evaluation_cases.py](pdf_evaluation_cases.py) | Khai báo năm ca PDF, nhóm cách diễn đạt và yêu cầu có/không có trích dẫn |
 | [pdf_evaluation.py](pdf_evaluation.py) | Gọi API, chấm nhóm thông tin và trích dẫn, ghi lỗi từng ca và báo cáo JSON |
-| [pdf_evaluation_report.json](pdf_evaluation_report.json) | Báo cáo mới nhất: 5/5 ca đạt, gồm phản hồi, kiểm tra trích dẫn và lỗi request |
+| [pdf_evaluation_report.json](pdf_evaluation_report.json) | Báo cáo 5/5 trên môi trường phát triển, gồm phản hồi, kiểm tra trích dẫn và lỗi request |
 | [pdf_evaluation_report_before_sampling.json](pdf_evaluation_report_before_sampling.json) | Mốc 4/5 lưu trước khi cố định tham số sinh để đối chiếu |
+| [pdf_evaluation_report_clean_clone.json](pdf_evaluation_report_clean_clone.json) | Báo cáo 4/5 từ bản clone với môi trường Python mới |
 
 Các file như `embedding_demo.py`, `tokenizer_demo.py`, `rerank_demo.py` và `knowledge.txt` lưu những bài thực hành trước đó. [pdf_demo.py](pdf_demo.py) là bài thử trích xuất văn bản PDF; việc tạo index PDF được thực hiện bằng `pdf_index_demo.py`.
 
