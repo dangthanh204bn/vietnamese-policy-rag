@@ -1,7 +1,8 @@
 from pydantic import BaseModel, ValidationError
 from contextlib import asynccontextmanager
 from pathlib import Path
-from index_store import load_index
+from uuid import uuid4
+from index_store import load_startup_index, save_index
 from fastembed import TextEmbedding
 from sentence_transformers import CrossEncoder
 from rag_pipeline import answer_question
@@ -14,8 +15,11 @@ from config import INDEX_DIR
 from pdf_loader import extract_pdf_pages
 from tokenizers import Tokenizer
 from knowledge_base import prepare_knowledge_from_documents
+import json
+from threading import Lock
 
-
+upload_lock = Lock()
+UPLOAD_ROOT = Path(__file__).parent / "output" / "uploaded_indexes"
 class AskRequest(BaseModel):
     query: str
 
@@ -23,7 +27,7 @@ class AskRequest(BaseModel):
 async def lifespan(app: FastAPI):
     print("Khởi động ứng dụng")
     index_dir = Path(__file__).parent / INDEX_DIR
-    app.state.knowledge = load_index(index_dir)
+    app.state.knowledge = load_startup_index(index_dir, UPLOAD_ROOT)
     app.state.embedding_model = TextEmbedding( model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
     app.state.reranker = CrossEncoder("cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",device="cpu")
     app.state.tokenizer = Tokenizer.from_pretrained("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
@@ -82,7 +86,14 @@ def upload_document(file: UploadFile):
     if not pages:
         raise HTTPException(status_code=400, detail="PDF không có văn bản để xử lý.")
     new_knowledge = prepare_knowledge_from_documents(documents=pages, model=app.state.embedding_model, tokenizer=app.state.tokenizer, chunk_size=64, overlap=16)
-    app.state.knowledge = new_knowledge
+    upload_dir = UPLOAD_ROOT / uuid4().hex
+    save_index(new_knowledge, upload_dir)
+    manifest_tmp = upload_dir.parent / f".active-{upload_dir.name}.tmp"
+    manifest_tmp.write_text(json.dumps({"index_id": upload_dir.name}),
+                            encoding="utf-8")
+    with upload_lock:
+        manifest_tmp.replace(upload_dir.parent / "active.json")
+        app.state.knowledge = new_knowledge
     return {
         "filename": file.filename,
         "content_type": file.content_type,

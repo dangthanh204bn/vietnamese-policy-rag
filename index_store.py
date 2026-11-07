@@ -29,3 +29,25 @@ def load_index(index_dir):
         "chunks_vectors": chunks_vectors
 
     }
+
+def load_startup_index(default_dir, upload_root):
+    root = Path(upload_root)
+
+    try:
+        manifest = json.loads(
+            (root / "active.json").read_text(encoding="utf-8")
+        )
+        index_id = manifest.get("index_id") if isinstance(manifest, dict) else None
+
+        if (
+            not isinstance(index_id, str)
+            or len(index_id) != 32
+            or any(char not in "0123456789abcdef" for char in index_id)
+        ):
+            raise ValueError("index_id trong active.json không hợp lệ")
+        return load_index(root / index_id)
+
+    except (OSError, ValueError, TypeError, EOFError) as error:
+        print(f"Dùng chỉ mục mặc định. Lý do: {error}")
+
+    return load_index(default_dir)

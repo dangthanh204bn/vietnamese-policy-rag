@@ -24,7 +24,7 @@ Câu hỏi cuối dùng để kiểm tra việc từ chối trả lời khi thi�
 ## Chức năng hiện có
 
 - Đọc TXT UTF-8 hoặc trích xuất văn bản từ PDF bằng pypdf, chuẩn hóa đầu ra thành các record có nội dung và metadata nguồn.
-- Nạp PDF qua Streamlit hoặc `POST /upload`; tạo index trong RAM và chuyển các câu hỏi tiếp theo sang tài liệu mới.
+- Nạp PDF qua Streamlit hoặc `POST /upload`, lưu chỉ mục trên đĩa và khôi phục chỉ mục đang dùng khi API khởi động lại.
 - Dùng mỗi đoạn TXT hoặc mỗi trang PDF có văn bản làm parent, sau đó chia thành các child chunk theo token.
 - Tạo embedding cho child chunk; các script build lưu metadata vào JSON và vector vào NumPy `.npy`.
 - Truy xuất bằng cosine similarity, lọc theo ngưỡng và chọn các ứng viên có điểm cao nhất.
@@ -33,7 +33,7 @@ Câu hỏi cuối dùng để kiểm tra việc từ chối trả lời khi thi�
 - Dùng formatter để ghép nhãn `[chunk_ID]` khi model báo có căn cứ; trả câu thông báo cố định không kèm trích dẫn khi model báo thiếu thông tin.
 - Giữ số trang PDF trong metadata, context, nguồn trả về của API và nhãn hộp nguồn trên Streamlit.
 - Cung cấp FastAPI backend, Streamlit UI và chế độ hỏi đáp trên terminal.
-- Chọn index TXT hoặc PDF được nạp lúc khởi động bằng `INDEX_DIR` trong `config.py`; API có thể thay index đang dùng bằng PDF upload.
+- Chọn chỉ mục trên đĩa cho CLI và chỉ mục dự phòng cho API bằng `INDEX_DIR` trong `config.py`.
 - Lưu kết quả đánh giá vào JSON; kiểm tra cụm đáp án mong đợi và ID trích dẫn ngoài context.
 - Chạy bộ kiểm tra PDF qua API với nhóm cách diễn đạt được chấp nhận, đối chiếu nguồn/trang hoặc yêu cầu không có trích dẫn; ghi báo cáo JSON cùng lỗi từng ca.
 
@@ -60,9 +60,11 @@ Record mới lưu `chunk_id`, `text`, `parent_id`, `parent_text`, `source` và `
 
 ### Nạp PDF khi API đang chạy
 
-UI gửi file bằng multipart/form-data tới `POST /upload`. API đọc từng trang, bỏ qua trang không có văn bản rồi dùng chung phần chia chunk và tạo embedding với các script build. Chỉ sau khi xử lý thành công, kết quả mới được gán vào `app.state.knowledge`.
+UI gửi file bằng multipart/form-data tới `POST /upload`. API đọc từng trang, bỏ qua trang không có văn bản rồi dùng chung phần chia chunk và tạo embedding với các script build.
 
-Upload thay **toàn bộ index đang dùng trong RAM của tiến trình API**. Ứng dụng chưa lưu PDF hoặc index upload để sử dụng lại; index đang hoạt động chỉ được giữ trong RAM. Mọi client dùng cùng tiến trình API chia sẻ index này; khi khởi động lại, API nạp lại thư mục `INDEX_DIR` thay vì khôi phục PDF upload.
+Mỗi lượt upload tạo một thư mục riêng ở `output/uploaded_indexes/<id>/`. Dữ liệu lưu để khôi phục gồm văn bản đã trích xuất và metadata trong `chunk_records.json` cùng vector trong `chunk_vectors.npy`.
+
+Sau khi ghi đủ hai tệp, API dùng một tệp tạm để thay `output/uploaded_indexes/active.json`. Trường `index_id` trỏ tới thư mục của chỉ mục được chọn. API cập nhật manifest và `app.state.knowledge` theo cùng thứ tự trong khóa của tiến trình. Mọi client của tiến trình đó hỏi trên cùng một chỉ mục đang hoạt động. Git bỏ qua thư mục `output/`. [Luồng upload trong API](api_server.py)
 
 ### Trả lời câu hỏi
 
@@ -146,22 +148,22 @@ Cấu hình sinh cố định giúp so sánh các lượt thử rõ hơn, không
 
 ### Chọn index để hỏi đáp
 
-Cấu hình hiện tại trong `config.py` chọn PDF:
+Cấu hình hiện tại trong `config.py` chọn chỉ mục PDF mẫu cho CLI và làm chỉ mục dự phòng cho API.
 
 ```python
 INDEX_DIR = "index_pdf"
 ```
 
-| Giá trị `INDEX_DIR` | Index được API và CLI đọc | `/health` với dữ liệu mẫu |
+| Giá trị `INDEX_DIR` | Chỉ mục CLI và dự phòng của API | `/health` khi API đang dùng chỉ mục này |
 | --- | --- | --- |
 | `"index"` | Chính sách TXT trong `index/` | `chunk_count: 37` |
 | `"index_pdf"` | PDF 13 trang trong `index_pdf/` | `chunk_count: 84` |
 
-Đổi giá trị rồi **khởi động lại API hoặc CLI** để nạp index mới. Với API, đây là index ban đầu; upload thành công sẽ thay nó trong RAM. `/health` báo số chunk của index đang hoạt động, nên sau upload số này có thể khác bảng trên.
+Khi API khởi động, `load_startup_index()` ưu tiên chỉ mục do `active.json` trỏ tới. Nếu manifest bị thiếu, ID sai định dạng hoặc đọc chỉ mục upload gặp lỗi, hàm nạp chỉ mục từ `INDEX_DIR`. [Hàm chọn chỉ mục lúc khởi động](index_store.py)
 
-CLI tự nạp index trên đĩa và không gọi API. Upload qua Streamlit không thay đổi index của CLI.
+Để chủ động quay về chỉ mục mặc định của API, dừng API, đổi tên `output/uploaded_indexes/active.json` sang một tên sao lưu chưa dùng, rồi khởi động lại. Có thể chọn chỉ mục TXT hoặc PDF mặc định bằng cách đặt `INDEX_DIR` trước lần khởi động đó.
 
-`INDEX_DIR` điều khiển index được đọc khi hỏi đáp. Hai script build bên dưới có nguồn và thư mục lưu riêng; chúng không đổi đích lưu theo biến này.
+CLI nạp trực tiếp chỉ mục từ `INDEX_DIR` mỗi lần chạy. Hai script build dùng nguồn và thư mục lưu cố định.
 
 ## Cài đặt trên Windows PowerShell
 
@@ -249,7 +251,7 @@ index/
 └── chunk_vectors.npy
 ```
 
-Với dữ liệu hiện tại, log sẽ báo 37 chunk và 37 vector. Khi sửa tài liệu, cách chunking hoặc embedding model, cần **build lại index rồi khởi động lại API**. Index hiện chưa tự phát hiện thay đổi của dữ liệu hay model.
+Với dữ liệu hiện tại, log sẽ báo 37 chunk và 37 vector. Khi sửa tài liệu, cách chunking hoặc embedding model, tạo lại chỉ mục tương ứng. Để dùng bản TXT vừa tạo, chọn `INDEX_DIR = "index"` rồi chạy lại CLI hoặc đưa API về chỉ mục mặc định theo hướng dẫn ở trên.
 
 ### 5. Tạo index PDF
 
@@ -265,11 +267,9 @@ index_pdf/
 └── chunk_vectors.npy
 ```
 
-Với PDF mẫu hiện tại, kết quả là **84 chunk và 84 vector**, mỗi vector có 384 chiều. Có 13 parent, tương ứng với 13 trang có văn bản. API và CLI đang chọn index này qua `INDEX_DIR = "index_pdf"` trong `config.py`.
+Với PDF mẫu hiện tại, kết quả là **84 chunk và 84 vector**, mỗi vector có 384 chiều. Có 13 parent, tương ứng với 13 trang có văn bản. `INDEX_DIR = "index_pdf"` chọn thư mục này cho CLI và cho nhánh dự phòng của API.
 
-Sau khi tạo lại index, khởi động lại API hoặc CLI để nạp dữ liệu mới. Để hỏi trên TXT, đổi thành `INDEX_DIR = "index"` rồi khởi động lại.
-
-Để lưu index của tài liệu khác xuống đĩa, sửa biến `file_path` trong script build tương ứng rồi tạo lại index. Để thử nhanh một PDF khi API đang chạy, dùng chức năng upload trên Streamlit. PDF đầu vào cần có lớp văn bản để trích xuất; dự án chưa thực hiện OCR cho trang chỉ chứa ảnh scan.
+Sau khi tạo lại chỉ mục, chạy lại CLI hoặc đưa API về chỉ mục mặc định để dùng kết quả vừa build. Để thay tài liệu mặc định, sửa `file_path` trong script build tương ứng. Để nạp PDF khi API đang chạy, dùng chức năng upload trên Streamlit. PDF đầu vào cần có lớp văn bản để trích xuất.
 
 ## Chạy ứng dụng
 
@@ -281,9 +281,9 @@ Sau khi tạo lại index, khởi động lại API hoặc CLI để nạp dữ 
 .\.venv\Scripts\python.exe -X utf8 -m uvicorn api_server:app --app-dir . --host 127.0.0.1 --port 8000
 ```
 
-Backend tải index, embedding model, reranker và tokenizer một lần khi tiến trình server khởi động. Cần có index hợp lệ trong `INDEX_DIR` trước khi khởi động, kể cả khi định dùng upload. Mỗi câu hỏi vẫn cần tạo embedding cho query, truy xuất, rerank và gọi Ollama nếu có context.
+Backend chọn chỉ mục lúc khởi động, rồi tải embedding model, reranker và tokenizer. Chuẩn bị chỉ mục trong `INDEX_DIR` cho lần chạy đầu và cho nhánh dự phòng. Mỗi câu hỏi tạo embedding cho query, truy xuất, rerank và gọi Ollama nếu có context.
 
-Lệnh trên không bật tự nạp lại code. Khi sửa code, prompt hoặc cấu hình, dừng API bằng `Ctrl+C` rồi chạy lại và đợi `Application startup complete`. Sau khi khởi động lại, cần nạp lại PDF upload nếu muốn tiếp tục dùng nó.
+Khi sửa code, prompt hoặc cấu hình, dừng API bằng `Ctrl+C` rồi chạy lại và đợi `Application startup complete`.
 
 **Terminal 2 — Streamlit:**
 
@@ -320,7 +320,7 @@ Nhập `exit` để thoát CLI. Dùng `Ctrl+C` trong terminal tương ứng đ�
 
 ### `GET /health`
 
-Với `INDEX_DIR = "index"` và tài liệu TXT mẫu:
+Ví dụ khi API đang dùng chỉ mục TXT mẫu.
 
 ```json
 {
@@ -329,7 +329,7 @@ Với `INDEX_DIR = "index"` và tài liệu TXT mẫu:
 }
 ```
 
-Với cấu hình hiện tại `INDEX_DIR = "index_pdf"` và PDF 13 trang:
+Ví dụ khi API đang dùng chỉ mục của PDF mẫu 13 trang.
 
 ```json
 {
@@ -338,7 +338,7 @@ Với cấu hình hiện tại `INDEX_DIR = "index_pdf"` và PDF 13 trang:
 }
 ```
 
-Endpoint này báo số chunk của index đang hoạt động, gồm cả index vừa upload. Hai ví dụ trên chỉ áp dụng cho index mẫu tương ứng. Health check chưa kiểm tra khả năng kết nối hoặc sinh câu trả lời của Ollama.
+Endpoint này báo số chunk của chỉ mục đang hoạt động, kể cả chỉ mục được khôi phục sau khi API khởi động lại. Dùng `retrieved_sources[].source` trong phản hồi `/ask` để xác nhận tên nguồn.
 
 ### `POST /upload`
 
@@ -360,15 +360,15 @@ Ví dụ response với `sample.pdf`:
 
 | HTTP status | Trường hợp |
 | --- | --- |
-| `200` | Đọc PDF, tạo chunk/vector thành công và thay index trong RAM |
+| `200` | Tạo và lưu chỉ mục PDF, cập nhật `active.json` và chọn chỉ mục mới trong RAM |
 | `400` | Bắt được `PdfReadError`, hoặc không có văn bản để xử lý |
 | `422` | Request không hợp lệ, ví dụ thiếu trường `file` |
 
-Nếu đọc hoặc tạo index thất bại, bước gán index mới chưa thực hiện nên index đang dùng được giữ lại. Lỗi build/embedding chưa có ánh xạ HTTP riêng. Ứng dụng chưa lưu PDF và index upload để khôi phục cho lần chạy sau. Upload không đổi `INDEX_DIR` và không có index riêng cho từng phiên người dùng.
+Nếu xử lý PDF, ghi chỉ mục hoặc cập nhật `active.json` thất bại, API tiếp tục dùng chỉ mục trước đó. Các lỗi tạo hoặc ghi chỉ mục đi qua xử lý lỗi mặc định của API.
 
 ### `POST /ask`
 
-Ví dụ request khi chọn index TXT (`INDEX_DIR = "index"`):
+Ví dụ request khi API đang dùng chỉ mục TXT mẫu.
 
 ```json
 {
@@ -397,7 +397,7 @@ Response thực tế trả đầy đủ `parent_text` cho từng nguồn đượ
 
 ### Ví dụ hỏi trên PDF
 
-Sau khi tạo index PDF và khởi động API với `INDEX_DIR = "index_pdf"`, gửi:
+Gửi câu hỏi sau khi API đã nạp chỉ mục của `sample.pdf`.
 
 ```json
 {
@@ -477,6 +477,8 @@ Một lượt thử PDF trước đó dùng bản clone GitHub và `.venv` có s
 
 Luồng Streamlit → upload PDF → tạo index trong RAM → hỏi đáp đã được thử trên môi trường phát triển với bản sao của `sample.pdf` mang tên khác. Nguồn trả về đổi theo tên file upload. Ca thiếu thông tin cho cùng câu từ chối và trạng thái `insufficient_context` trong ba lượt hỏi liên tiếp.
 
+Trong lần thử khôi phục, API trên cổng `8001` lưu 84 chunk và 84 vector của `upload_check.pdf`. Sau khi dừng và khởi động lại API, `/ask` vẫn trả nguồn `upload_check.pdf` và trích `[chunk_51]` ở trang 8 cho câu hỏi về thời hạn hoàn tiền.
+
 ### Kiểm tra bản clone với môi trường Python mới
 
 Bản clone ở commit `22f40c9` được thử trên cùng máy với `.venv` mới, Python `3.12.10` và PyTorch `2.15.0+cpu`, dùng lại Ollama và model đã tải. `pip check` đạt, tạo lại được 84 chunk và 84 vector từ `sample.pdf`. Sau khi nạp PDF qua Streamlit, câu hỏi về thời hạn hoàn tiền trả đúng nội dung và dẫn nguồn đến trang 8.
@@ -489,7 +491,7 @@ Lượt thử thủ công bổ sung đạt **4/4** trên bốn câu khác. Hai c
 
 Bộ năm câu hỏi nằm trong [pdf_evaluation_cases.py](pdf_evaluation_cases.py). Mỗi ca có `query` và `expected_fact_groups`. Bốn ca cần nguồn khai báo thêm `expected_source`, `expected_page`; ca từ chối khai báo `expect_citations: False` và không yêu cầu hai trường nguồn/trang.
 
-Trước khi chạy, bảo đảm API đang dùng đúng `sample.pdf` 13 trang của dự án, với cách chunking hiện tại. Có thể khởi động lại API với `INDEX_DIR = "index_pdf"` và index mẫu đã build, hoặc nạp lại chính `sample.pdf` qua UI. Nếu trước đó đã upload PDF khác, evaluator sẽ dùng index upload đang hoạt động; nó không tự phục hồi dữ liệu mẫu.
+Trước khi chạy, nạp đúng `sample.pdf` 13 trang của dự án qua UI. Bạn cũng có thể đưa API về chỉ mục mặc định với `INDEX_DIR = "index_pdf"` theo mục **Chọn index để hỏi đáp**. Một lần khởi động lại thông thường có thể khôi phục PDF upload trước đó theo `active.json`.
 
 Bốn ca đối chiếu tên file chính xác là `sample.pdf`. Một bản sao có tên khác dù cùng nội dung vẫn có thể trượt phần kiểm tra nguồn. `/health` báo 84 chunk chưa đủ xác nhận đúng tên file. Giữ Ollama và FastAPI hoạt động, mở terminal khác trong thư mục dự án và chạy:
 
@@ -638,14 +640,14 @@ Các điểm cần kiểm tra khi mở rộng dữ liệu:
 | [document_loader.py](document_loader.py) | Chọn loader theo đuôi file và chuẩn hóa cấu trúc đầu ra |
 | [load_documents.py](load_documents.py), [pdf_loader.py](pdf_loader.py) | Đọc TXT; dùng chung hàm trích xuất trang PDF cho file trên đĩa và file upload |
 | [chunking.py](chunking.py) | Chia văn bản thành các chunk theo token |
-| [knowledge_base.py](knowledge_base.py), [index_store.py](index_store.py) | Tạo records/vector từ đường dẫn hoặc danh sách trang; lưu và nạp index trên đĩa |
+| [knowledge_base.py](knowledge_base.py), [index_store.py](index_store.py) | Tạo records/vector, lưu chỉ mục và chọn chỉ mục upload hoặc mặc định lúc API khởi động |
 | [retrieval.py](retrieval.py), [semantic_retrieval.py](semantic_retrieval.py) | Tính cosine và chọn child chunk |
 | [reranking.py](reranking.py) | Chấm lại và sắp xếp các parent ứng viên |
 | [context_builder.py](context_builder.py), [prompt_builder.py](prompt_builder.py) | Ghép nguồn và xây prompt |
 | [llm_client.py](llm_client.py) | Gửi schema và cấu hình sinh tới Ollama, kiểm tra nội dung JSON, ghi trạng thái/ID ra terminal |
 | [answer_schema.py](answer_schema.py), [answer_formatter.py](answer_formatter.py) | Định nghĩa cấu trúc phản hồi model và định dạng chuỗi trả lời theo trạng thái |
 | [rag_pipeline.py](rag_pipeline.py) | Điều phối các bước hỏi đáp |
-| [config.py](config.py) | Chọn index, tham số truy xuất và số kết quả rerank |
+| [config.py](config.py) | Chọn chỉ mục cho CLI và dự phòng cho API, cấu hình truy xuất và rerank |
 | [api_server.py](api_server.py), [ui.py](ui.py), [app.py](app.py) | Backend nhận upload/hỏi đáp, giao diện web và CLI độc lập |
 | [policy_evaluation.py](policy_evaluation.py), [evaluation.py](evaluation.py), [evaluation_report.py](evaluation_report.py) | Chạy đánh giá, lấy ID trích dẫn và tổng hợp kết quả |
 | [pdf_evaluation_result.json](pdf_evaluation_result.json) | Lưu thủ công bốn phản hồi API trên PDF 13 trang, kèm nội dung nguồn và số trang |
@@ -659,7 +661,7 @@ Các file như `embedding_demo.py`, `tokenizer_demo.py`, `rerank_demo.py` và `k
 
 ## Giới hạn hiện tại
 
-- Mỗi script build có một đường dẫn tài liệu khai báo trong code. API hỗ trợ upload một PDF để thay index trong RAM; chưa lưu index upload, gom nhiều tài liệu hoặc tách dữ liệu theo phiên/người dùng. CLI dùng index trên đĩa riêng.
+- Mỗi script build có một đường dẫn tài liệu khai báo trong code. API phục vụ một chỉ mục chung cho các client của cùng tiến trình. Mỗi lượt upload tạo thêm một thư mục lưu chỉ mục trong `output/`.
 - PDF hiện hỗ trợ trích xuất lớp văn bản. Chưa có OCR cho trang chỉ chứa ảnh; bố cục nhiều cột và bảng biểu chưa được đánh giá. Xem [giới hạn trích xuất văn bản của pypdf](https://pypdf.readthedocs.io/en/stable/user/extract-text.html).
 - Retrieval quét tuyến tính toàn bộ vector bằng cosine; index JSON/NumPy chưa có tìm kiếm ANN hay vector database.
 - Chưa tự phát hiện index cũ; cần tự đảm bảo embedding model khi hỏi khớp với model đã dùng để build.
@@ -670,7 +672,7 @@ Các file như `embedding_demo.py`, `tokenizer_demo.py`, `rerank_demo.py` và `k
 ## Hướng phát triển
 
 - Khóa đầy đủ dependency, phiên bản PyTorch và ghi nhận phiên bản model; thử cài mới lại bản có hỗ trợ PDF.
-- Bổ sung lưu trữ file/index upload và cơ chế chọn tài liệu rõ ràng; tách index theo tài liệu hoặc người dùng khi mở rộng.
+- Bổ sung cơ chế chọn và quản lý các chỉ mục đã lưu theo tài liệu hoặc người dùng.
 - Mở rộng bộ đánh giá với câu diễn đạt lại, câu cần nhiều mục và câu thiếu thông tin; tách bộ phát triển và bộ test.
 - Mở rộng bộ PDF sang tài liệu dài hơn, câu hỏi cần nhiều trang và các cách diễn đạt khác.
 - Bổ sung thời điểm chạy, cấu hình, phiên bản model và phân loại lỗi vào báo cáo đánh giá.
